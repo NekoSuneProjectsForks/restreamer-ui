@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 
 import Checkbox from '../Checkbox';
 import Select from '../Select';
+import FormInlineButton from '../FormInlineButton';
 
 function init(settings) {
 	const initSettings = {
@@ -41,6 +42,13 @@ export default function Control(props) {
 		} else {
 			settings[what] = value;
 		}
+
+		props.onChange(settings, false);
+	};
+
+	const handleLowLatencyPreset = () => {
+		settings.segmentDuration = 1;
+		settings.listSize = 4;
 
 		props.onChange(settings, false);
 	};
@@ -110,6 +118,18 @@ export default function Control(props) {
 				/>
 				<Typography variant="caption">
 					<Trans>The maximum number of playlist segments. 0 will contain all the segments. 6 is recommended.</Trans>
+				</Typography>
+			</Grid>
+			<Grid item xs={12}>
+				<FormInlineButton onClick={handleLowLatencyPreset}>
+					<Trans>Use low-latency preset (~3-4s delay)</Trans>
+				</FormInlineButton>
+				<Typography variant="caption" display="block">
+					<Trans>
+						Sets segment length to 1s and list size to 4. This is standard HLS with short segments, not the experimental LHLS mode
+						above, so it works with any HLS player (including VRChat's video player) - it just trades some efficiency/compatibility
+						margin for lower latency. Make sure your encoder's keyframe interval matches (1s), or segments won't actually cut at 1s.
+					</Trans>
 				</Typography>
 			</Grid>
 			<Grid item xs={12}>
