@@ -87,6 +87,7 @@ export default function Edit(props) {
 	const [$service, setService] = React.useState(null);
 	const [$serviceSkills, setServiceSkills] = React.useState(null);
 	const [$invalid, setInvalid] = React.useState('');
+	const [$serviceMissing, setServiceMissing] = React.useState(false);
 	const [$sourceLive, setSourceLive] = React.useState(false);
 	const sourceLiveMounted = React.useRef(false);
 	const autopilotBusy = React.useRef(false);
@@ -158,7 +159,13 @@ export default function Edit(props) {
 			settings: newServiceSettings,
 		};
 
-		const [global, inputs, resolvedOutputs] = helper.createInputsOutputs($sources, newSettings.profiles, newSettings.outputs, false);
+		const [global, inputs, resolvedOutputs] = helper.createInputsOutputs(
+			$sources,
+			newSettings.profiles,
+			newSettings.outputs,
+			false,
+			$service.rawOutputs === true,
+		);
 
 		await props.restreamer.UpdateEgress(_channelid, id, global, inputs, resolvedOutputs, newSettings.control);
 		await props.restreamer.SetEgressMetadata(_channelid, id, newSettings);
@@ -211,9 +218,15 @@ export default function Edit(props) {
 		if (isFirst === true) {
 			const s = Services.Get(_service);
 			if (s === null) {
-				notify.Dispatch('warning', 'notfound:egress:' + _service, i18n._(t`Publication service not found`));
-				setInvalid(`/${_channelid}/`);
-				return null;
+				// The service this publication was created with (e.g. a
+				// platform that has since shut down) is no longer
+				// registered. There's nothing to render a settings form
+				// for, but the user still needs a way to delete it - so
+				// don't redirect away, just skip straight to a minimal
+				// "delete this" view instead of the full editor.
+				setServiceMissing(true);
+				setReady(true);
+				return;
 			}
 
 			setService(s);
@@ -275,7 +288,15 @@ export default function Edit(props) {
 
 		if (action === 'connect') {
 			if (isWHIPClient) {
-				await props.restreamer.PublishWHIPClient($settings.settings.name, $settings.settings.remoteUrl, $settings.settings.token);
+				const relay = await props.restreamer.PublishWHIPClient(
+					$settings.settings.name,
+					$settings.settings.remoteUrl,
+					$settings.settings.token,
+				);
+				if (relay === null) {
+					notify.Dispatch('error', 'connect:egress:' + _service, i18n._(t`Publishing to the remote WHIP server failed`));
+					return;
+				}
 			}
 			await props.restreamer.StartEgress(_channelid, id);
 			state = 'connecting';
@@ -289,7 +310,15 @@ export default function Edit(props) {
 			await props.restreamer.StopEgress(_channelid, id);
 			if (isWHIPClient) {
 				await props.restreamer.UnpublishWHIPClient($settings.settings.name);
-				await props.restreamer.PublishWHIPClient($settings.settings.name, $settings.settings.remoteUrl, $settings.settings.token);
+				const relay = await props.restreamer.PublishWHIPClient(
+					$settings.settings.name,
+					$settings.settings.remoteUrl,
+					$settings.settings.token,
+				);
+				if (relay === null) {
+					notify.Dispatch('error', 'connect:egress:' + _service, i18n._(t`Publishing to the remote WHIP server failed`));
+					return;
+				}
 			}
 			await props.restreamer.StartEgress(_channelid, id);
 			state = 'connecting';
@@ -505,6 +534,53 @@ export default function Edit(props) {
 
 	if ($ready === false) {
 		return null;
+	}
+
+	if ($serviceMissing === true) {
+		return (
+			<React.Fragment>
+				<Paper xs={12} sm={9} md={6}>
+					<PaperHeader title={<Trans>Publication service not found</Trans>} onAbort={handleAbort} />
+					<Grid container spacing={2}>
+						<Grid item xs={12}>
+							<Typography>
+								<Trans>
+									This publication was set up with a service ("{_service}") that no longer exists - it may have shut down or
+									been removed. It can't be edited, only deleted.
+								</Trans>
+							</Typography>
+						</Grid>
+						<Grid item xs={12}>
+							<Button variant="outlined" color="secondary" onClick={handleServiceDeleteDialog}>
+								<Trans>Delete</Trans>
+							</Button>
+						</Grid>
+					</Grid>
+				</Paper>
+				<Dialog
+					open={$deleteDialog}
+					onClose={handleServiceDeleteDialog}
+					title={<Trans>Do you want to delete this publication?</Trans>}
+					buttonsLeft={
+						<Button variant="outlined" color="default" onClick={handleServiceDeleteDialog}>
+							<Trans>Abort</Trans>
+						</Button>
+					}
+					buttonsRight={
+						<Button variant="outlined" color="secondary" onClick={handleServiceDelete}>
+							<Trans>Delete</Trans>
+						</Button>
+					}
+				>
+					<Typography>
+						<Trans>Deleting a publication service cannot be reversed. The publication stops immediately.</Trans>
+					</Typography>
+				</Dialog>
+				<Backdrop open={$saving}>
+					<CircularProgress color="inherit" />
+				</Backdrop>
+			</React.Fragment>
+		);
 	}
 
 	const ServiceControl = $service.component;

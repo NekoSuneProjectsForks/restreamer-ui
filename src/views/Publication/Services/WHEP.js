@@ -41,6 +41,12 @@ const author = {
 	},
 };
 const category = 'universal';
+// This service's createOutput() returns two fully self-contained outputs
+// (separate video/audio RTP targets, each with its own -map/-c:v or -c:a) -
+// the generic publication pipeline must use them as-is instead of
+// prepending the combined single-output profile mapping it normally does,
+// which would duplicate/conflict with these.
+const rawOutputs = true;
 const requires = {
 	protocols: ['rtp'],
 	formats: ['rtp'],
@@ -134,7 +140,7 @@ function Service(props) {
 		if (settings.audioCodec === 'copy') {
 			audioOptions.push('-c:a', 'copy');
 		} else {
-			audioOptions.push('-c:a', 'libopus', '-b:a', '128k');
+			audioOptions.push('-c:a', 'libopus', '-ar', '48000', '-b:a', '128k');
 		}
 		audioOptions.push('-f', 'rtp');
 
@@ -235,4 +241,17 @@ Service.defaultProps = {
 	onChange: function (output, settings) {},
 };
 
-export { id, name, version, stream_key_link, description, image_copyright, author, category, requires, ServiceIcon as icon, Service as component };
+export {
+	id,
+	name,
+	version,
+	stream_key_link,
+	description,
+	image_copyright,
+	author,
+	category,
+	requires,
+	rawOutputs,
+	ServiceIcon as icon,
+	Service as component,
+};

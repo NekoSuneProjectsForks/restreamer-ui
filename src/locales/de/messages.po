@@ -34,11 +34,11 @@ msgstr "Erstellen Sie einen neuen Kanal und wählen RTMP- oder SRT-Server aus."
 msgid "3. Copy the URL and paste it in the \"Target address\" field."
 msgstr "Kopieren Sie die URL und fügen Sie sie in das Feld \"Ziel-Adresse\" ein."
 
-#: src/misc/controls/HLS.js:81
+#: src/misc/controls/HLS.js:89
 msgid "6 (+ guaranteed to start with a Key frame)"
 msgstr "6 (+ garantierter Start mit einem Keyframe)"
 
-#: src/misc/controls/HLS.js:84
+#: src/misc/controls/HLS.js:92
 msgid "7 (+ fragmented MP4 format)"
 msgstr "7 (+ fragmentierte MP4 Format)"
 
@@ -47,7 +47,8 @@ msgstr "7 (+ fragmentierte MP4 Format)"
 #: src/views/Edit/index.js:666
 #: src/views/Edit/Profile.js:599
 #: src/views/Edit/Wizard/Abort.js:14
-#: src/views/Publication/Edit.js:631
+#: src/views/Publication/Edit.js:566
+#: src/views/Publication/Edit.js:812
 #: src/views/Settings.js:2278
 #: src/views/Settings.js:2300
 msgid "Abort"
@@ -74,7 +75,7 @@ msgstr "Fügen Sie externe Widgets und Stile zur Publikationsseite hinzu. Einige
 msgid "Add new channel"
 msgstr "Neuen Kanal hinzufügen"
 
-#: src/views/Publication/Add.js:363
+#: src/views/Publication/Add.js:370
 msgid "Add Publication"
 msgstr "Publikation hinzufügen"
 
@@ -82,7 +83,7 @@ msgstr "Publikation hinzufügen"
 #~ msgid "Add Stream"
 #~ msgstr ""
 
-#: src/views/Publication/Add.js:366
+#: src/views/Publication/Add.js:373
 msgid "Add: {0}"
 msgstr "Hinzufügen: {0}"
 
@@ -107,7 +108,7 @@ msgstr ""
 #: src/views/Publication/Services/MPEGTS.js:170
 #: src/views/Publication/Services/Red5.js:115
 #: src/views/Publication/Services/RTMP.js:159
-#: src/views/Publication/Services/RTSP.js:150
+#: src/views/Publication/Services/RTSP.js:160
 #: src/views/Publication/Services/SRT.js:161
 #: src/views/Publication/Services/UDP.js:127
 #: src/views/Publication/Services/WOWZA.js:132
@@ -149,9 +150,10 @@ msgstr "Erweiterte Systemüberwachung"
 #: src/views/Publication/Services/Image2.js:132
 #: src/views/Publication/Services/MPEGTS.js:176
 #: src/views/Publication/Services/RTMP.js:174
-#: src/views/Publication/Services/RTSP.js:162
+#: src/views/Publication/Services/RTSP.js:185
 #: src/views/Publication/Services/SRT.js:170
 #: src/views/Publication/Services/UDP.js:133
+#: src/views/Publication/Services/WHEP.js:192
 msgid "Advanced settings"
 msgstr "Erweiterte Einstellungen"
 
@@ -168,7 +170,7 @@ msgstr "AirPlay"
 msgid "Alerting by email"
 msgstr "Benachrichtigung per E-Mail"
 
-#: src/views/Publication/Add.js:386
+#: src/views/Publication/Add.js:393
 msgid "All"
 msgstr "Alle"
 
@@ -218,9 +220,13 @@ msgstr "Anwendung"
 msgid "Are you sure you want to abort the wizard?"
 msgstr "Sind Sie sicher, dass Sie den Assistenten abbrechen wollen?"
 
-#: src/views/Publication/Add.js:527
+#: src/views/Publication/Add.js:534
 msgid "Audio"
 msgstr "Audio"
+
+#: src/views/Publication/Services/WHEP.js:204
+msgid "Audio codec"
+msgstr ""
 
 #: src/views/Edit/Sources/ALSA.js:114
 #: src/views/Edit/Sources/AVFoundation.js:159
@@ -238,7 +244,7 @@ msgstr "Audio von Gerät"
 
 #: src/views/Edit/Profile.js:614
 #: src/views/Edit/ProfileSummary.js:90
-#: src/views/Publication/Edit.js:565
+#: src/views/Publication/Edit.js:746
 msgid "Audio settings"
 msgstr "Audio-Einstellungen"
 
@@ -271,9 +277,13 @@ msgstr "Autorisierung"
 msgid "Auto"
 msgstr "Automatisch"
 
-#: src/misc/controls/HLS.js:123
+#: src/misc/controls/HLS.js:143
 msgid "Automatic cleanup of all media data"
 msgstr "Automatische Bereinigung aller Mediadateien"
+
+#: src/views/Publication/Services/TikTok.js:267
+msgid "Automatic via Streamlabs (start/stop with the source, title, game)"
+msgstr ""
 
 #: src/views/Publication/Player.js:524
 msgid "Autoplay"
@@ -298,7 +308,7 @@ msgstr "avoid_negative_ts"
 #: src/views/Edit/Wizard/Metadata.js:35
 #: src/views/Edit/Wizard/Video.js:66
 #: src/views/Edit/Wizard/VideoProfile.js:67
-#: src/views/Publication/Add.js:561
+#: src/views/Publication/Add.js:568
 msgid "Back"
 msgstr "Zurück"
 
@@ -343,6 +353,10 @@ msgstr "Banner"
 #: src/views/Settings.js:1534
 msgid "Basic"
 msgstr "Basic"
+
+#: src/views/Publication/Services/WHIP.js:153
+msgid "Bearer token (optional)"
+msgstr ""
 
 #: src/views/Edit/Sources/VirtualAudio.js:157
 msgid "Beep factor"
@@ -422,9 +436,13 @@ msgstr "Kanäle"
 msgid "Check for updates"
 msgstr "Nach Updates suchen"
 
-#: src/views/Publication/Add.js:316
+#: src/views/Publication/Add.js:323
 msgid "Check the requirements"
 msgstr "Anforderungen prüfen"
+
+#: src/views/Edit/Sources/WHIP.js:82
+msgid "Choose a name for this stream. It's part of the publish URL, so keep it hard to guess."
+msgstr ""
 
 #: src/views/Edit/StreamSelect.js:53
 msgid "Choose a video stream"
@@ -475,9 +493,9 @@ msgstr "Segment"
 #: src/misc/modals/Hint.js:181
 #: src/views/Edit/index.js:621
 #: src/views/Playersite.js:823
-#: src/views/Publication/Add.js:404
-#: src/views/Publication/Add.js:558
-#: src/views/Publication/Edit.js:595
+#: src/views/Publication/Add.js:411
+#: src/views/Publication/Add.js:565
+#: src/views/Publication/Edit.js:776
 #: src/views/Publication/Player.js:536
 #: src/views/Settings.js:2219
 msgid "Close"
@@ -526,6 +544,10 @@ msgstr "Verbunden für <0/>"
 #: src/views/Publication/Process.js:40
 msgid "Connecting ..."
 msgstr "Verbinde ..."
+
+#: src/views/Publication/Services/WHIP.js:167
+msgid "Connecting this publication (the normal Connect/Disconnect control) starts and stops the WHIP session with the remote server. See <0>RFC 9725 (WHIP)</0>."
+msgstr ""
 
 #: src/views/Initializing.js:21
 msgid "Connecting to Restreamer Core ..."
@@ -735,12 +757,15 @@ msgstr "Verzögerung (ms)"
 #: src/views/Edit/index.js:635
 #: src/views/Edit/index.js:671
 #: src/views/Playersite.js:506
-#: src/views/Publication/Edit.js:604
-#: src/views/Publication/Edit.js:636
+#: src/views/Publication/Edit.js:555
+#: src/views/Publication/Edit.js:571
+#: src/views/Publication/Edit.js:785
+#: src/views/Publication/Edit.js:817
 msgid "Delete"
 msgstr "Löschen"
 
-#: src/views/Publication/Edit.js:641
+#: src/views/Publication/Edit.js:576
+#: src/views/Publication/Edit.js:822
 msgid "Deleting a publication service cannot be reversed. The publication stops immediately."
 msgstr "Die Löschung eines Publikationsdienstes kann nicht rückgängig gemacht werden. Die Veröffentlichung wird sofort gestoppt."
 
@@ -780,7 +805,7 @@ msgstr "Trennen und fortfahren"
 msgid "Disconnecting ..."
 msgstr "Trennen ..."
 
-#: src/misc/controls/HLS.js:70
+#: src/misc/controls/HLS.js:78
 #: src/views/Settings.js:1767
 msgid "Disk"
 msgstr "Festplatte"
@@ -803,9 +828,13 @@ msgstr "Möchten Sie die Anwendung wirklich neu starten?"
 msgid "Do you want to delete \"{0}\"?"
 msgstr "Soll \"{0}\" gelöscht werden?"
 
-#: src/views/Publication/Edit.js:628
+#: src/views/Publication/Edit.js:809
 msgid "Do you want to delete {title}?"
 msgstr "Möchten Sie {title} löschen?"
+
+#: src/views/Publication/Edit.js:563
+msgid "Do you want to delete this publication?"
+msgstr ""
 
 #: src/views/Edit/index.js:644
 msgid "Do you want to disconnect \"{0}\"?"
@@ -822,7 +851,7 @@ msgstr "Dokumente"
 #: src/views/Publication/Services/Image2.js:171
 #: src/views/Publication/Services/MPEGTS.js:365
 #: src/views/Publication/Services/RTMP.js:286
-#: src/views/Publication/Services/RTSP.js:235
+#: src/views/Publication/Services/RTSP.js:258
 #: src/views/Publication/Services/SRT.js:428
 #: src/views/Publication/Services/UDP.js:241
 msgid "Documentation"
@@ -848,7 +877,7 @@ msgstr "Bearbeiten"
 msgid "Edit the audio and video sources for the live stream. Add a description, and set your desired content license."
 msgstr "Bearbeiten Sie die Audio- und Videoquellen für den Live-Stream. Fügen Sie eine Beschreibung hinzu, und legen Sie die gewünschte Inhaltslizenz fest."
 
-#: src/views/Publication/Edit.js:417
+#: src/views/Publication/Edit.js:596
 msgid "Edit: {title}"
 msgstr "Bearbeiten: {title}"
 
@@ -927,8 +956,8 @@ msgid "Encoder"
 msgstr "Encoder"
 
 #: src/views/Edit/Summary.js:95
-#: src/views/Publication/Add.js:492
-#: src/views/Publication/Edit.js:528
+#: src/views/Publication/Add.js:499
+#: src/views/Publication/Edit.js:709
 msgid "Encoding"
 msgstr "Kodierung"
 
@@ -990,7 +1019,7 @@ msgstr "Erweitert den Bereich unter der Kanalbeschreibung (Kommentarfelder)."
 msgid "Expert mode"
 msgstr "Expertenmodus"
 
-#: src/misc/controls/HLS.js:78
+#: src/misc/controls/HLS.js:86
 msgid "EXT-X-VERSION"
 msgstr "EXT-X-VERSION"
 
@@ -1010,7 +1039,7 @@ msgstr "Fußzeile erweitern"
 msgid "Extend header"
 msgstr "Header erweitern"
 
-#: src/views/Publication/Add.js:229
+#: src/views/Publication/Add.js:236
 msgid "Failed to create publication service ({0})"
 msgstr "Publikationsdienst konnte nicht erstellt werden ({0})"
 
@@ -1039,7 +1068,7 @@ msgstr "Prozess konnte nicht angehalten werden"
 msgid "Failed to store player size setting."
 msgstr "Die Einstellung für die Playergröße konnte nicht gespeichert werden."
 
-#: src/views/Publication/Edit.js:269
+#: src/views/Publication/Edit.js:401
 msgid "Failed to store publication service ({0})"
 msgstr "Publikationsdienst konnte nicht gespeichert werden ({0})"
 
@@ -1093,6 +1122,10 @@ msgstr "Flaggen"
 msgid "For Javascripts."
 msgstr "Für Javascripte."
 
+#: src/views/Publication/Services/RTSP.js:167
+msgid "For playback in VRChat, forcing TCP transport here plus using an \"rtspt://\" URL (instead of \"rtsp://\") on the RTSP server/player side gives the lowest latency and avoids UDP packet loss. This only affects how this stream is pushed to your RTSP server - the \"rtspt://\" part is something you enter wherever you play the stream back (e.g. in a VRChat video player), not here."
+msgstr ""
+
 #: src/views/Playersite.js:753
 msgid "For Stylesheets."
 msgstr "Für Stylesheets."
@@ -1144,26 +1177,29 @@ msgstr "Framerate Modus"
 msgid "Frequency (Hz)"
 msgstr "Frequenz (Hz)"
 
+#: src/views/Publication/Services/TikTok.js:314
+msgid "Game"
+msgstr ""
+
 #: src/views/Edit/index.js:418
 #: src/views/Edit/index.js:430
 #: src/views/Edit/Sources/Network.js:612
 #: src/views/Playersite.js:328
 #: src/views/Playersite.js:341
-#: src/views/Publication/Add.js:414
-#: src/views/Publication/Edit.js:426
+#: src/views/Publication/Add.js:421
+#: src/views/Publication/Edit.js:605
 #: src/views/Publication/Services/DASH.js:211
 #: src/views/Publication/Services/HLS.js:200
 #: src/views/Publication/Services/Icecast.js:179
 #: src/views/Publication/Services/Image2.js:139
 #: src/views/Publication/Services/RTMP.js:181
-#: src/views/Publication/Services/RTSP.js:169
+#: src/views/Publication/Services/RTSP.js:192
 #: src/views/Publication/Services/SRT.js:177
 #: src/views/Settings.js:1231
 #: src/views/Settings.js:1252
 msgid "General"
 msgstr "Allgemein"
 
-#: src/views/Publication/Services/DLive.js:79
 #: src/views/Publication/Services/Facebook.js:115
 #: src/views/Publication/Services/Facebook.js:133
 #: src/views/Publication/Services/Instagram.js:85
@@ -1173,9 +1209,10 @@ msgstr "Allgemein"
 #: src/views/Publication/Services/PeerTube.js:96
 #: src/views/Publication/Services/Restream.js:120
 #: src/views/Publication/Services/Rumble.js:107
-#: src/views/Publication/Services/Trovo.js:79
+#: src/views/Publication/Services/TikTok.js:250
 #: src/views/Publication/Services/Twitch.js:155
 #: src/views/Publication/Services/Twitter.js:179
+#: src/views/Publication/Services/VPZone.js:88
 #: src/views/Publication/Services/Wettercom.js:107
 #: src/views/Publication/Services/Youtube.js:193
 msgid "GET"
@@ -1284,7 +1321,7 @@ msgstr "Neben dem Player bietet der Restreamer eine komplette Landingpage, mit d
 msgid "In order to proceed anyways, you can provide <0>hints</0> about the available streams."
 msgstr ""
 
-#: src/misc/controls/HLS.js:67
+#: src/misc/controls/HLS.js:75
 #: src/views/Settings.js:1693
 msgid "In-memory"
 msgstr "In-memory"
@@ -1294,7 +1331,7 @@ msgstr "In-memory"
 msgid "In-memory storage"
 msgstr "In-Memory-Speicher"
 
-#: src/views/Publication/Add.js:313
+#: src/views/Publication/Add.js:320
 msgid "Incompatible"
 msgstr "Inkompatibel"
 
@@ -1347,6 +1384,10 @@ msgstr "Intervall (Sekunden)"
 msgid "Issue alert"
 msgstr "Fehler melden"
 
+#: src/views/Publication/Services/TikTok.js:343
+msgid "Just a preview - the real session starts automatically once the source goes live."
+msgstr ""
+
 #: src/misc/Progress.js:105
 #: src/views/Main/Progress.js:67
 #: src/views/Main/Publication.js:184
@@ -1389,8 +1430,8 @@ msgid "Life color"
 msgstr "Life color"
 
 #: src/views/Edit/index.js:565
-#: src/views/Publication/Add.js:458
-#: src/views/Publication/Edit.js:470
+#: src/views/Publication/Add.js:465
+#: src/views/Publication/Edit.js:651
 msgid "Limits"
 msgstr "Grenzen"
 
@@ -1423,13 +1464,13 @@ msgstr "Liste der zu cachenden Dateierweiterungen (z. B. \".html\"), eine pro Ze
 msgid "List of IP ranges in CIDR notation, e.g., 127.0.0.1/32, that the statistics will not record—one IP range per line. Leave empty to record all sessions."
 msgstr "Liste der IP-Bereiche in CIDR-Notation, z. B. 127.0.0.1/32, die von der Statistik nicht erfasst werden sollen - ein IP-Bereich pro Zeile. Leer lassen, um alle Sitzungen aufzuzeichnen."
 
-#: src/misc/controls/HLS.js:107
+#: src/misc/controls/HLS.js:115
 msgid "List size (segments)"
 msgstr "Listengröße (Segmente)"
 
 #: src/views/Publication/Services/DLive.js:15
-msgid "Live-Streaming to dlive Live RTMP Service."
-msgstr "Live-Streaming zum dlive Live RTMP-Dienst."
+#~ msgid "Live-Streaming to dlive Live RTMP Service."
+#~ msgstr "Live-Streaming zum dlive Live RTMP-Dienst."
 
 #: src/views/Publication/Services/Facebook.js:16
 msgid "Live-Streaming to Facebook Live RTMP service"
@@ -1451,9 +1492,13 @@ msgstr "Live-Streaming zum Media Network RTMP-Dienst."
 msgid "Live-Streaming to PeerTube v3+ RTMP/S Service."
 msgstr "Live-Streaming zum PeerTube v3+ RTMP/S-Dienst."
 
+#: src/views/Publication/Services/TikTok.js:24
+msgid "Live-Streaming to TikTok LIVE via RTMP. Either paste a server URL and stream key from TikTok LIVE Studio directly, or provide a Streamlabs account token so this can start/stop the TikTok session automatically together with the source stream, with a title and game category. Requires TikTok LIVE access on your account."
+msgstr ""
+
 #: src/views/Publication/Services/Trovo.js:15
-msgid "Live-Streaming to Trovo Live RTMP Service."
-msgstr "Live-Streaming zum Trovo Live RTMP-Dienst."
+#~ msgid "Live-Streaming to Trovo Live RTMP Service."
+#~ msgstr "Live-Streaming zum Trovo Live RTMP-Dienst."
 
 #: src/views/Publication/Services/Twitch.js:17
 msgid "Live-Streaming to Twitch Live RTMP Service."
@@ -1462,6 +1507,10 @@ msgstr "Live-Streaming zu Twitch."
 #: src/views/Publication/Services/Vimeo.js:12
 msgid "Live-Streaming to Vimeo Live RTMP Service"
 msgstr "Live-Streaming zu Vimeo"
+
+#: src/views/Publication/Services/VPZone.js:17
+msgid "Live-Streaming to VPZone RTMP Service."
+msgstr ""
 
 #: src/views/Publication/Services/Livespotting.js:94
 msgid "Livesource ID"
@@ -1558,7 +1607,7 @@ msgstr "Den Kanal als SRT-Stream verfügbar machen (experimentell)."
 msgid "Marked frames"
 msgstr "Markierte Frames"
 
-#: src/misc/controls/HLS.js:117
+#: src/misc/controls/HLS.js:137
 msgid "Master playlist (increases browser/client compatibility)"
 msgstr "Master playlist (erhöht Kompatibilität mit Browsern/Klienten)"
 
@@ -1830,6 +1879,15 @@ msgstr "OK"
 msgid "One referrer per line, e.g. http://www.example.com"
 msgstr "Ein Referrer pro Zeile, wie http://www.beispiel.com"
 
+#: src/views/Publication/Services/WHIP.js:161
+msgid "Only letters, numbers, \"-\" and \"_\" are allowed in the stream name."
+msgstr ""
+
+#: src/views/Edit/Sources/WHIP.js:99
+#: src/views/Publication/Services/WHEP.js:169
+msgid "Only letters, numbers, \"-\" and \"_\" are allowed."
+msgstr ""
+
 #: src/views/Playersite.js:839
 msgid "Open"
 msgstr "Öffnen"
@@ -1855,7 +1913,7 @@ msgstr "Passwort für SRT-Verschlüsselung"
 msgid "Passphrase must be between 10 and 79 characters long"
 msgstr "Das Passwort muss zwischen 10 und 79 Zeichen lang sein."
 
-#: src/views/Publication/Edit.js:533
+#: src/views/Publication/Edit.js:714
 msgid "Passthrough (copy) should only be disabled if necessary. Each encoding requires additional CPU/GPU resources."
 msgstr "Passthrough (Kopieren) sollte nur bei Bedarf deaktiviert werden. Jede Kodierung erfordert zusätzliche CPU/GPU-Ressourcen."
 
@@ -1867,7 +1925,7 @@ msgstr "Passthrough (Kopieren) sollte nur bei Bedarf deaktiviert werden. Jede Ko
 #: src/views/Publication/Services/DASH.js:198
 #: src/views/Publication/Services/HLS.js:187
 #: src/views/Publication/Services/Red5.js:157
-#: src/views/Publication/Services/RTSP.js:156
+#: src/views/Publication/Services/RTSP.js:179
 #: src/views/Publication/Services/WOWZA.js:178
 #: src/views/Settings.js:1569
 #: src/views/Settings.js:1727
@@ -1904,9 +1962,13 @@ msgstr ""
 msgid "Plan: <0>Starter</0>"
 msgstr "Plan: <0>Starter</0>"
 
-#: src/views/Publication/Add.js:389
+#: src/views/Publication/Add.js:396
 msgid "Platforms"
 msgstr "Plattformen"
+
+#: src/views/Publication/Services/WHEP.js:26
+msgid "Play the main source over WebRTC (sub-second latency) via WHEP. This does not itself let VRChat play the stream - VRChat's video players don't support WebRTC - but it's the fastest way to preview/monitor a stream in a browser, and a building block for anything else that speaks WHEP."
+msgstr ""
 
 #: src/views/Publication/Player.js:384
 #: src/views/Settings.js:1237
@@ -1936,7 +1998,7 @@ msgstr "Playerseite"
 msgid "Playlist"
 msgstr "Wiedergabeliste"
 
-#: src/misc/controls/HLS.js:88
+#: src/misc/controls/HLS.js:96
 msgid "Playlist version (M3U8). Version 3 has the best browser/client compatibility."
 msgstr "Playlist Version (M3U8). Version 3 bietet die grösste Kompatibilität mit Browsern/Klienten."
 
@@ -1963,7 +2025,7 @@ msgstr "Bitte <0>Prozessprotokoll</0> prüfen"
 #: src/views/Publication/Services/Red5.js:25
 #: src/views/Publication/Services/Restream.js:26
 #: src/views/Publication/Services/RTMP.js:32
-#: src/views/Publication/Services/RTSP.js:36
+#: src/views/Publication/Services/RTSP.js:37
 #: src/views/Publication/Services/SRT.js:33
 #: src/views/Publication/Services/UDP.js:31
 #: src/views/Publication/Services/WOWZA.js:28
@@ -1990,7 +2052,7 @@ msgstr "Bitte kontaktieren Sie den Betreiber des Services."
 msgid "Please select a file to upload."
 msgstr "Datei zum Hochladen auswählen."
 
-#: src/views/Publication/Add.js:497
+#: src/views/Publication/Add.js:504
 msgid "Please use \"Passthrough (copy)\" if possible. Encoding requires additional CPU/GPU resources."
 msgstr "„Passthrough (Kopieren)“ sollte nur deaktiviert werden, wenn es erforderlich ist. Jedes weitere Encoding benötigt zusätzliche CPU/GPU Ressourcen."
 
@@ -2024,6 +2086,10 @@ msgstr "URL des Posterbilds"
 msgid "Preset"
 msgstr "Voreinstellung"
 
+#: src/views/Publication/Services/TikTok.js:333
+msgid "Preview server/key from Streamlabs"
+msgstr ""
+
 #: src/views/Publication/Services/Youtube.js:197
 msgid "Primary stream"
 msgstr "Primärer Stream"
@@ -2045,31 +2111,32 @@ msgstr "Primärer Stream-Schlüssel"
 #: src/views/Edit/Sources/VideoLoop.js:163
 #: src/views/Edit/Sources/VirtualAudio.js:169
 #: src/views/Edit/Sources/VirtualVideo.js:188
+#: src/views/Edit/Sources/WHIP.js:134
 msgid "Probe"
 msgstr "Prüfen"
 
 #: src/views/Edit/index.js:554
-#: src/views/Publication/Add.js:447
-#: src/views/Publication/Edit.js:459
+#: src/views/Publication/Add.js:454
+#: src/views/Publication/Edit.js:640
 msgid "Process"
 msgstr "Prozess"
 
-#: src/views/Publication/Add.js:416
-#: src/views/Publication/Edit.js:428
+#: src/views/Publication/Add.js:423
+#: src/views/Publication/Edit.js:607
 msgid "Process control"
 msgstr "Prozesskontrolle"
 
 #: src/views/Main/index.js:451
 #: src/views/Main/index.js:467
-#: src/views/Publication/Edit.js:494
-#: src/views/Publication/Edit.js:613
+#: src/views/Publication/Edit.js:675
+#: src/views/Publication/Edit.js:794
 msgid "Process details"
 msgstr "Prozess-Details"
 
 #: src/views/Main/index.js:454
 #: src/views/Main/index.js:475
-#: src/views/Publication/Edit.js:497
-#: src/views/Publication/Edit.js:621
+#: src/views/Publication/Edit.js:678
+#: src/views/Publication/Edit.js:802
 msgid "Process report"
 msgstr "Prozess-Bericht"
 
@@ -2106,7 +2173,7 @@ msgstr "Profil"
 #: src/views/Publication/Services/Owncast.js:88
 #: src/views/Publication/Services/Red5.js:105
 #: src/views/Publication/Services/RTMP.js:149
-#: src/views/Publication/Services/RTSP.js:144
+#: src/views/Publication/Services/RTSP.js:154
 #: src/views/Publication/Services/SRT.js:158
 #: src/views/Publication/Services/Telegram.js:79
 #: src/views/Publication/Services/UDP.js:124
@@ -2114,7 +2181,7 @@ msgstr "Profil"
 msgid "Protocol"
 msgstr "Protokoll"
 
-#: src/views/Publication/Add.js:395
+#: src/views/Publication/Add.js:402
 msgid "Protocols"
 msgstr "Protokolle"
 
@@ -2122,8 +2189,8 @@ msgstr "Protokolle"
 msgid "Public domain/s"
 msgstr "Öffentliceh Domain/s"
 
-#: src/views/Publication/Edit.js:117
-#: src/views/Publication/Edit.js:127
+#: src/views/Publication/Edit.js:206
+#: src/views/Publication/Edit.js:543
 msgid "Publication service not found"
 msgstr "Publikationsdienst nicht gefunden"
 
@@ -2134,6 +2201,15 @@ msgstr "Einstellungen der Publication Webseite gespeichert"
 #: src/views/Main/Publication.js:163
 msgid "Publications"
 msgstr "Publikationen"
+
+#: src/views/Edit/Sources/WHIP.js:108
+msgid "Publish to this URL with a WHIP-capable encoder (e.g. OBS Studio's WHIP output, or a browser). This uses WebRTC, so latency is typically sub-second."
+msgstr ""
+
+#: src/views/Publication/Edit.js:297
+#: src/views/Publication/Edit.js:319
+msgid "Publishing to the remote WHIP server failed"
+msgstr ""
 
 #: src/views/Edit/Sources/Network.js:1154
 msgid "Pull Mode"
@@ -2225,6 +2301,7 @@ msgstr "Aktualisieren"
 #: src/views/Publication/Services/Twitch.js:83
 #: src/views/Publication/Services/Twitter.js:150
 #: src/views/Publication/Services/Twitter.js:166
+#: src/views/Publication/Services/VPZone.js:78
 msgid "Region"
 msgstr "Region"
 
@@ -2232,10 +2309,18 @@ msgstr "Region"
 msgid "Register user"
 msgstr "Benutzer registrieren"
 
+#: src/views/Publication/Services/WHIP.js:17
+msgid "Relay the main source to another WHIP server (e.g. a MediaMTX \"/mystream/whip\" endpoint) over WebRTC. This core acts as the WHIP client/publisher - no ffmpeg codec conversion needed beyond H264+Opus, which the source encoding should already provide."
+msgstr ""
+
 #: src/views/Password.js:178
 #: src/views/Settings.js:2266
 msgid "Reload"
 msgstr "Erneut laden"
+
+#: src/views/Publication/Services/WHIP.js:143
+msgid "Remote WHIP server URL"
+msgstr ""
 
 #: src/misc/modals/Hint.js:159
 msgid "Remove Audio"
@@ -2249,9 +2334,21 @@ msgstr ""
 msgid "Remove the oldest entries if the /memfs is full"
 msgstr "Älteste Einträge entfernen, wenn das /memfs voll ist"
 
+#: src/views/Publication/Services/TikTok.js:328
+msgid "Requires a token above. Type to search TikTok's game categories."
+msgstr ""
+
 #: src/views/Settings.js:1942
 msgid "Requires activation"
 msgstr "Aktivierung erforderlich"
+
+#: src/views/Edit/Sources/WHIP.js:123
+msgid "Requires the WebRTC server to be enabled. See <0>RFC 9725 (WHIP)</0>."
+msgstr ""
+
+#: src/views/Publication/Services/WHEP.js:223
+msgid "Requires the WebRTC server to be enabled. See <0>WHEP</0>."
+msgstr ""
 
 #: src/views/Publication/Player.js:546
 msgid "Reset logo"
@@ -2377,8 +2474,8 @@ msgstr "Sampling"
 #: src/views/Edit/index.js:632
 #: src/views/Edit/Wizard/License.js:43
 #: src/views/Playersite.js:829
-#: src/views/Publication/Add.js:567
-#: src/views/Publication/Edit.js:601
+#: src/views/Publication/Add.js:574
+#: src/views/Publication/Edit.js:782
 #: src/views/Publication/Player.js:542
 #: src/views/Settings.js:2224
 msgid "Save"
@@ -2423,11 +2520,11 @@ msgstr "Sicherheit Token"
 msgid "Seekbar color"
 msgstr "Seekbar Farbe"
 
-#: src/misc/controls/HLS.js:95
+#: src/misc/controls/HLS.js:103
 msgid "Segment length (seconds)"
 msgstr "Segmentlänge (Sek)"
 
-#: src/misc/controls/HLS.js:100
+#: src/misc/controls/HLS.js:108
 msgid "Segment will be cut on the following keyframe after this time has passed. 2 is recommended."
 msgstr "Das Segment wird nach Ablauf dieser Zeit auf dem folgenden Keyframe geschnitten. 2 wird empfohlen."
 
@@ -2451,8 +2548,8 @@ msgstr "Auswahl Gerät:"
 msgid "Select audio source:"
 msgstr "Audio-Quelle auswählen:"
 
-#: src/views/Publication/Add.js:480
-#: src/views/Publication/Edit.js:520
+#: src/views/Publication/Add.js:487
+#: src/views/Publication/Edit.js:701
 msgid "Select RTMP or SRT (if enabled) for less latency."
 msgstr "Benutze RTMP oder SRT (falls aktiviert) für eine geringere Latenz."
 
@@ -2516,6 +2613,7 @@ msgstr "Server"
 #: src/views/Publication/Services/Owncast.js:100
 #: src/views/Publication/Services/Rumble.js:88
 #: src/views/Publication/Services/Telegram.js:91
+#: src/views/Publication/Services/TikTok.js:242
 msgid "Server URL"
 msgstr "Server URL"
 
@@ -2526,8 +2624,8 @@ msgstr "Server URL"
 msgid "Service"
 msgstr "Service"
 
-#: src/views/Publication/Add.js:427
-#: src/views/Publication/Edit.js:439
+#: src/views/Publication/Add.js:434
+#: src/views/Publication/Edit.js:618
 msgid "Service name"
 msgstr "Name des Dienstes"
 
@@ -2550,6 +2648,10 @@ msgstr "Legt eine Begrenzung der Bandbreite in Mbit/s für die ausgehende HLS-Da
 #: src/views/Settings.js:1499
 msgid "Sets a viewer limit for HLS sessions. If the limit is exceeded, HLS viewers receive the HTTP status code 509 (Bandwidth Limit Exceeded). 0 is unlimited."
 msgstr "Legt ein Limit für die Zuschauenden in der HLS-Sitzungen fest. Wenn das Limit überschritten wird, erhalten HLS-Zuschauende den HTTP-Statuscode 509 (Bandbreitenlimit überschritten). 0 ist unbegrenzt."
+
+#: src/misc/controls/HLS.js:128
+msgid "Sets segment length to 1s and list size to 4. This is standard HLS with short segments, not the experimental LHLS mode above, so it works with any HLS player (including VRChat's video player) - it just trades some efficiency/compatibility margin for lower latency. Make sure your encoder's keyframe interval matches (1s), or segments won't actually cut at 1s."
+msgstr ""
 
 #: src/views/Settings.js:1319
 msgid "Setting for connection to the service."
@@ -2620,22 +2722,22 @@ msgstr "Social-login (OAuth2, 2FA)"
 msgid "Socket timeout (microseconds)"
 msgstr "Socket-Zeitüberschreitung (Mikrosekunden)"
 
-#: src/views/Publication/Add.js:392
+#: src/views/Publication/Add.js:399
 msgid "Software"
 msgstr "Software"
 
 #: src/misc/controls/Source.js:74
 #: src/views/Edit/Sources/VirtualAudio.js:88
 #: src/views/Edit/Sources/VirtualVideo.js:112
-#: src/views/Publication/Add.js:475
-#: src/views/Publication/Edit.js:515
+#: src/views/Publication/Add.js:482
+#: src/views/Publication/Edit.js:696
 msgid "Source"
 msgstr "Quelle"
 
-#: src/views/Publication/Add.js:415
-#: src/views/Publication/Add.js:470
-#: src/views/Publication/Edit.js:427
-#: src/views/Publication/Edit.js:510
+#: src/views/Publication/Add.js:422
+#: src/views/Publication/Add.js:477
+#: src/views/Publication/Edit.js:606
+#: src/views/Publication/Edit.js:691
 msgid "Source & Encoding"
 msgstr "Quelle & Encoding"
 
@@ -2687,7 +2789,7 @@ msgstr "start_at_zero"
 msgid "Statistics"
 msgstr "Statistiken"
 
-#: src/misc/controls/HLS.js:65
+#: src/misc/controls/HLS.js:73
 #: src/views/Settings.js:1238
 #: src/views/Settings.js:1688
 msgid "Storage"
@@ -2711,7 +2813,6 @@ msgstr ""
 #: src/views/Publication/Services/CDN77.js:113
 #: src/views/Publication/Services/DaCast.js:153
 #: src/views/Publication/Services/Dailymotion.js:98
-#: src/views/Publication/Services/DLive.js:75
 #: src/views/Publication/Services/Dummy.js:280
 #: src/views/Publication/Services/Instagram.js:81
 #: src/views/Publication/Services/Kick.js:100
@@ -2724,10 +2825,11 @@ msgstr ""
 #: src/views/Publication/Services/Restream.js:116
 #: src/views/Publication/Services/Rumble.js:100
 #: src/views/Publication/Services/Telegram.js:101
-#: src/views/Publication/Services/Trovo.js:75
+#: src/views/Publication/Services/TikTok.js:257
 #: src/views/Publication/Services/Twitch.js:151
 #: src/views/Publication/Services/Twitter.js:175
 #: src/views/Publication/Services/Vimeo.js:73
+#: src/views/Publication/Services/VPZone.js:84
 #: src/views/Publication/Services/Wettercom.js:100
 #: src/views/Publication/Services/Youtube.js:189
 msgid "Stream key"
@@ -2737,8 +2839,11 @@ msgstr "Stream-Schlüssel"
 msgid "Stream Key"
 msgstr "Stream-Schlüssel"
 
+#: src/views/Edit/Sources/WHIP.js:89
 #: src/views/Publication/Services/Brightcove.js:101
 #: src/views/Publication/Services/Red5.js:136
+#: src/views/Publication/Services/WHEP.js:159
+#: src/views/Publication/Services/WHIP.js:133
 #: src/views/Publication/Services/WOWZA.js:158
 msgid "Stream name"
 msgstr "Streamname"
@@ -2756,6 +2861,14 @@ msgstr "Stream-Quelle für Publikations-Service (experimentell)."
 #: src/views/Publication/Services/Dailymotion.js:86
 msgid "Stream URL"
 msgstr "Stream-URL"
+
+#: src/views/Publication/Services/TikTok.js:276
+msgid "Streamlabs account token"
+msgstr ""
+
+#: src/views/Publication/Services/TikTok.js:282
+msgid "Streamlabs' own token, not a TikTok one - there's no way to obtain it without going through Streamlabs' login flow in a tool like Streamlabs Desktop first. This is not an officially documented API and may break without notice. Once a token and a game are set, this publication starts automatically when the source goes live and ends automatically when it stops - the manual connect/disconnect button still works too, but shouldn't be needed."
+msgstr ""
 
 #: src/views/Playersite.js:457
 msgid "Support datarhei Restreamer"
@@ -2835,11 +2948,11 @@ msgstr "Die Löschung dieses Kanals kann nicht rückgängig gemacht werden. Alle
 
 #: src/views/Edit/index.js:302
 #: src/views/Edit/Wizard/index.js:176
-#: src/views/Publication/Edit.js:262
+#: src/views/Publication/Edit.js:394
 msgid "The input profile is not complete. Please define a video and audio source."
 msgstr "Unvollständiges Eingangsprofil. Video- und Audioquelle definieren."
 
-#: src/views/Publication/Add.js:222
+#: src/views/Publication/Add.js:229
 msgid "The input profile is not complete. Please define a video and/or audio source."
 msgstr "Das Eingabeprofil ist unvollständig. Bitte definieren Sie eine Video- und/oder Audioquelle."
 
@@ -2848,7 +2961,7 @@ msgstr "Das Eingabeprofil ist unvollständig. Bitte definieren Sie eine Video- u
 msgid "The layout of the audio stream."
 msgstr "Anordnung des Audiostreams."
 
-#: src/misc/controls/HLS.js:112
+#: src/misc/controls/HLS.js:120
 msgid "The maximum number of playlist segments. 0 will contain all the segments. 6 is recommended."
 msgstr "Die maximale Anzahl von Wiedergabelistensegmenten. 0 enthält alle Segmente. 6 wird empfohlen."
 
@@ -2864,19 +2977,19 @@ msgstr "Die Person, die ein Werk mit dieser Urkunde verbunden hat, hat das Werk 
 msgid "The public reachable domain name of the host this Restreamer is running on. Separate multiple domain names by a comma."
 msgstr "Der öffentlich erreichbare Domänenname des Hosts, auf dem der Restreamer läuft. Trennen Sie mehrere Domänennamen durch ein Komma."
 
-#: src/views/Publication/Edit.js:317
+#: src/views/Publication/Edit.js:449
 msgid "The publication service \"{0}\" could not be deleted"
 msgstr "Der Publikationsdienst \"{0}\" konnte nicht gelöscht werden"
 
-#: src/views/Publication/Add.js:237
+#: src/views/Publication/Add.js:244
 msgid "The publication service \"{0}\" has been created"
 msgstr "Der Publikationsdienst \"{0}\" wurde erstellt"
 
-#: src/views/Publication/Edit.js:323
+#: src/views/Publication/Edit.js:455
 msgid "The publication service \"{0}\" has been deleted"
 msgstr "Der Publikationsdienst wurde \"{0}\" gelöscht"
 
-#: src/views/Publication/Add.js:235
+#: src/views/Publication/Add.js:242
 msgid "The publication service has been created"
 msgstr "Der Publikationsdienst wurde erstellt"
 
@@ -2903,7 +3016,7 @@ msgstr "Die ausgewählte Datei ist zu groß (<0/>). Es sind nur <1/> zulässig."
 msgid "The selected file type ({0}) is not allowed. Allowed file types are {1}"
 msgstr "Der ausgewählte Dateityp ({0}) ist nicht zulässig. Zulässige Dateitypen sind {1}"
 
-#: src/views/Publication/Edit.js:277
+#: src/views/Publication/Edit.js:409
 msgid "The settings for \"{0}\" have been saved"
 msgstr "Die Einstellungen für \"{0}\" wurden gespeichert"
 
@@ -2943,6 +3056,10 @@ msgstr "Die Videoquelle stellt keinen kompatiblen Audiokanal zur Verfügung. <0>
 msgid "The video source is compatible. Select the desired resolution:"
 msgstr "Die Videoquelle ist kompatibel. Gewünschte Auflösung auswählen:"
 
+#: src/views/Publication/Services/WHEP.js:211
+msgid "The WHEP server only speaks H264 and Opus. If you pick \"copy\" for a source that isn't already in that codec, playback will fail."
+msgstr ""
+
 #: src/views/Settings.js:1276
 msgid "There are updates available. Here you get more information."
 msgstr "Es sind Updates verfügbar. Hier erhalten Sie weitere Informationen."
@@ -2973,6 +3090,10 @@ msgstr "Es gab einige Fehler in den Einstellungen. Einstellungen nicht gespeiche
 #: src/views/Login.js:257
 msgid "There's no login method available."
 msgstr "Es ist keine Methode für die Anmeldung verfügbar."
+
+#: src/views/Publication/Services/TikTok.js:337
+msgid "This ends the current TikTok session and starts a new one with the title/game above - viewers will see the stream briefly drop and reconnect. There's no way to change title/game on TikTok without doing this."
+msgstr ""
 
 #: src/views/Publication/Services/Dummy.js:26
 msgid "This is a dummy service that explains to you the concepts of service."
@@ -3014,6 +3135,10 @@ msgstr "Diese Lizenz erlaubt es Wiederverwendern, das Material in jedem Medium o
 msgid "This protocol is unknown or not supported by the available FFmpeg binary."
 msgstr "Dieses Protokoll ist entweder unbekannt oder nicht verfügbar mit der verfügbaren FFmpeg-Version."
 
+#: src/views/Publication/Edit.js:547
+msgid "This publication was set up with a service (\"{_service}\") that no longer exists - it may have shut down or been removed. It can't be edited, only deleted."
+msgstr ""
+
 #: src/views/Edit/index.js:657
 msgid "This source cannot be edited while it is in use. To continue, you have to disconnect the source."
 msgstr "Diese Quelle kann nicht bearbeitet werden, während sie in Gebrauch ist. Um fortzufahren, müssen Sie die Verbindung zur Quelle unterbrechen."
@@ -3034,6 +3159,10 @@ msgstr "Die verwendete Version der Benutzeroberfläche ist kompatibel."
 msgid "Threshold (seconds)"
 msgstr "Schwellenwert (Sekunden)"
 
+#: src/views/Publication/Edit.js:140
+msgid "TikTok autopilot failed ({0})"
+msgstr ""
+
 #: src/misc/coders/Encoders/video/av1_librav1e.js:212
 msgid "Tile Columns"
 msgstr "Kachel-Spalten"
@@ -3049,6 +3178,10 @@ msgstr "Kacheln"
 #: src/views/Settings.js:1666
 msgid "Time until an inactive viewer connection is treated as closed."
 msgstr "Zeit bis eine inaktive Zuschauerverbindung als geschlossen behandelt wird."
+
+#: src/views/Publication/Services/TikTok.js:295
+msgid "Title"
+msgstr ""
 
 #: src/misc/coders/Encoders/video/h264_v4l2m2m.js:181
 msgid "To stabilize the system, increase the HLS segment length for the keyframe interval by 2-3 * (Processing and Control)."
@@ -3116,7 +3249,7 @@ msgstr "Übertragen Sie die Hauptquelle an einen Red5/Pro Server. Weitere Detail
 msgid "Transmit the main source to an RTMP(e|s|t|te|ts) Server. More details about the settings can be found <0>here</0>."
 msgstr "Übertragen Sie die Hauptquelle an einen MPEG-TS-Dienst. Weitere Details zu den Einstellungen finden Sie <0>hier</0>."
 
-#: src/views/Publication/Services/RTSP.js:28
+#: src/views/Publication/Services/RTSP.js:29
 msgid "Transmit the main source to an RTSP Server. More details about the settings can be found <0>here</0>."
 msgstr "Übertragen Sie die Hauptquelle an einen RTSP-Server. Weitere Details zu den Einstellungen finden Sie <0>hier</0>."
 
@@ -3229,6 +3362,10 @@ msgstr "Nicht gewählt"
 msgid "Update details (Changelog)"
 msgstr "Details zum Update (Changelog)"
 
+#: src/views/Publication/Services/TikTok.js:333
+msgid "Update title/game now"
+msgstr ""
+
 #: src/views/Edit/Sources/AudioLoop.js:146
 #: src/views/Edit/Sources/VideoLoop.js:154
 #: src/views/Playersite.js:514
@@ -3272,6 +3409,14 @@ msgstr "Betriebszeit"
 msgid "Use Auth0 for your running Restreamer Core. More <0>details</0>."
 msgstr "Verwenden Sie Auth0 für Ihren laufenden Restreamer Core. Mehr <0>Details</0>."
 
+#: src/misc/controls/HLS.js:125
+msgid "Use low-latency preset (~3-4s delay)"
+msgstr ""
+
+#: src/views/Publication/Services/RTSP.js:164
+msgid "Use low-latency preset (TCP transport)"
+msgstr ""
+
 #: src/views/Edit/index.js:444
 msgid "Use the wizard (<0/>) for a quick and easy setup, or edit (<1/>) the sources directly in custom mode."
 msgstr "Verwenden Sie den Assistenten (<0/>) für eine schnelle und einfache Einrichtung, oder bearbeiten Sie (<1/>) die Quellen direkt im benutzerdefinierten Modus."
@@ -3299,7 +3444,7 @@ msgstr "Benutzerregistrierung"
 #: src/views/Publication/Services/DASH.js:195
 #: src/views/Publication/Services/HLS.js:184
 #: src/views/Publication/Services/Red5.js:146
-#: src/views/Publication/Services/RTSP.js:153
+#: src/views/Publication/Services/RTSP.js:176
 #: src/views/Publication/Services/WOWZA.js:168
 #: src/views/Settings.js:1556
 #: src/views/Settings.js:1714
@@ -3332,9 +3477,13 @@ msgstr "velvet"
 msgid "Vertical Flip"
 msgstr "Vertikal spiegeln"
 
-#: src/views/Publication/Add.js:502
+#: src/views/Publication/Add.js:509
 msgid "Video"
 msgstr "Video"
+
+#: src/views/Publication/Services/WHEP.js:198
+msgid "Video codec"
+msgstr ""
 
 #: src/views/Edit/Sources/AVFoundation.js:126
 #: src/views/Edit/Sources/Raspicam.js:98
@@ -3347,7 +3496,7 @@ msgstr "Videogerät"
 
 #: src/views/Edit/Profile.js:490
 #: src/views/Edit/ProfileSummary.js:66
-#: src/views/Publication/Edit.js:540
+#: src/views/Publication/Edit.js:721
 msgid "Video settings"
 msgstr "Videoeinstellungen"
 
@@ -3367,6 +3516,10 @@ msgstr "Videoquelle"
 #: src/views/Main/Publication.js:173
 msgid "Viewer"
 msgstr "Zuschauende"
+
+#: src/views/Publication/Services/WHEP.js:178
+msgid "Viewers/players that speak WHEP can watch this stream at this URL:"
+msgstr ""
 
 #: src/views/Edit/Sources/VirtualAudio.js:115
 msgid "violet"
@@ -3397,9 +3550,13 @@ msgstr "Willkommen bei Restreamer v2, der Lösung für die schnelle und einfache
 msgid "What speed preset to use."
 msgstr "Welche Geschwindigkeitsvoreinstellung ist zu verwenden."
 
-#: src/misc/controls/HLS.js:74
+#: src/misc/controls/HLS.js:82
 msgid "Where to store the HLS playlist and segments. In-Memory is recommended."
 msgstr "Wo die HLS-Playlist und Segmente gespeichert werden sollen. In-Memory ist empfohlen."
+
+#: src/views/Edit/Sources/WHIP.js:154
+msgid "WHIP (WebRTC)"
+msgstr ""
 
 #: src/views/Edit/Sources/VirtualAudio.js:111
 msgid "white"
@@ -3434,7 +3591,7 @@ msgstr "Konfiguration geändert. Damit die Änderungen wirksam werden muss die A
 msgid "You have to reconnect manually"
 msgstr "Verbindung manuell wiederherstellen"
 
-#: src/views/Publication/Edit.js:482
+#: src/views/Publication/Edit.js:663
 msgid "You have unsaved changes. Please save them before you can control the service again."
 msgstr "Ungespeicherte Änderungen. Bitte speichern, bevor der Dienst wieder gesteuert werden kann."
 

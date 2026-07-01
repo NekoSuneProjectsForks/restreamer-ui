@@ -32,13 +32,32 @@ export function createSourcesFromStreams(streams) {
  * @param {*} sources
  * @param {*} profiles encoding settings
  * @param {*} outputs service outputs (format options and address)
+ * @param {boolean} requireVideo
+ * @param {boolean} rawOutputs if true, use the service's outputs exactly as
+ *   given instead of prepending the (single, combined video+audio) profile
+ *   mapping to each one. Needed by services that split video and audio
+ *   across genuinely separate output addresses (e.g. WHIP/WHEP relaying
+ *   two RTP streams), where each output already carries its own complete
+ *   -map/-c:v/-c:a - prepending the combined profile options on top would
+ *   duplicate/conflict with them.
  * @returns
  */
-export function createInputsOutputs(sources, profiles, outputs, requireVideo = true) {
+export function createInputsOutputs(sources, profiles, outputs, requireVideo = true, rawOutputs = false) {
 	const [global, inpts, outpts] = M.createInputsOutputs(sources, profiles, requireVideo);
 
 	if (inpts.length === 0 || outpts.length === 0) {
 		return [global, [], []];
+	}
+
+	if (rawOutputs === true) {
+		return [
+			global,
+			inpts,
+			outputs.map((o) => ({
+				address: o.address,
+				options: [...o.options],
+			})),
+		];
 	}
 
 	const out = [];

@@ -216,7 +216,14 @@ export default function Add(props) {
 	const handleServiceDone = async () => {
 		setSaving(true);
 
-		const [global, inputs, outputs] = helper.createInputsOutputs($sources, $settings.profiles, $settings.outputs, false);
+		const service = Services.Get($service);
+		const [global, inputs, outputs] = helper.createInputsOutputs(
+			$sources,
+			$settings.profiles,
+			$settings.outputs,
+			false,
+			service !== null && service.rawOutputs === true,
+		);
 		if (inputs.length === 0 || outputs.length === 0) {
 			setSaving(false);
 			notify.Dispatch('error', 'save:egress:' + $service, i18n._(t`The input profile is not complete. Please define a video and/or audio source.`));

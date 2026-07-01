@@ -34,11 +34,11 @@ msgstr "2. 创建一个新的频道并选择 RTMP 或 SRT 服务。"
 msgid "3. Copy the URL and paste it in the \"Target address\" field."
 msgstr "3. 复制 URL 并粘贴在 \"目标地址\" 字段。"
 
-#: src/misc/controls/HLS.js:81
+#: src/misc/controls/HLS.js:89
 msgid "6 (+ guaranteed to start with a Key frame)"
 msgstr "6 (+ 保证以关键帧开始)"
 
-#: src/misc/controls/HLS.js:84
+#: src/misc/controls/HLS.js:92
 msgid "7 (+ fragmented MP4 format)"
 msgstr "7 (+ fragmented MP4 格式)"
 
@@ -47,7 +47,8 @@ msgstr "7 (+ fragmented MP4 格式)"
 #: src/views/Edit/index.js:666
 #: src/views/Edit/Profile.js:599
 #: src/views/Edit/Wizard/Abort.js:14
-#: src/views/Publication/Edit.js:631
+#: src/views/Publication/Edit.js:566
+#: src/views/Publication/Edit.js:812
 #: src/views/Settings.js:2278
 #: src/views/Settings.js:2300
 msgid "Abort"
@@ -74,7 +75,7 @@ msgstr "将外部小部件和样式添加到站点。您可以在帮助页面上
 msgid "Add new channel"
 msgstr "添加新频道"
 
-#: src/views/Publication/Add.js:363
+#: src/views/Publication/Add.js:370
 msgid "Add Publication"
 msgstr "添加串流输出"
 
@@ -82,7 +83,7 @@ msgstr "添加串流输出"
 #~ msgid "Add Stream"
 #~ msgstr ""
 
-#: src/views/Publication/Add.js:366
+#: src/views/Publication/Add.js:373
 msgid "Add: {0}"
 msgstr "添加：{0}"
 
@@ -107,7 +108,7 @@ msgstr ""
 #: src/views/Publication/Services/MPEGTS.js:170
 #: src/views/Publication/Services/Red5.js:115
 #: src/views/Publication/Services/RTMP.js:159
-#: src/views/Publication/Services/RTSP.js:150
+#: src/views/Publication/Services/RTSP.js:160
 #: src/views/Publication/Services/SRT.js:161
 #: src/views/Publication/Services/UDP.js:127
 #: src/views/Publication/Services/WOWZA.js:132
@@ -149,9 +150,10 @@ msgstr "高级监控"
 #: src/views/Publication/Services/Image2.js:132
 #: src/views/Publication/Services/MPEGTS.js:176
 #: src/views/Publication/Services/RTMP.js:174
-#: src/views/Publication/Services/RTSP.js:162
+#: src/views/Publication/Services/RTSP.js:185
 #: src/views/Publication/Services/SRT.js:170
 #: src/views/Publication/Services/UDP.js:133
+#: src/views/Publication/Services/WHEP.js:192
 msgid "Advanced settings"
 msgstr "高级设置"
 
@@ -168,7 +170,7 @@ msgstr "AirPlay"
 msgid "Alerting by email"
 msgstr "邮件通知"
 
-#: src/views/Publication/Add.js:386
+#: src/views/Publication/Add.js:393
 msgid "All"
 msgstr "全部"
 
@@ -218,9 +220,13 @@ msgstr "Application"
 msgid "Are you sure you want to abort the wizard?"
 msgstr "确定要终止向导吗？"
 
-#: src/views/Publication/Add.js:527
+#: src/views/Publication/Add.js:534
 msgid "Audio"
 msgstr "音频"
+
+#: src/views/Publication/Services/WHEP.js:204
+msgid "Audio codec"
+msgstr ""
 
 #: src/views/Edit/Sources/ALSA.js:114
 #: src/views/Edit/Sources/AVFoundation.js:159
@@ -238,7 +244,7 @@ msgstr "来自设备的音频"
 
 #: src/views/Edit/Profile.js:614
 #: src/views/Edit/ProfileSummary.js:90
-#: src/views/Publication/Edit.js:565
+#: src/views/Publication/Edit.js:746
 msgid "Audio settings"
 msgstr "音频设置"
 
@@ -271,9 +277,13 @@ msgstr "权限"
 msgid "Auto"
 msgstr "自动"
 
-#: src/misc/controls/HLS.js:123
+#: src/misc/controls/HLS.js:143
 msgid "Automatic cleanup of all media data"
 msgstr "自动清理所有媒体数据"
+
+#: src/views/Publication/Services/TikTok.js:267
+msgid "Automatic via Streamlabs (start/stop with the source, title, game)"
+msgstr ""
 
 #: src/views/Publication/Player.js:524
 msgid "Autoplay"
@@ -298,7 +308,7 @@ msgstr "avoid_negative_ts"
 #: src/views/Edit/Wizard/Metadata.js:35
 #: src/views/Edit/Wizard/Video.js:66
 #: src/views/Edit/Wizard/VideoProfile.js:67
-#: src/views/Publication/Add.js:561
+#: src/views/Publication/Add.js:568
 msgid "Back"
 msgstr "返回"
 
@@ -343,6 +353,10 @@ msgstr "横幅"
 #: src/views/Settings.js:1534
 msgid "Basic"
 msgstr "常规"
+
+#: src/views/Publication/Services/WHIP.js:153
+msgid "Bearer token (optional)"
+msgstr ""
 
 #: src/views/Edit/Sources/VirtualAudio.js:157
 msgid "Beep factor"
@@ -422,9 +436,13 @@ msgstr "频道"
 msgid "Check for updates"
 msgstr "检查更新"
 
-#: src/views/Publication/Add.js:316
+#: src/views/Publication/Add.js:323
 msgid "Check the requirements"
 msgstr "检查"
+
+#: src/views/Edit/Sources/WHIP.js:82
+msgid "Choose a name for this stream. It's part of the publish URL, so keep it hard to guess."
+msgstr ""
 
 #: src/views/Edit/StreamSelect.js:53
 msgid "Choose a video stream"
@@ -475,9 +493,9 @@ msgstr "块"
 #: src/misc/modals/Hint.js:181
 #: src/views/Edit/index.js:621
 #: src/views/Playersite.js:823
-#: src/views/Publication/Add.js:404
-#: src/views/Publication/Add.js:558
-#: src/views/Publication/Edit.js:595
+#: src/views/Publication/Add.js:411
+#: src/views/Publication/Add.js:565
+#: src/views/Publication/Edit.js:776
 #: src/views/Publication/Player.js:536
 #: src/views/Settings.js:2219
 msgid "Close"
@@ -526,6 +544,10 @@ msgstr "连接建立于"
 #: src/views/Publication/Process.js:40
 msgid "Connecting ..."
 msgstr "连接中 ..."
+
+#: src/views/Publication/Services/WHIP.js:167
+msgid "Connecting this publication (the normal Connect/Disconnect control) starts and stops the WHIP session with the remote server. See <0>RFC 9725 (WHIP)</0>."
+msgstr ""
 
 #: src/views/Initializing.js:21
 msgid "Connecting to Restreamer Core ..."
@@ -735,12 +757,15 @@ msgstr "延迟（ms）"
 #: src/views/Edit/index.js:635
 #: src/views/Edit/index.js:671
 #: src/views/Playersite.js:506
-#: src/views/Publication/Edit.js:604
-#: src/views/Publication/Edit.js:636
+#: src/views/Publication/Edit.js:555
+#: src/views/Publication/Edit.js:571
+#: src/views/Publication/Edit.js:785
+#: src/views/Publication/Edit.js:817
 msgid "Delete"
 msgstr "删除"
 
-#: src/views/Publication/Edit.js:641
+#: src/views/Publication/Edit.js:576
+#: src/views/Publication/Edit.js:822
 msgid "Deleting a publication service cannot be reversed. The publication stops immediately."
 msgstr "删除串流输出服务无法撤消。串流输出立即停止。"
 
@@ -780,7 +805,7 @@ msgstr "断连 & 继续"
 msgid "Disconnecting ..."
 msgstr "正在断开连接 ..."
 
-#: src/misc/controls/HLS.js:70
+#: src/misc/controls/HLS.js:78
 #: src/views/Settings.js:1767
 msgid "Disk"
 msgstr "硬盘"
@@ -803,9 +828,13 @@ msgstr "确定要立刻重启应用吗？"
 msgid "Do you want to delete \"{0}\"?"
 msgstr "确定要删除 \"{0}\" 吗？"
 
-#: src/views/Publication/Edit.js:628
+#: src/views/Publication/Edit.js:809
 msgid "Do you want to delete {title}?"
 msgstr "确定要删除 {title} 吗？"
+
+#: src/views/Publication/Edit.js:563
+msgid "Do you want to delete this publication?"
+msgstr ""
 
 #: src/views/Edit/index.js:644
 msgid "Do you want to disconnect \"{0}\"?"
@@ -822,7 +851,7 @@ msgstr "文档"
 #: src/views/Publication/Services/Image2.js:171
 #: src/views/Publication/Services/MPEGTS.js:365
 #: src/views/Publication/Services/RTMP.js:286
-#: src/views/Publication/Services/RTSP.js:235
+#: src/views/Publication/Services/RTSP.js:258
 #: src/views/Publication/Services/SRT.js:428
 #: src/views/Publication/Services/UDP.js:241
 msgid "Documentation"
@@ -848,7 +877,7 @@ msgstr "编辑"
 msgid "Edit the audio and video sources for the live stream. Add a description, and set your desired content license."
 msgstr "编辑直播流的音频和视频源。添加描述，并设置您想要的内容许可。"
 
-#: src/views/Publication/Edit.js:417
+#: src/views/Publication/Edit.js:596
 msgid "Edit: {title}"
 msgstr "编辑：{title}"
 
@@ -927,8 +956,8 @@ msgid "Encoder"
 msgstr "编码器"
 
 #: src/views/Edit/Summary.js:95
-#: src/views/Publication/Add.js:492
-#: src/views/Publication/Edit.js:528
+#: src/views/Publication/Add.js:499
+#: src/views/Publication/Edit.js:709
 msgid "Encoding"
 msgstr "编码"
 
@@ -990,7 +1019,7 @@ msgstr "扩展频道描述下的区域（评论）。"
 msgid "Expert mode"
 msgstr "专家模式"
 
-#: src/misc/controls/HLS.js:78
+#: src/misc/controls/HLS.js:86
 msgid "EXT-X-VERSION"
 msgstr "EXT-X-VERSION"
 
@@ -1010,7 +1039,7 @@ msgstr "扩展底栏"
 msgid "Extend header"
 msgstr "扩展顶栏"
 
-#: src/views/Publication/Add.js:229
+#: src/views/Publication/Add.js:236
 msgid "Failed to create publication service ({0})"
 msgstr "创建串流输出服务失败（{0}）"
 
@@ -1039,7 +1068,7 @@ msgstr "终止进程失败"
 msgid "Failed to store player size setting."
 msgstr "保存播放器尺寸设置失败。"
 
-#: src/views/Publication/Edit.js:269
+#: src/views/Publication/Edit.js:401
 msgid "Failed to store publication service ({0})"
 msgstr "保存串流输出服务失败（{0}）"
 
@@ -1093,6 +1122,10 @@ msgstr "选项"
 msgid "For Javascripts."
 msgstr "For Javascripts."
 
+#: src/views/Publication/Services/RTSP.js:167
+msgid "For playback in VRChat, forcing TCP transport here plus using an \"rtspt://\" URL (instead of \"rtsp://\") on the RTSP server/player side gives the lowest latency and avoids UDP packet loss. This only affects how this stream is pushed to your RTSP server - the \"rtspt://\" part is something you enter wherever you play the stream back (e.g. in a VRChat video player), not here."
+msgstr ""
+
 #: src/views/Playersite.js:753
 msgid "For Stylesheets."
 msgstr "For Stylesheets."
@@ -1144,26 +1177,29 @@ msgstr "帧率模式"
 msgid "Frequency (Hz)"
 msgstr "频率（Hz）"
 
+#: src/views/Publication/Services/TikTok.js:314
+msgid "Game"
+msgstr ""
+
 #: src/views/Edit/index.js:418
 #: src/views/Edit/index.js:430
 #: src/views/Edit/Sources/Network.js:612
 #: src/views/Playersite.js:328
 #: src/views/Playersite.js:341
-#: src/views/Publication/Add.js:414
-#: src/views/Publication/Edit.js:426
+#: src/views/Publication/Add.js:421
+#: src/views/Publication/Edit.js:605
 #: src/views/Publication/Services/DASH.js:211
 #: src/views/Publication/Services/HLS.js:200
 #: src/views/Publication/Services/Icecast.js:179
 #: src/views/Publication/Services/Image2.js:139
 #: src/views/Publication/Services/RTMP.js:181
-#: src/views/Publication/Services/RTSP.js:169
+#: src/views/Publication/Services/RTSP.js:192
 #: src/views/Publication/Services/SRT.js:177
 #: src/views/Settings.js:1231
 #: src/views/Settings.js:1252
 msgid "General"
 msgstr "常规"
 
-#: src/views/Publication/Services/DLive.js:79
 #: src/views/Publication/Services/Facebook.js:115
 #: src/views/Publication/Services/Facebook.js:133
 #: src/views/Publication/Services/Instagram.js:85
@@ -1173,9 +1209,10 @@ msgstr "常规"
 #: src/views/Publication/Services/PeerTube.js:96
 #: src/views/Publication/Services/Restream.js:120
 #: src/views/Publication/Services/Rumble.js:107
-#: src/views/Publication/Services/Trovo.js:79
+#: src/views/Publication/Services/TikTok.js:250
 #: src/views/Publication/Services/Twitch.js:155
 #: src/views/Publication/Services/Twitter.js:179
+#: src/views/Publication/Services/VPZone.js:88
 #: src/views/Publication/Services/Wettercom.js:107
 #: src/views/Publication/Services/Youtube.js:193
 msgid "GET"
@@ -1284,7 +1321,7 @@ msgstr "除了播放器之外，Restreamer 还提供了一个完整的展示页�
 msgid "In order to proceed anyways, you can provide <0>hints</0> about the available streams."
 msgstr ""
 
-#: src/misc/controls/HLS.js:67
+#: src/misc/controls/HLS.js:75
 #: src/views/Settings.js:1693
 msgid "In-memory"
 msgstr "In-memory"
@@ -1294,7 +1331,7 @@ msgstr "In-memory"
 msgid "In-memory storage"
 msgstr "In-memory 存储"
 
-#: src/views/Publication/Add.js:313
+#: src/views/Publication/Add.js:320
 msgid "Incompatible"
 msgstr "不兼容"
 
@@ -1347,6 +1384,10 @@ msgstr "间隔（秒）"
 msgid "Issue alert"
 msgstr "问题警告"
 
+#: src/views/Publication/Services/TikTok.js:343
+msgid "Just a preview - the real session starts automatically once the source goes live."
+msgstr ""
+
 #: src/misc/Progress.js:105
 #: src/views/Main/Progress.js:67
 #: src/views/Main/Publication.js:184
@@ -1389,8 +1430,8 @@ msgid "Life color"
 msgstr "Life color"
 
 #: src/views/Edit/index.js:565
-#: src/views/Publication/Add.js:458
-#: src/views/Publication/Edit.js:470
+#: src/views/Publication/Add.js:465
+#: src/views/Publication/Edit.js:651
 msgid "Limits"
 msgstr "限制"
 
@@ -1423,13 +1464,13 @@ msgstr "要缓存文件的扩展名列表（例如 \".html\"），每行一个�
 msgid "List of IP ranges in CIDR notation, e.g., 127.0.0.1/32, that the statistics will not record—one IP range per line. Leave empty to record all sessions."
 msgstr "以 CIDR 表示法表示的 IP 范围列表，例如 127.0.0.1/32，统计信息不会记录 - 每行一个 IP 范围。留空以记录所有会话。"
 
-#: src/misc/controls/HLS.js:107
+#: src/misc/controls/HLS.js:115
 msgid "List size (segments)"
 msgstr "列表大小（segments）"
 
 #: src/views/Publication/Services/DLive.js:15
-msgid "Live-Streaming to dlive Live RTMP Service."
-msgstr "将直播流传输到 dlive Live RTMP 服务。"
+#~ msgid "Live-Streaming to dlive Live RTMP Service."
+#~ msgstr "将直播流传输到 dlive Live RTMP 服务。"
 
 #: src/views/Publication/Services/Facebook.js:16
 msgid "Live-Streaming to Facebook Live RTMP service"
@@ -1451,9 +1492,13 @@ msgstr "将直播流传输到 Media Network RTMP 服务。"
 msgid "Live-Streaming to PeerTube v3+ RTMP/S Service."
 msgstr "将直播流传输到 PeerTube V3+ RTMP/S 服务。"
 
+#: src/views/Publication/Services/TikTok.js:24
+msgid "Live-Streaming to TikTok LIVE via RTMP. Either paste a server URL and stream key from TikTok LIVE Studio directly, or provide a Streamlabs account token so this can start/stop the TikTok session automatically together with the source stream, with a title and game category. Requires TikTok LIVE access on your account."
+msgstr ""
+
 #: src/views/Publication/Services/Trovo.js:15
-msgid "Live-Streaming to Trovo Live RTMP Service."
-msgstr "将直播流传输到 Trove Live RTMP 服务。"
+#~ msgid "Live-Streaming to Trovo Live RTMP Service."
+#~ msgstr "将直播流传输到 Trove Live RTMP 服务。"
 
 #: src/views/Publication/Services/Twitch.js:17
 msgid "Live-Streaming to Twitch Live RTMP Service."
@@ -1462,6 +1507,10 @@ msgstr "串流到 Twitch Live RTMP 服务。"
 #: src/views/Publication/Services/Vimeo.js:12
 msgid "Live-Streaming to Vimeo Live RTMP Service"
 msgstr "串流到 Vimeo Live RTMP 服务"
+
+#: src/views/Publication/Services/VPZone.js:17
+msgid "Live-Streaming to VPZone RTMP Service."
+msgstr ""
 
 #: src/views/Publication/Services/Livespotting.js:94
 msgid "Livesource ID"
@@ -1558,7 +1607,7 @@ msgstr "使频道可用作 SRT 流（实验）。"
 msgid "Marked frames"
 msgstr "标记的帧"
 
-#: src/misc/controls/HLS.js:117
+#: src/misc/controls/HLS.js:137
 msgid "Master playlist (increases browser/client compatibility)"
 msgstr "Master playlist（增加浏览器/客户端兼容性）"
 
@@ -1830,6 +1879,15 @@ msgstr "确定"
 msgid "One referrer per line, e.g. http://www.example.com"
 msgstr "每行一个来源，例如 http://www.example.com"
 
+#: src/views/Publication/Services/WHIP.js:161
+msgid "Only letters, numbers, \"-\" and \"_\" are allowed in the stream name."
+msgstr ""
+
+#: src/views/Edit/Sources/WHIP.js:99
+#: src/views/Publication/Services/WHEP.js:169
+msgid "Only letters, numbers, \"-\" and \"_\" are allowed."
+msgstr ""
+
 #: src/views/Playersite.js:839
 msgid "Open"
 msgstr "打开"
@@ -1855,7 +1913,7 @@ msgstr "SRT 加密的密码。"
 msgid "Passphrase must be between 10 and 79 characters long"
 msgstr "密码长度必须介于 10 和 79 之间"
 
-#: src/views/Publication/Edit.js:533
+#: src/views/Publication/Edit.js:714
 msgid "Passthrough (copy) should only be disabled if necessary. Each encoding requires additional CPU/GPU resources."
 msgstr "仅在必要时才应禁用直通（复制）。每种编码都需要额外的 CPU/GPU 资源。"
 
@@ -1867,7 +1925,7 @@ msgstr "仅在必要时才应禁用直通（复制）。每种编码都需要额
 #: src/views/Publication/Services/DASH.js:198
 #: src/views/Publication/Services/HLS.js:187
 #: src/views/Publication/Services/Red5.js:157
-#: src/views/Publication/Services/RTSP.js:156
+#: src/views/Publication/Services/RTSP.js:179
 #: src/views/Publication/Services/WOWZA.js:178
 #: src/views/Settings.js:1569
 #: src/views/Settings.js:1727
@@ -1904,9 +1962,13 @@ msgstr ""
 msgid "Plan: <0>Starter</0>"
 msgstr "计划：<0>起步</0>"
 
-#: src/views/Publication/Add.js:389
+#: src/views/Publication/Add.js:396
 msgid "Platforms"
 msgstr "直播平台"
+
+#: src/views/Publication/Services/WHEP.js:26
+msgid "Play the main source over WebRTC (sub-second latency) via WHEP. This does not itself let VRChat play the stream - VRChat's video players don't support WebRTC - but it's the fastest way to preview/monitor a stream in a browser, and a building block for anything else that speaks WHEP."
+msgstr ""
 
 #: src/views/Publication/Player.js:384
 #: src/views/Settings.js:1237
@@ -1936,7 +1998,7 @@ msgstr "播放页"
 msgid "Playlist"
 msgstr "播放列表"
 
-#: src/misc/controls/HLS.js:88
+#: src/misc/controls/HLS.js:96
 msgid "Playlist version (M3U8). Version 3 has the best browser/client compatibility."
 msgstr "Playlist 版本（M3U8）。版本 3 有最好的浏览器/客户端兼容性。"
 
@@ -1963,7 +2025,7 @@ msgstr "请检查 <0>进程日志</0>"
 #: src/views/Publication/Services/Red5.js:25
 #: src/views/Publication/Services/Restream.js:26
 #: src/views/Publication/Services/RTMP.js:32
-#: src/views/Publication/Services/RTSP.js:36
+#: src/views/Publication/Services/RTSP.js:37
 #: src/views/Publication/Services/SRT.js:33
 #: src/views/Publication/Services/UDP.js:31
 #: src/views/Publication/Services/WOWZA.js:28
@@ -1990,7 +2052,7 @@ msgstr "请与该服务的运营商联系并检查发生了什么。"
 msgid "Please select a file to upload."
 msgstr "请选择要上传的文件。"
 
-#: src/views/Publication/Add.js:497
+#: src/views/Publication/Add.js:504
 msgid "Please use \"Passthrough (copy)\" if possible. Encoding requires additional CPU/GPU resources."
 msgstr "请尽可能使用 \"直通（复制）\"。编码需要额外的 CPU/GPU 资源。"
 
@@ -2024,6 +2086,10 @@ msgstr "海报图片 URL"
 msgid "Preset"
 msgstr "预设"
 
+#: src/views/Publication/Services/TikTok.js:333
+msgid "Preview server/key from Streamlabs"
+msgstr ""
+
 #: src/views/Publication/Services/Youtube.js:197
 msgid "Primary stream"
 msgstr "主媒体流"
@@ -2045,31 +2111,32 @@ msgstr "主线路 key"
 #: src/views/Edit/Sources/VideoLoop.js:163
 #: src/views/Edit/Sources/VirtualAudio.js:169
 #: src/views/Edit/Sources/VirtualVideo.js:188
+#: src/views/Edit/Sources/WHIP.js:134
 msgid "Probe"
 msgstr "检测媒体流信息"
 
 #: src/views/Edit/index.js:554
-#: src/views/Publication/Add.js:447
-#: src/views/Publication/Edit.js:459
+#: src/views/Publication/Add.js:454
+#: src/views/Publication/Edit.js:640
 msgid "Process"
 msgstr "串流进程"
 
-#: src/views/Publication/Add.js:416
-#: src/views/Publication/Edit.js:428
+#: src/views/Publication/Add.js:423
+#: src/views/Publication/Edit.js:607
 msgid "Process control"
 msgstr "进程控制"
 
 #: src/views/Main/index.js:451
 #: src/views/Main/index.js:467
-#: src/views/Publication/Edit.js:494
-#: src/views/Publication/Edit.js:613
+#: src/views/Publication/Edit.js:675
+#: src/views/Publication/Edit.js:794
 msgid "Process details"
 msgstr "进程详情"
 
 #: src/views/Main/index.js:454
 #: src/views/Main/index.js:475
-#: src/views/Publication/Edit.js:497
-#: src/views/Publication/Edit.js:621
+#: src/views/Publication/Edit.js:678
+#: src/views/Publication/Edit.js:802
 msgid "Process report"
 msgstr "进程报告"
 
@@ -2106,7 +2173,7 @@ msgstr "Profile"
 #: src/views/Publication/Services/Owncast.js:88
 #: src/views/Publication/Services/Red5.js:105
 #: src/views/Publication/Services/RTMP.js:149
-#: src/views/Publication/Services/RTSP.js:144
+#: src/views/Publication/Services/RTSP.js:154
 #: src/views/Publication/Services/SRT.js:158
 #: src/views/Publication/Services/Telegram.js:79
 #: src/views/Publication/Services/UDP.js:124
@@ -2114,7 +2181,7 @@ msgstr "Profile"
 msgid "Protocol"
 msgstr "协议"
 
-#: src/views/Publication/Add.js:395
+#: src/views/Publication/Add.js:402
 msgid "Protocols"
 msgstr "串流协议"
 
@@ -2122,8 +2189,8 @@ msgstr "串流协议"
 msgid "Public domain/s"
 msgstr "公有域名"
 
-#: src/views/Publication/Edit.js:117
-#: src/views/Publication/Edit.js:127
+#: src/views/Publication/Edit.js:206
+#: src/views/Publication/Edit.js:543
 msgid "Publication service not found"
 msgstr "找不到串流输出服务"
 
@@ -2134,6 +2201,15 @@ msgstr "已保存发布页设置"
 #: src/views/Main/Publication.js:163
 msgid "Publications"
 msgstr "串流输出"
+
+#: src/views/Edit/Sources/WHIP.js:108
+msgid "Publish to this URL with a WHIP-capable encoder (e.g. OBS Studio's WHIP output, or a browser). This uses WebRTC, so latency is typically sub-second."
+msgstr ""
+
+#: src/views/Publication/Edit.js:297
+#: src/views/Publication/Edit.js:319
+msgid "Publishing to the remote WHIP server failed"
+msgstr ""
 
 #: src/views/Edit/Sources/Network.js:1154
 msgid "Pull Mode"
@@ -2225,6 +2301,7 @@ msgstr "刷新"
 #: src/views/Publication/Services/Twitch.js:83
 #: src/views/Publication/Services/Twitter.js:150
 #: src/views/Publication/Services/Twitter.js:166
+#: src/views/Publication/Services/VPZone.js:78
 msgid "Region"
 msgstr "区域"
 
@@ -2232,10 +2309,18 @@ msgstr "区域"
 msgid "Register user"
 msgstr "注册用户"
 
+#: src/views/Publication/Services/WHIP.js:17
+msgid "Relay the main source to another WHIP server (e.g. a MediaMTX \"/mystream/whip\" endpoint) over WebRTC. This core acts as the WHIP client/publisher - no ffmpeg codec conversion needed beyond H264+Opus, which the source encoding should already provide."
+msgstr ""
+
 #: src/views/Password.js:178
 #: src/views/Settings.js:2266
 msgid "Reload"
 msgstr "重新加载"
+
+#: src/views/Publication/Services/WHIP.js:143
+msgid "Remote WHIP server URL"
+msgstr ""
 
 #: src/misc/modals/Hint.js:159
 msgid "Remove Audio"
@@ -2249,9 +2334,21 @@ msgstr ""
 msgid "Remove the oldest entries if the /memfs is full"
 msgstr "如果 /memfs 已满则移除最早的内容"
 
+#: src/views/Publication/Services/TikTok.js:328
+msgid "Requires a token above. Type to search TikTok's game categories."
+msgstr ""
+
 #: src/views/Settings.js:1942
 msgid "Requires activation"
 msgstr "需要激活"
+
+#: src/views/Edit/Sources/WHIP.js:123
+msgid "Requires the WebRTC server to be enabled. See <0>RFC 9725 (WHIP)</0>."
+msgstr ""
+
+#: src/views/Publication/Services/WHEP.js:223
+msgid "Requires the WebRTC server to be enabled. See <0>WHEP</0>."
+msgstr ""
 
 #: src/views/Publication/Player.js:546
 msgid "Reset logo"
@@ -2377,8 +2474,8 @@ msgstr "采样"
 #: src/views/Edit/index.js:632
 #: src/views/Edit/Wizard/License.js:43
 #: src/views/Playersite.js:829
-#: src/views/Publication/Add.js:567
-#: src/views/Publication/Edit.js:601
+#: src/views/Publication/Add.js:574
+#: src/views/Publication/Edit.js:782
 #: src/views/Publication/Player.js:542
 #: src/views/Settings.js:2224
 msgid "Save"
@@ -2423,11 +2520,11 @@ msgstr "Security token"
 msgid "Seekbar color"
 msgstr "进度条颜色"
 
-#: src/misc/controls/HLS.js:95
+#: src/misc/controls/HLS.js:103
 msgid "Segment length (seconds)"
 msgstr "Segment 长度（秒）"
 
-#: src/misc/controls/HLS.js:100
+#: src/misc/controls/HLS.js:108
 msgid "Segment will be cut on the following keyframe after this time has passed. 2 is recommended."
 msgstr "该值所示时间过后，片段将在下一个关键帧被剪切。推荐值是2。"
 
@@ -2451,8 +2548,8 @@ msgstr "选择一个设备："
 msgid "Select audio source:"
 msgstr "选择音频源："
 
-#: src/views/Publication/Add.js:480
-#: src/views/Publication/Edit.js:520
+#: src/views/Publication/Add.js:487
+#: src/views/Publication/Edit.js:701
 msgid "Select RTMP or SRT (if enabled) for less latency."
 msgstr "选择 RTMP 或 SRT （如果可用）以减少延迟。"
 
@@ -2516,6 +2613,7 @@ msgstr "服务器"
 #: src/views/Publication/Services/Owncast.js:100
 #: src/views/Publication/Services/Rumble.js:88
 #: src/views/Publication/Services/Telegram.js:91
+#: src/views/Publication/Services/TikTok.js:242
 msgid "Server URL"
 msgstr "服务器 URL"
 
@@ -2526,8 +2624,8 @@ msgstr "服务器 URL"
 msgid "Service"
 msgstr "服务"
 
-#: src/views/Publication/Add.js:427
-#: src/views/Publication/Edit.js:439
+#: src/views/Publication/Add.js:434
+#: src/views/Publication/Edit.js:618
 msgid "Service name"
 msgstr "服务名称"
 
@@ -2550,6 +2648,10 @@ msgstr "为传出 HLS 数据传输设置带宽限制，以 Mbit/s 为单位。�
 #: src/views/Settings.js:1499
 msgid "Sets a viewer limit for HLS sessions. If the limit is exceeded, HLS viewers receive the HTTP status code 509 (Bandwidth Limit Exceeded). 0 is unlimited."
 msgstr "设置 HLS 会话的查看者限制。如果超出限制，HLS 查看器会收到 HTTP 状态代码 509（超出带宽限制）。 0 表示无限制。"
+
+#: src/misc/controls/HLS.js:128
+msgid "Sets segment length to 1s and list size to 4. This is standard HLS with short segments, not the experimental LHLS mode above, so it works with any HLS player (including VRChat's video player) - it just trades some efficiency/compatibility margin for lower latency. Make sure your encoder's keyframe interval matches (1s), or segments won't actually cut at 1s."
+msgstr ""
 
 #: src/views/Settings.js:1319
 msgid "Setting for connection to the service."
@@ -2620,22 +2722,22 @@ msgstr "通过社交媒体登录（OAuth2, 2FA）"
 msgid "Socket timeout (microseconds)"
 msgstr "Socket 超时（毫秒）"
 
-#: src/views/Publication/Add.js:392
+#: src/views/Publication/Add.js:399
 msgid "Software"
 msgstr "软件"
 
 #: src/misc/controls/Source.js:74
 #: src/views/Edit/Sources/VirtualAudio.js:88
 #: src/views/Edit/Sources/VirtualVideo.js:112
-#: src/views/Publication/Add.js:475
-#: src/views/Publication/Edit.js:515
+#: src/views/Publication/Add.js:482
+#: src/views/Publication/Edit.js:696
 msgid "Source"
 msgstr "媒体源"
 
-#: src/views/Publication/Add.js:415
-#: src/views/Publication/Add.js:470
-#: src/views/Publication/Edit.js:427
-#: src/views/Publication/Edit.js:510
+#: src/views/Publication/Add.js:422
+#: src/views/Publication/Add.js:477
+#: src/views/Publication/Edit.js:606
+#: src/views/Publication/Edit.js:691
 msgid "Source & Encoding"
 msgstr "媒体源 & 编码"
 
@@ -2687,7 +2789,7 @@ msgstr "start_at_zero"
 msgid "Statistics"
 msgstr "统计"
 
-#: src/misc/controls/HLS.js:65
+#: src/misc/controls/HLS.js:73
 #: src/views/Settings.js:1238
 #: src/views/Settings.js:1688
 msgid "Storage"
@@ -2711,7 +2813,6 @@ msgstr ""
 #: src/views/Publication/Services/CDN77.js:113
 #: src/views/Publication/Services/DaCast.js:153
 #: src/views/Publication/Services/Dailymotion.js:98
-#: src/views/Publication/Services/DLive.js:75
 #: src/views/Publication/Services/Dummy.js:280
 #: src/views/Publication/Services/Instagram.js:81
 #: src/views/Publication/Services/Kick.js:100
@@ -2724,10 +2825,11 @@ msgstr ""
 #: src/views/Publication/Services/Restream.js:116
 #: src/views/Publication/Services/Rumble.js:100
 #: src/views/Publication/Services/Telegram.js:101
-#: src/views/Publication/Services/Trovo.js:75
+#: src/views/Publication/Services/TikTok.js:257
 #: src/views/Publication/Services/Twitch.js:151
 #: src/views/Publication/Services/Twitter.js:175
 #: src/views/Publication/Services/Vimeo.js:73
+#: src/views/Publication/Services/VPZone.js:84
 #: src/views/Publication/Services/Wettercom.js:100
 #: src/views/Publication/Services/Youtube.js:189
 msgid "Stream key"
@@ -2737,8 +2839,11 @@ msgstr "Stream key"
 msgid "Stream Key"
 msgstr "流钥匙"
 
+#: src/views/Edit/Sources/WHIP.js:89
 #: src/views/Publication/Services/Brightcove.js:101
 #: src/views/Publication/Services/Red5.js:136
+#: src/views/Publication/Services/WHEP.js:159
+#: src/views/Publication/Services/WHIP.js:133
 #: src/views/Publication/Services/WOWZA.js:158
 msgid "Stream name"
 msgstr "Stream name"
@@ -2756,6 +2861,14 @@ msgstr "发布服务的媒体源（实验性）。"
 #: src/views/Publication/Services/Dailymotion.js:86
 msgid "Stream URL"
 msgstr "媒体流 URL"
+
+#: src/views/Publication/Services/TikTok.js:276
+msgid "Streamlabs account token"
+msgstr ""
+
+#: src/views/Publication/Services/TikTok.js:282
+msgid "Streamlabs' own token, not a TikTok one - there's no way to obtain it without going through Streamlabs' login flow in a tool like Streamlabs Desktop first. This is not an officially documented API and may break without notice. Once a token and a game are set, this publication starts automatically when the source goes live and ends automatically when it stops - the manual connect/disconnect button still works too, but shouldn't be needed."
+msgstr ""
 
 #: src/views/Playersite.js:457
 msgid "Support datarhei Restreamer"
@@ -2835,11 +2948,11 @@ msgstr "此频道删除后无法恢复。该频道的所有串流输出将被删
 
 #: src/views/Edit/index.js:302
 #: src/views/Edit/Wizard/index.js:176
-#: src/views/Publication/Edit.js:262
+#: src/views/Publication/Edit.js:394
 msgid "The input profile is not complete. Please define a video and audio source."
 msgstr "输入设置不完整。请设置视频源和音频源。"
 
-#: src/views/Publication/Add.js:222
+#: src/views/Publication/Add.js:229
 msgid "The input profile is not complete. Please define a video and/or audio source."
 msgstr "输入配置文件不完整。请定义视频和/或音频源。"
 
@@ -2848,7 +2961,7 @@ msgstr "输入配置文件不完整。请定义视频和/或音频源。"
 msgid "The layout of the audio stream."
 msgstr "音频流的布局。"
 
-#: src/misc/controls/HLS.js:112
+#: src/misc/controls/HLS.js:120
 msgid "The maximum number of playlist segments. 0 will contain all the segments. 6 is recommended."
 msgstr "最大的 playlist segments 数量。0 表示包含所有 segment。推荐值为 6。"
 
@@ -2864,19 +2977,19 @@ msgstr "在法律允许的范围内，根据版权法，包括所有相关和邻
 msgid "The public reachable domain name of the host this Restreamer is running on. Separate multiple domain names by a comma."
 msgstr "运行 Restreamer 主机的公网域名。用逗号分隔多个域名。"
 
-#: src/views/Publication/Edit.js:317
+#: src/views/Publication/Edit.js:449
 msgid "The publication service \"{0}\" could not be deleted"
 msgstr "无法删除串流输出服务 \"{0}\""
 
-#: src/views/Publication/Add.js:237
+#: src/views/Publication/Add.js:244
 msgid "The publication service \"{0}\" has been created"
 msgstr "已创建串流输出服务 \"{0}\""
 
-#: src/views/Publication/Edit.js:323
+#: src/views/Publication/Edit.js:455
 msgid "The publication service \"{0}\" has been deleted"
 msgstr "已删除串流输出服务 \"{0}\""
 
-#: src/views/Publication/Add.js:235
+#: src/views/Publication/Add.js:242
 msgid "The publication service has been created"
 msgstr "已创建串流输出服务"
 
@@ -2903,7 +3016,7 @@ msgstr "所选文件太大 (<0/>)。只允许 <1/>。"
 msgid "The selected file type ({0}) is not allowed. Allowed file types are {1}"
 msgstr "不允许使用所选文件类型（{0}）。允许的文件类型为 {1}"
 
-#: src/views/Publication/Edit.js:277
+#: src/views/Publication/Edit.js:409
 msgid "The settings for \"{0}\" have been saved"
 msgstr "已保存 \"{0}\" 的设置"
 
@@ -2943,6 +3056,10 @@ msgstr "该视频源没有提供任何兼容的音频流。推荐<0>静音音频
 msgid "The video source is compatible. Select the desired resolution:"
 msgstr "视频源不兼容。选择期望的解决方案："
 
+#: src/views/Publication/Services/WHEP.js:211
+msgid "The WHEP server only speaks H264 and Opus. If you pick \"copy\" for a source that isn't already in that codec, playback will fail."
+msgstr ""
+
 #: src/views/Settings.js:1276
 msgid "There are updates available. Here you get more information."
 msgstr "有可用的更新。这里获取更多信息。"
@@ -2973,6 +3090,10 @@ msgstr "设置中有错误。设置未保存。"
 #: src/views/Login.js:257
 msgid "There's no login method available."
 msgstr "没有可用的登录方式。"
+
+#: src/views/Publication/Services/TikTok.js:337
+msgid "This ends the current TikTok session and starts a new one with the title/game above - viewers will see the stream briefly drop and reconnect. There's no way to change title/game on TikTok without doing this."
+msgstr ""
 
 #: src/views/Publication/Services/Dummy.js:26
 msgid "This is a dummy service that explains to you the concepts of service."
@@ -3014,6 +3135,10 @@ msgstr "该许可证允许再利用者以任何媒体或格式分发、重新混
 msgid "This protocol is unknown or not supported by the available FFmpeg binary."
 msgstr "该协议未知或不被当前可用的 FFmpeg 支持。"
 
+#: src/views/Publication/Edit.js:547
+msgid "This publication was set up with a service (\"{_service}\") that no longer exists - it may have shut down or been removed. It can't be edited, only deleted."
+msgstr ""
+
 #: src/views/Edit/index.js:657
 msgid "This source cannot be edited while it is in use. To continue, you have to disconnect the source."
 msgstr "此源在使用中无法编辑。要继续，您必须断开信号源。"
@@ -3034,6 +3159,10 @@ msgstr "该版本的 UI 是兼容的。"
 msgid "Threshold (seconds)"
 msgstr "阈值（秒）"
 
+#: src/views/Publication/Edit.js:140
+msgid "TikTok autopilot failed ({0})"
+msgstr ""
+
 #: src/misc/coders/Encoders/video/av1_librav1e.js:212
 msgid "Tile Columns"
 msgstr "瓷砖立柱"
@@ -3049,6 +3178,10 @@ msgstr "瓷砖"
 #: src/views/Settings.js:1666
 msgid "Time until an inactive viewer connection is treated as closed."
 msgstr "超出该时间的不活动查看器连接将被视为已关闭。"
+
+#: src/views/Publication/Services/TikTok.js:295
+msgid "Title"
+msgstr ""
 
 #: src/misc/coders/Encoders/video/h264_v4l2m2m.js:181
 msgid "To stabilize the system, increase the HLS segment length for the keyframe interval by 2-3 * (Processing and Control)."
@@ -3116,7 +3249,7 @@ msgstr "将主媒体源传输到 Red5/Pro 服务器。有关该设置的更多�
 msgid "Transmit the main source to an RTMP(e|s|t|te|ts) Server. More details about the settings can be found <0>here</0>."
 msgstr "将主媒体源传输到 RTMP(e|s|t|te|ts) 服务器。有关设置的更多详细信息，请访问<0>这里</0>。"
 
-#: src/views/Publication/Services/RTSP.js:28
+#: src/views/Publication/Services/RTSP.js:29
 msgid "Transmit the main source to an RTSP Server. More details about the settings can be found <0>here</0>."
 msgstr "将主媒体源传输到 RTSP 服务器。有关设置的更多详细信息，请访问<0>这里</0>。"
 
@@ -3229,6 +3362,10 @@ msgstr "未选中"
 msgid "Update details (Changelog)"
 msgstr "更新详情（Changelog）"
 
+#: src/views/Publication/Services/TikTok.js:333
+msgid "Update title/game now"
+msgstr ""
+
 #: src/views/Edit/Sources/AudioLoop.js:146
 #: src/views/Edit/Sources/VideoLoop.js:154
 #: src/views/Playersite.js:514
@@ -3272,6 +3409,14 @@ msgstr "在线时长"
 msgid "Use Auth0 for your running Restreamer Core. More <0>details</0>."
 msgstr "为你的 Restreamer Core 启用 Auth0。<0>查看更多详情</0>。"
 
+#: src/misc/controls/HLS.js:125
+msgid "Use low-latency preset (~3-4s delay)"
+msgstr ""
+
+#: src/views/Publication/Services/RTSP.js:164
+msgid "Use low-latency preset (TCP transport)"
+msgstr ""
+
 #: src/views/Edit/index.js:444
 msgid "Use the wizard (<0/>) for a quick and easy setup, or edit (<1/>) the sources directly in custom mode."
 msgstr "使用向导 (<0/>) 快速设置，或者直接在自定义模式中编辑 (<1/>) 源。"
@@ -3299,7 +3444,7 @@ msgstr "用户注册"
 #: src/views/Publication/Services/DASH.js:195
 #: src/views/Publication/Services/HLS.js:184
 #: src/views/Publication/Services/Red5.js:146
-#: src/views/Publication/Services/RTSP.js:153
+#: src/views/Publication/Services/RTSP.js:176
 #: src/views/Publication/Services/WOWZA.js:168
 #: src/views/Settings.js:1556
 #: src/views/Settings.js:1714
@@ -3332,9 +3477,13 @@ msgstr "天鹅绒"
 msgid "Vertical Flip"
 msgstr "垂直翻转"
 
-#: src/views/Publication/Add.js:502
+#: src/views/Publication/Add.js:509
 msgid "Video"
 msgstr "视频"
+
+#: src/views/Publication/Services/WHEP.js:198
+msgid "Video codec"
+msgstr ""
 
 #: src/views/Edit/Sources/AVFoundation.js:126
 #: src/views/Edit/Sources/Raspicam.js:98
@@ -3347,7 +3496,7 @@ msgstr "视频设备"
 
 #: src/views/Edit/Profile.js:490
 #: src/views/Edit/ProfileSummary.js:66
-#: src/views/Publication/Edit.js:540
+#: src/views/Publication/Edit.js:721
 msgid "Video settings"
 msgstr "视频设置"
 
@@ -3367,6 +3516,10 @@ msgstr "视频源"
 #: src/views/Main/Publication.js:173
 msgid "Viewer"
 msgstr "观看者"
+
+#: src/views/Publication/Services/WHEP.js:178
+msgid "Viewers/players that speak WHEP can watch this stream at this URL:"
+msgstr ""
 
 #: src/views/Edit/Sources/VirtualAudio.js:115
 msgid "violet"
@@ -3397,9 +3550,13 @@ msgstr "欢迎使用 Restreamer v2，这是一种快速简便的视频发布解�
 msgid "What speed preset to use."
 msgstr "使用什么速度预置。"
 
-#: src/misc/controls/HLS.js:74
+#: src/misc/controls/HLS.js:82
 msgid "Where to store the HLS playlist and segments. In-Memory is recommended."
 msgstr "存储 HLM playlist 和 segments 的位置。推荐 In-Memory。"
+
+#: src/views/Edit/Sources/WHIP.js:154
+msgid "WHIP (WebRTC)"
+msgstr ""
 
 #: src/views/Edit/Sources/VirtualAudio.js:111
 msgid "white"
@@ -3434,7 +3591,7 @@ msgstr "配置已更改。请重启应用以使更改生效。要立刻重启吗
 msgid "You have to reconnect manually"
 msgstr "需要手动重连"
 
-#: src/views/Publication/Edit.js:482
+#: src/views/Publication/Edit.js:663
 msgid "You have unsaved changes. Please save them before you can control the service again."
 msgstr "有未保存的更改。请保存以再次管理服务。"
 
