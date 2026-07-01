@@ -2834,6 +2834,23 @@ class Restreamer {
 		return await this._listSRTChannels();
 	}
 
+	// WebRTC (WHIP/WHEP)
+
+	// PublishWHIPClient starts relaying a resource to a remote WHIP server.
+	// Returns {address, video_port, audio_port} on success, null on failure.
+	async PublishWHIPClient(resource, remoteURL, token) {
+		const [val, err] = await this._call(this.api.WHIPClientPublish, resource, remoteURL, token);
+		if (err !== null) {
+			return null;
+		}
+
+		return val;
+	}
+
+	async UnpublishWHIPClient(resource) {
+		await this._call(this.api.WHIPClientUnpublish, resource);
+	}
+
 	// Expert Mode
 
 	IsExpert() {

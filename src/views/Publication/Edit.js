@@ -264,17 +264,33 @@ export default function Edit(props) {
 		}
 	};
 
+	// Some services (currently WHIP, relaying to a remote WHIP server) need
+	// an explicit session established/torn down alongside the publication
+	// connecting/disconnecting, since there's no ffmpeg-only way to speak
+	// WHIP - this core has to do that handshake itself.
+	const isWHIPClient = $service && $service.id === 'whip';
+
 	const handleServiceAction = async (action) => {
 		let state = 'disconnected';
 
 		if (action === 'connect') {
+			if (isWHIPClient) {
+				await props.restreamer.PublishWHIPClient($settings.settings.name, $settings.settings.remoteUrl, $settings.settings.token);
+			}
 			await props.restreamer.StartEgress(_channelid, id);
 			state = 'connecting';
 		} else if (action === 'disconnect') {
 			await props.restreamer.StopEgress(_channelid, id);
+			if (isWHIPClient) {
+				await props.restreamer.UnpublishWHIPClient($settings.settings.name);
+			}
 			state = 'disconnecting';
 		} else if (action === 'reconnect') {
 			await props.restreamer.StopEgress(_channelid, id);
+			if (isWHIPClient) {
+				await props.restreamer.UnpublishWHIPClient($settings.settings.name);
+				await props.restreamer.PublishWHIPClient($settings.settings.name, $settings.settings.remoteUrl, $settings.settings.token);
+			}
 			await props.restreamer.StartEgress(_channelid, id);
 			state = 'connecting';
 		}

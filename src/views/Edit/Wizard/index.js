@@ -255,6 +255,8 @@ export default function Wizard(props) {
 				knownSources.push('raspicam');
 			} else if (s === 'avfoundation') {
 				knownSources.push('avfoundation');
+			} else if (s === 'whip') {
+				knownSources.push('whip');
 			}
 		}
 

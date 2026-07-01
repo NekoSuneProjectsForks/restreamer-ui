@@ -476,6 +476,20 @@ class API {
 
 		return res;
 	}
+
+	async WHIPClientPublish(resource, remoteURL, token) {
+		return await this._POST('/v3/webrtc/whip/' + encodeURIComponent(resource), {
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify({ remote_url: remoteURL, token: token }),
+			expect: 'json',
+		});
+	}
+
+	async WHIPClientUnpublish(resource) {
+		return await this._DELETE('/v3/webrtc/whip/' + encodeURIComponent(resource));
+	}
 }
 
 export default API;
