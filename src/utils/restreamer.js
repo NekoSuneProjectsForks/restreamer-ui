@@ -514,6 +514,7 @@ class Restreamer {
 				virtualvideo: [],
 				videoloop: [],
 				audioloop: [],
+				whip: [],
 			},
 			sinks: {},
 		};
