@@ -9,6 +9,7 @@ import * as VideoLoop from './VideoLoop';
 import * as AudioLoop from './AudioLoop';
 import * as VirtualAudio from './VirtualAudio';
 import * as VirtualVideo from './VirtualVideo';
+import * as WHIP from './WHIP';
 
 class Registry {
 	constructor() {
@@ -40,6 +41,7 @@ class Registry {
 const registry = new Registry();
 
 registry.Register(Network);
+registry.Register(WHIP);
 registry.Register(ALSA);
 registry.Register(AVFoundation);
 registry.Register(Video4Linux);

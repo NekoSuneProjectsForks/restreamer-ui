@@ -19,6 +19,7 @@ import Select from '../../../misc/Select';
 import MultiSelect from '../../../misc/MultiSelect';
 import MultiSelectOption from '../../../misc/MultiSelectOption';
 import Password from '../../../misc/Password';
+import FormInlineButton from '../../../misc/FormInlineButton';
 
 const id = 'rtsp';
 const name = 'RTSP';
@@ -134,6 +135,15 @@ function Service(props) {
 		return output;
 	};
 
+	const handleLowLatencyPreset = () => {
+		settings.options.rtsp_transport = 'tcp';
+		settings.options.muxdelay = '0.1';
+
+		const output = createOutput(settings);
+
+		props.onChange([output], settings);
+	};
+
 	return (
 		<Grid container spacing={2}>
 			<Grid item xs={12} md={3}>
@@ -148,6 +158,19 @@ function Service(props) {
 			</Grid>
 			<Grid item xs={12} md={9}>
 				<TextField variant="outlined" fullWidth type="url" label={<Trans>Address</Trans>} value={settings.address} onChange={handleChange('address')} />
+			</Grid>
+			<Grid item xs={12}>
+				<FormInlineButton onClick={handleLowLatencyPreset}>
+					<Trans>Use low-latency preset (TCP transport)</Trans>
+				</FormInlineButton>
+				<Typography variant="caption" display="block">
+					<Trans>
+						For playback in VRChat, forcing TCP transport here plus using an "rtspt://" URL (instead of "rtsp://") on the RTSP
+						server/player side gives the lowest latency and avoids UDP packet loss. This only affects how this stream is pushed to
+						your RTSP server - the "rtspt://" part is something you enter wherever you play the stream back (e.g. in a VRChat video
+						player), not here.
+					</Trans>
+				</Typography>
 			</Grid>
 			<Grid item xs={6}>
 				<TextField variant="outlined" fullWidth label={<Trans>Username</Trans>} value={settings.username} onChange={handleChange('username')} />
