@@ -43,19 +43,21 @@ msgid "7 (+ fragmented MP4 format)"
 msgstr "7 (+ parçalanmış MP4 biçimi)"
 
 #: src/misc/ChannelList.js:412
-#: src/views/Edit/index.js:647
-#: src/views/Edit/index.js:666
+#: src/views/Edit/index.js:651
+#: src/views/Edit/index.js:670
 #: src/views/Edit/Profile.js:599
 #: src/views/Edit/Wizard/Abort.js:14
 #: src/views/Publication/Edit.js:566
 #: src/views/Publication/Edit.js:812
 #: src/views/Settings.js:2278
 #: src/views/Settings.js:2300
+#: src/views/Users.js:241
+#: src/views/Users.js:294
 msgid "Abort"
 msgstr "Durdur"
 
-#: src/Header.js:283
-#: src/Header.js:324
+#: src/Header.js:292
+#: src/Header.js:333
 msgid "About"
 msgstr "Hakkında"
 
@@ -82,6 +84,11 @@ msgstr "Yayın Ekle"
 #: src/misc/modals/Hint.js:158
 #~ msgid "Add Stream"
 #~ msgstr ""
+
+#: src/views/Users.js:230
+#: src/views/Users.js:238
+msgid "Add user"
+msgstr ""
 
 #: src/views/Publication/Add.js:373
 msgid "Add: {0}"
@@ -138,6 +145,11 @@ msgstr "Adres:"
 #: src/views/Playersite.js:552
 msgid "Adjust publication site colors and background as you like."
 msgstr "Yayın sitesi renklerini ve arka planını istediğiniz gibi ayarlayın."
+
+#: src/views/Users.js:211
+#: src/views/Users.js:272
+msgid "Admin"
+msgstr ""
 
 #: src/views/Login.js:322
 msgid "Advanced monitoring"
@@ -379,7 +391,7 @@ msgstr "mavi"
 msgid "Bottom field"
 msgstr "Alt alan"
 
-#: src/views/Edit/index.js:582
+#: src/views/Edit/index.js:586
 #: src/views/Edit/Wizard/Metadata.js:24
 msgid "Briefly describe what the audience will see during the live stream."
 msgstr "Canlı yayın sırasında izleyicilerin ne göreceğini kısaca açıklayın."
@@ -424,7 +436,7 @@ msgstr "Tıklamaları yakalayın"
 msgid "Capture cursor"
 msgstr "İmleci yakala"
 
-#: src/views/Edit/index.js:351
+#: src/views/Edit/index.js:355
 msgid "Channel \"{0}\" saved"
 msgstr "Kanal \"{0}\" kaydedildi"
 
@@ -491,7 +503,7 @@ msgstr "Chunk"
 #: src/misc/Changelog.js:177
 #: src/misc/ModalContent.js:77
 #: src/misc/modals/Hint.js:181
-#: src/views/Edit/index.js:621
+#: src/views/Edit/index.js:625
 #: src/views/Playersite.js:823
 #: src/views/Publication/Add.js:411
 #: src/views/Publication/Add.js:565
@@ -754,13 +766,14 @@ msgstr "Gecikme"
 msgid "Delay (ms)"
 msgstr "Gecikme (ms)"
 
-#: src/views/Edit/index.js:635
-#: src/views/Edit/index.js:671
+#: src/views/Edit/index.js:639
+#: src/views/Edit/index.js:675
 #: src/views/Playersite.js:506
 #: src/views/Publication/Edit.js:555
 #: src/views/Publication/Edit.js:571
 #: src/views/Publication/Edit.js:785
 #: src/views/Publication/Edit.js:817
+#: src/views/Users.js:299
 msgid "Delete"
 msgstr "Sil"
 
@@ -796,7 +809,7 @@ msgstr "Cihaz"
 msgid "Disconnect"
 msgstr "Bağlantıyı Kes"
 
-#: src/views/Edit/index.js:652
+#: src/views/Edit/index.js:656
 msgid "Disconnect & Continue"
 msgstr "Bağlantıyı Kes ve Devam Et"
 
@@ -824,7 +837,7 @@ msgstr "Disk kapasitesi"
 msgid "Do you really want to restart the application now?"
 msgstr "Uygulamayı gerçekten şimdi yeniden başlatmak istiyor musunuz?"
 
-#: src/views/Edit/index.js:663
+#: src/views/Edit/index.js:667
 msgid "Do you want to delete \"{0}\"?"
 msgstr "\"{0}\" silmek istiyor musunuz?"
 
@@ -836,12 +849,16 @@ msgstr "{title}'ı silmek istiyor musunuz?"
 msgid "Do you want to delete this publication?"
 msgstr ""
 
-#: src/views/Edit/index.js:644
+#: src/views/Users.js:291
+msgid "Do you want to delete this user?"
+msgstr ""
+
+#: src/views/Edit/index.js:648
 msgid "Do you want to disconnect \"{0}\"?"
 msgstr "\"{0}\" bağlantısını kesmek istiyor musunuz?"
 
-#: src/Header.js:289
-#: src/Header.js:330
+#: src/Header.js:298
+#: src/Header.js:339
 msgid "Docs"
 msgstr "Dokümanlar"
 
@@ -869,13 +886,17 @@ msgstr "Her bir alan"
 msgid "Each frames"
 msgstr "Her çerçeve"
 
-#: src/views/Edit/index.js:409
+#: src/views/Edit/index.js:413
 msgid "Edit"
 msgstr "Düzenle"
 
-#: src/views/Edit/index.js:435
+#: src/views/Edit/index.js:439
 msgid "Edit the audio and video sources for the live stream. Add a description, and set your desired content license."
 msgstr "Canlı akış için ses ve video kaynaklarını düzenleyin. Bir açıklama ekleyin ve istediğiniz içerik lisansını ayarlayın."
+
+#: src/views/Users.js:238
+msgid "Edit user"
+msgstr ""
 
 #: src/views/Publication/Edit.js:596
 msgid "Edit: {title}"
@@ -1047,18 +1068,26 @@ msgstr "Yayın hizmeti oluşturulamadı ({0})"
 msgid "Failed to create publication website files."
 msgstr "Yayın web sitesi dosyaları oluşturulamadı."
 
+#: src/views/Users.js:161
+msgid "Failed to delete user"
+msgstr ""
+
 #: src/views/Edit/Profile.js:512
 #: src/views/Edit/Profile.js:671
 msgid "Failed to probe the source. Please check the <0>probe details</0>."
 msgstr "Kaynak araştırması başarısız oldu. Lütfen <0>inceleme detaylarını</0> kontrol edin."
 
-#: src/utils/restreamer.js:449
+#: src/utils/restreamer.js:498
 msgid "Failed to refresh token: {0}"
 msgstr "Yenileme tokeni hatalı: {0}"
 
-#: src/views/Edit/index.js:316
+#: src/views/Edit/index.js:320
 msgid "Failed to save ingest metadata"
 msgstr "Alma meta verileri kaydedilemedi"
+
+#: src/views/Users.js:134
+msgid "Failed to save user ({0})"
+msgstr ""
 
 #: src/views/Edit/index.js:187
 msgid "Failed to stop process"
@@ -1072,19 +1101,19 @@ msgstr "Oyuncu boyutu ayarı kaydedilemedi."
 msgid "Failed to store publication service ({0})"
 msgstr "Yayın hizmeti depolanamadı ({0})"
 
-#: src/views/Edit/index.js:309
+#: src/views/Edit/index.js:312
 msgid "Failed to update ingest process ({0})"
 msgstr "Alma işlemi güncellenemedi ({0})"
 
-#: src/views/Edit/index.js:322
+#: src/views/Edit/index.js:326
 msgid "Failed to update ingest snapshot process ({0})"
 msgstr "Anlık görüntü alma işlemi güncellenemedi ({0})"
 
-#: src/views/Edit/index.js:328
+#: src/views/Edit/index.js:332
 msgid "Failed to update the player"
 msgstr "Oynatıcı güncellenemedi"
 
-#: src/views/Edit/index.js:334
+#: src/views/Edit/index.js:338
 msgid "Failed to update the playersite"
 msgstr "Oyuncu sitesi güncellenemedi"
 
@@ -1181,8 +1210,8 @@ msgstr "Frekans (Hz)"
 msgid "Game"
 msgstr ""
 
-#: src/views/Edit/index.js:418
-#: src/views/Edit/index.js:430
+#: src/views/Edit/index.js:422
+#: src/views/Edit/index.js:434
 #: src/views/Edit/Sources/Network.js:612
 #: src/views/Playersite.js:328
 #: src/views/Playersite.js:341
@@ -1247,7 +1276,7 @@ msgstr "Yükseklik"
 msgid "HLS"
 msgstr "HLS"
 
-#: src/views/Edit/index.js:490
+#: src/views/Edit/index.js:494
 msgid "HLS output"
 msgstr "HLS çıktısı"
 
@@ -1379,8 +1408,8 @@ msgstr "Örnek etki alanı"
 msgid "Interval (seconds)"
 msgstr "Aralık (saniye)"
 
-#: src/Header.js:295
-#: src/Header.js:336
+#: src/Header.js:304
+#: src/Header.js:345
 msgid "Issue alert"
 msgstr "Sorun uyarısı"
 
@@ -1419,8 +1448,8 @@ msgstr "Seviye"
 msgid "Level of system protocol."
 msgstr "Sistem protokolü seviyesi."
 
-#: src/views/Edit/index.js:421
-#: src/views/Edit/index.js:597
+#: src/views/Edit/index.js:425
+#: src/views/Edit/index.js:601
 #: src/views/Edit/Wizard/License.js:17
 msgid "License"
 msgstr "Lisans"
@@ -1429,7 +1458,7 @@ msgstr "Lisans"
 msgid "Life color"
 msgstr "Yaşam rengi"
 
-#: src/views/Edit/index.js:565
+#: src/views/Edit/index.js:569
 #: src/views/Publication/Add.js:465
 #: src/views/Publication/Edit.js:651
 msgid "Limits"
@@ -1533,15 +1562,15 @@ msgstr "Günlük kaydı"
 msgid "Login"
 msgstr "Giriş yap"
 
-#: src/utils/restreamer.js:262
-#: src/utils/restreamer.js:296
+#: src/utils/restreamer.js:266
+#: src/utils/restreamer.js:300
 msgid "Login failed: {0}"
 msgstr "Giriş başarısız oldu: {0}"
 
-#: src/utils/restreamer.js:271
-#: src/utils/restreamer.js:276
-#: src/utils/restreamer.js:305
-#: src/utils/restreamer.js:310
+#: src/utils/restreamer.js:275
+#: src/utils/restreamer.js:280
+#: src/utils/restreamer.js:309
+#: src/utils/restreamer.js:314
 msgid "Login failed: Couldn't load API details"
 msgstr "Giriş başarısız oldu: API ayrıntıları yüklenemedi"
 
@@ -1553,7 +1582,7 @@ msgstr "Giriş/JWT yetkilendirmesi"
 msgid "Logo"
 msgstr "Logo"
 
-#: src/Header.js:307
+#: src/Header.js:316
 msgid "Logout"
 msgstr "Oturum Kapatma"
 
@@ -1587,7 +1616,7 @@ msgstr "Ana kanal kaydedildi"
 msgid "Main page channel (index.html)."
 msgstr "Ana sayfa kanalı (index.html)."
 
-#: src/views/Edit/index.js:398
+#: src/views/Edit/index.js:402
 msgid "Main Source"
 msgstr "Ana Kaynak"
 
@@ -1610,6 +1639,11 @@ msgstr "İşaretli çerçeveler"
 #: src/misc/controls/HLS.js:137
 msgid "Master playlist (increases browser/client compatibility)"
 msgstr "Ana oynatma listesi (tarayıcı/istemci uyumluluğunu artırır)"
+
+#: src/views/Users.js:202
+#: src/views/Users.js:280
+msgid "Max. restreams"
+msgstr ""
 
 #: src/views/Settings.js:1841
 msgid "Maximum allowed cache size, 0 for unlimited."
@@ -1679,11 +1713,11 @@ msgstr "Bellek Sınırı (megabayt)"
 msgid "Memory usage limit in megabytes, 0 for unlimited."
 msgstr "Megabayt cinsinden bellek kullanım sınırı, sınırsız için 0."
 
-#: src/views/Edit/index.js:420
+#: src/views/Edit/index.js:424
 msgid "Meta information"
 msgstr "Meta bilgisi"
 
-#: src/views/Edit/index.js:577
+#: src/views/Edit/index.js:581
 #: src/views/Edit/Wizard/Metadata.js:17
 msgid "Metadata"
 msgstr "Metadata"
@@ -1760,6 +1794,10 @@ msgstr "Ağ"
 msgid "Network source"
 msgstr "Ağ kaynağı"
 
+#: src/views/Users.js:261
+msgid "New password (leave empty to keep current)"
+msgstr ""
+
 #: src/views/Edit/Wizard/Audio.js:114
 #: src/views/Edit/Wizard/Metadata.js:40
 #: src/views/Edit/Wizard/Video.js:71
@@ -1796,6 +1834,10 @@ msgstr "Giriş cihazı mevcut değil"
 #: src/views/Edit/Wizard/Video.js:31
 msgid "No live stream was detected. Please check the software that sends the stream."
 msgstr "Canlı yayın algılanmadı. Lütfen akışı gönderen yazılımı kontrol edin."
+
+#: src/views/Users.js:189
+msgid "No named users yet."
+msgstr ""
 
 #: src/views/Edit/Summary.js:29
 msgid "No source selected"
@@ -1929,6 +1971,7 @@ msgstr "Passthrough (kopyalama) yalnızca gerekli olduğunda devre dışı bıra
 #: src/views/Publication/Services/WOWZA.js:178
 #: src/views/Settings.js:1569
 #: src/views/Settings.js:1727
+#: src/views/Users.js:261
 msgid "Password"
 msgstr "Şifre"
 
@@ -1941,6 +1984,10 @@ msgstr "Yetkilendirme için şifre."
 #: src/views/Edit/Wizard/Sources/Network.js:103
 msgid "Password for the device."
 msgstr "Cihaz için şifre."
+
+#: src/views/Users.js:112
+msgid "Password must not be empty"
+msgstr ""
 
 #: src/views/Settings.js:1671
 msgid "Persist viewer statistics"
@@ -1988,7 +2035,7 @@ msgstr "Oynatıcı ayarları kaydedildi"
 msgid "Player URL"
 msgstr "Oyuncu URL'si"
 
-#: src/Header.js:267
+#: src/Header.js:268
 #: src/views/Playersite.js:353
 msgid "Playersite"
 msgstr "Oynatıcı Sitesi"
@@ -2115,7 +2162,7 @@ msgstr "Birincil akış anahtarı"
 msgid "Probe"
 msgstr "Prob"
 
-#: src/views/Edit/index.js:554
+#: src/views/Edit/index.js:558
 #: src/views/Publication/Add.js:454
 #: src/views/Publication/Edit.js:640
 msgid "Process"
@@ -2140,8 +2187,8 @@ msgstr "Süreç ayrıntıları"
 msgid "Process report"
 msgstr "Süreç raporu"
 
-#: src/views/Edit/index.js:419
-#: src/views/Edit/index.js:482
+#: src/views/Edit/index.js:423
+#: src/views/Edit/index.js:486
 msgid "Processing & Control"
 msgstr "İşleme ve Kontrol"
 
@@ -2405,6 +2452,11 @@ msgstr "Yeniden dene"
 msgid "RGB test pattern"
 msgstr "RGB test deseni"
 
+#: src/views/Users.js:199
+#: src/views/Users.js:267
+msgid "Role"
+msgstr ""
+
 #: src/misc/filters/video/Transpose.js:46
 msgid "Rotate"
 msgstr "Döndür"
@@ -2419,7 +2471,7 @@ msgstr "RTMP"
 msgid "RTMP app for publishing."
 msgstr "Yayınlamak için RTMP uygulaması."
 
-#: src/views/Edit/index.js:505
+#: src/views/Edit/index.js:509
 msgid "RTMP output"
 msgstr "RTMP çıkışı"
 
@@ -2471,13 +2523,14 @@ msgid "Sampling"
 msgstr "Örnek"
 
 #: src/misc/modals/Hint.js:186
-#: src/views/Edit/index.js:632
+#: src/views/Edit/index.js:636
 #: src/views/Edit/Wizard/License.js:43
 #: src/views/Playersite.js:829
 #: src/views/Publication/Add.js:574
 #: src/views/Publication/Edit.js:782
 #: src/views/Publication/Player.js:542
 #: src/views/Settings.js:2224
+#: src/views/Users.js:246
 msgid "Save"
 msgstr "Kaydet"
 
@@ -2617,7 +2670,7 @@ msgstr "Sunucu"
 msgid "Server URL"
 msgstr "Sunucu adresi"
 
-#: src/Header.js:257
+#: src/Header.js:258
 #: src/views/Login.js:246
 #: src/views/Settings.js:1233
 #: src/views/Settings.js:1314
@@ -2709,7 +2762,7 @@ msgstr "Site adı"
 msgid "Size"
 msgstr "Boyut"
 
-#: src/views/Edit/index.js:543
+#: src/views/Edit/index.js:547
 #: src/views/Main/index.js:434
 msgid "Snapshot"
 msgstr "Anlık görüntü"
@@ -2755,7 +2808,7 @@ msgstr "Hız Ön Ayarı"
 msgid "SRT"
 msgstr "SRT"
 
-#: src/views/Edit/index.js:524
+#: src/views/Edit/index.js:528
 msgid "SRT output"
 msgstr "SRT çıkışı"
 
@@ -2880,7 +2933,7 @@ msgid "Supports HTTP (HLS, DASH), RTP, RTSP, RTMP, SRT and more."
 msgstr "HTTP (HLS, DASH), RTP, RTSP, RTMP, SRT ve daha fazlasını destekler."
 
 #: src/Footer.js:184
-#: src/Header.js:275
+#: src/Header.js:276
 #: src/views/Settings.js:2095
 msgid "System"
 msgstr "Sistem"
@@ -2930,19 +2983,23 @@ msgstr "Mevcut FFmpeg ikili dosyası gerekli protokollerin hiçbirini desteklemi
 msgid "The bitrate of the audio stream."
 msgstr "Ses akışının bit hızı."
 
+#: src/views/Users.js:182
+msgid "The bootstrap admin login can always sign in and manage everything. Named users you create here can only see and manage their own restreams, up to their quota."
+msgstr ""
+
 #: src/views/Edit/Sources/VirtualAudio.js:150
 msgid "The carrier frequency"
 msgstr "Taşıyıcı frekansı"
 
-#: src/views/Edit/index.js:376
+#: src/views/Edit/index.js:380
 msgid "The channel \"{0}\" could not be deleted"
 msgstr "\"{0}\" kanalı silinemedi"
 
-#: src/views/Edit/index.js:385
+#: src/views/Edit/index.js:389
 msgid "The channel \"{0}\" has been deleted"
 msgstr "\"{0}\" kanalı silindi"
 
-#: src/views/Edit/index.js:676
+#: src/views/Edit/index.js:680
 msgid "The deletion of this channel can not be recovered. All publications of this channel will be removed."
 msgstr "Bu kanalın silinmesi geri alınamaz. Bu kanalın tüm yayınları kaldırılacaktır."
 
@@ -3139,7 +3196,7 @@ msgstr "Bu profil bilinmiyor ya da FFmpeg tarafından desteklenmiyor."
 msgid "This publication was set up with a service (\"{_service}\") that no longer exists - it may have shut down or been removed. It can't be edited, only deleted."
 msgstr ""
 
-#: src/views/Edit/index.js:657
+#: src/views/Edit/index.js:661
 msgid "This source cannot be edited while it is in use. To continue, you have to disconnect the source."
 msgstr "Bu kaynak kullanımdayken düzenlenemez. Devam etmek için kaynağın bağlantısını kesmeniz gerekir."
 
@@ -3354,6 +3411,10 @@ msgstr "Bilinmiyor"
 msgid "Unknown upload error"
 msgstr "Bilinmeyen yükleme hatası"
 
+#: src/views/Users.js:212
+msgid "Unlimited"
+msgstr ""
+
 #: src/views/Playersite.js:635
 msgid "Unselected"
 msgstr "Seçilmemiş"
@@ -3417,7 +3478,7 @@ msgstr ""
 msgid "Use low-latency preset (TCP transport)"
 msgstr ""
 
-#: src/views/Edit/index.js:444
+#: src/views/Edit/index.js:448
 msgid "Use the wizard (<0/>) for a quick and easy setup, or edit (<1/>) the sources directly in custom mode."
 msgstr "Hızlı ve kolay bir kurulum için sihirbazı (<0/>) kullanın veya kaynakları doğrudan özel modda düzenleyin (<1/>)."
 
@@ -3425,7 +3486,7 @@ msgstr "Hızlı ve kolay bir kurulum için sihirbazı (<0/>) kullanın veya kayn
 msgid "Use your copyright and choose the correct image license. Whether free for all or highly restricted. Briefly discuss what others are allowed to do with your image."
 msgstr "Telif hakkınızı kullanın ve doğru görsel lisansını seçin. Herkes için ücretsiz veya oldukça kısıtlı olsun. Başkalarının resminizle ne yapmasına izin verildiğini kısaca tartışın."
 
-#: src/views/Edit/index.js:602
+#: src/views/Edit/index.js:606
 msgid "Use your copyright and choose the right image licence. Whether free for all or highly restricted. Briefly discuss what others are allowed to do with your image."
 msgstr "Telif hakkınızı kullanın ve doğru görsel lisansını seçin. İster herkes için ücretsiz ister oldukça kısıtlı olsun. Başkalarının görselinizle ne yapmasına izin verildiğini kısaca tartışın."
 
@@ -3433,9 +3494,22 @@ msgstr "Telif hakkınızı kullanın ve doğru görsel lisansını seçin. İste
 msgid "use_wallclock_as_timestamps"
 msgstr "use_wallclock_as_timestamps"
 
+#: src/views/Users.js:211
+#: src/views/Users.js:269
+msgid "User"
+msgstr ""
+
+#: src/views/Users.js:165
+msgid "User deleted"
+msgstr ""
+
 #: src/views/Password.js:99
 msgid "User registration"
 msgstr "Kullanıcı kaydı"
+
+#: src/views/Users.js:138
+msgid "User saved"
+msgstr ""
 
 #: src/views/Edit/Sources/Network.js:793
 #: src/views/Edit/Wizard/Sources/Network.js:84
@@ -3448,6 +3522,8 @@ msgstr "Kullanıcı kaydı"
 #: src/views/Publication/Services/WOWZA.js:168
 #: src/views/Settings.js:1556
 #: src/views/Settings.js:1714
+#: src/views/Users.js:196
+#: src/views/Users.js:253
 msgid "Username"
 msgstr "Kullanıcı Adı"
 
@@ -3460,6 +3536,15 @@ msgstr "Yetkilendirme için kullanıcı adı."
 #: src/views/Edit/Wizard/Sources/Network.js:90
 msgid "Username for the device."
 msgstr "Cihaz için kullanıcı adı."
+
+#: src/views/Users.js:100
+msgid "Username must not be empty"
+msgstr ""
+
+#: src/Header.js:284
+#: src/views/Users.js:179
+msgid "Users"
+msgstr ""
 
 #: src/misc/coders/Encoders/video/h264_v4l2m2m.js:167
 msgid "V4L2_M2M is experimental."
@@ -3594,6 +3679,10 @@ msgstr "Manuel olarak yeniden bağlanmanız gerekir"
 #: src/views/Publication/Edit.js:663
 msgid "You have unsaved changes. Please save them before you can control the service again."
 msgstr "Kaydedilmemiş değişiklikleriniz var. Hizmeti tekrar kontrol edebilmeniz için lütfen bunları kaydedin."
+
+#: src/views/Edit/index.js:310
+msgid "You've reached the maximum number of restreams allowed for your account."
+msgstr ""
 
 #: src/views/Edit/Wizard/VideoProfile.js:36
 msgid "Your stream needs to be encoded, but there's no suitable encoder available."

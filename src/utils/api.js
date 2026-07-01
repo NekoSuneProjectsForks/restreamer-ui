@@ -434,6 +434,42 @@ class API {
 		});
 	}
 
+	async UsersGetAll() {
+		return await this._GET('/v3/users', {
+			expect: 'json',
+		});
+	}
+
+	async UsersGet(id) {
+		return await this._GET('/v3/users/' + encodeURIComponent(id), {
+			expect: 'json',
+		});
+	}
+
+	async UsersCreate(data) {
+		return await this._POST('/v3/users', {
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(data),
+			expect: 'json',
+		});
+	}
+
+	async UsersUpdate(id, data) {
+		return await this._PUT('/v3/users/' + encodeURIComponent(id), {
+			headers: {
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(data),
+			expect: 'json',
+		});
+	}
+
+	async UsersDelete(id) {
+		return await this._DELETE('/v3/users/' + encodeURIComponent(id));
+	}
+
 	async Metrics(query) {
 		return await this._POST('/v3/metrics', {
 			headers: {

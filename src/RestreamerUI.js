@@ -375,6 +375,10 @@ export default function RestreamerUI(props) {
 		document.location.hash = '#/settings';
 	};
 
+	const handleUsers = () => {
+		document.location.hash = '#/users';
+	};
+
 	const handleChannelList = () => {
 		const channelid = restreamer.current.GetCurrentChannelID();
 		const channels = restreamer.current.ListChannels();
@@ -505,11 +509,15 @@ export default function RestreamerUI(props) {
 							expand={expand}
 							showPlayersite={$state.ingest}
 							showSettings={$state.compatibility.compatible}
+							showUsers={
+								$state.compatibility.compatible && restreamer.current !== null && restreamer.current.IsAdmin() && restreamer.current.HasUsers()
+							}
 							hasUpdates={$state.updates}
 							hasService={$state.service}
 							onChannel={handleChannelList}
 							onPlayersite={handlePlayersite}
 							onSettings={handleSettings}
+							onUsers={handleUsers}
 							onLogout={handleLogout}
 						/>
 					</Grid>

@@ -43,19 +43,21 @@ msgid "7 (+ fragmented MP4 format)"
 msgstr "7 (+ fragmenteret MP4-format)"
 
 #: src/misc/ChannelList.js:412
-#: src/views/Edit/index.js:647
-#: src/views/Edit/index.js:666
+#: src/views/Edit/index.js:651
+#: src/views/Edit/index.js:670
 #: src/views/Edit/Profile.js:599
 #: src/views/Edit/Wizard/Abort.js:14
 #: src/views/Publication/Edit.js:566
 #: src/views/Publication/Edit.js:812
 #: src/views/Settings.js:2278
 #: src/views/Settings.js:2300
+#: src/views/Users.js:241
+#: src/views/Users.js:294
 msgid "Abort"
 msgstr "Afbryd"
 
-#: src/Header.js:283
-#: src/Header.js:324
+#: src/Header.js:292
+#: src/Header.js:333
 msgid "About"
 msgstr "Om"
 
@@ -82,6 +84,11 @@ msgstr "Tilføj Publicering"
 #: src/misc/modals/Hint.js:158
 #~ msgid "Add Stream"
 #~ msgstr ""
+
+#: src/views/Users.js:230
+#: src/views/Users.js:238
+msgid "Add user"
+msgstr ""
 
 #: src/views/Publication/Add.js:373
 msgid "Add: {0}"
@@ -138,6 +145,11 @@ msgstr "Adresse:"
 #: src/views/Playersite.js:552
 msgid "Adjust publication site colors and background as you like."
 msgstr "Du kan justere farverne og baggrunden på publikationssiden som du vil."
+
+#: src/views/Users.js:211
+#: src/views/Users.js:272
+msgid "Admin"
+msgstr ""
 
 #: src/views/Login.js:322
 msgid "Advanced monitoring"
@@ -379,7 +391,7 @@ msgstr "blå"
 msgid "Bottom field"
 msgstr "Nederste felt"
 
-#: src/views/Edit/index.js:582
+#: src/views/Edit/index.js:586
 #: src/views/Edit/Wizard/Metadata.js:24
 msgid "Briefly describe what the audience will see during the live stream."
 msgstr "Beskriv kort, hvad publikum vil se under live-streamingen."
@@ -424,7 +436,7 @@ msgstr "Fang klik"
 msgid "Capture cursor"
 msgstr "Fang markør"
 
-#: src/views/Edit/index.js:351
+#: src/views/Edit/index.js:355
 msgid "Channel \"{0}\" saved"
 msgstr "Kanal \"{0}\" gemt"
 
@@ -491,7 +503,7 @@ msgstr "Chunk"
 #: src/misc/Changelog.js:177
 #: src/misc/ModalContent.js:77
 #: src/misc/modals/Hint.js:181
-#: src/views/Edit/index.js:621
+#: src/views/Edit/index.js:625
 #: src/views/Playersite.js:823
 #: src/views/Publication/Add.js:411
 #: src/views/Publication/Add.js:565
@@ -754,13 +766,14 @@ msgstr "Forsinkelse"
 msgid "Delay (ms)"
 msgstr "Forsinkelse (ms)"
 
-#: src/views/Edit/index.js:635
-#: src/views/Edit/index.js:671
+#: src/views/Edit/index.js:639
+#: src/views/Edit/index.js:675
 #: src/views/Playersite.js:506
 #: src/views/Publication/Edit.js:555
 #: src/views/Publication/Edit.js:571
 #: src/views/Publication/Edit.js:785
 #: src/views/Publication/Edit.js:817
+#: src/views/Users.js:299
 msgid "Delete"
 msgstr "Fjern"
 
@@ -796,7 +809,7 @@ msgstr "Enhed"
 msgid "Disconnect"
 msgstr "Afbrudt"
 
-#: src/views/Edit/index.js:652
+#: src/views/Edit/index.js:656
 msgid "Disconnect & Continue"
 msgstr "Afbryd forbindelsen og fortsæt"
 
@@ -824,7 +837,7 @@ msgstr "Diskopbevaring"
 msgid "Do you really want to restart the application now?"
 msgstr "Ønsker du virkelig at genstarte programmet nu?"
 
-#: src/views/Edit/index.js:663
+#: src/views/Edit/index.js:667
 msgid "Do you want to delete \"{0}\"?"
 msgstr "Ønsker du at slette \"{0}\"?"
 
@@ -836,12 +849,16 @@ msgstr "Vil du fjerne {title}?"
 msgid "Do you want to delete this publication?"
 msgstr ""
 
-#: src/views/Edit/index.js:644
+#: src/views/Users.js:291
+msgid "Do you want to delete this user?"
+msgstr ""
+
+#: src/views/Edit/index.js:648
 msgid "Do you want to disconnect \"{0}\"?"
 msgstr "Ønsker du at afbryde forbindelsen til \"{0}\"?"
 
-#: src/Header.js:289
-#: src/Header.js:330
+#: src/Header.js:298
+#: src/Header.js:339
 msgid "Docs"
 msgstr "Dokumenter"
 
@@ -869,13 +886,17 @@ msgstr "Hvert felt"
 msgid "Each frames"
 msgstr "Hver ramme"
 
-#: src/views/Edit/index.js:409
+#: src/views/Edit/index.js:413
 msgid "Edit"
 msgstr "Ret"
 
-#: src/views/Edit/index.js:435
+#: src/views/Edit/index.js:439
 msgid "Edit the audio and video sources for the live stream. Add a description, and set your desired content license."
 msgstr "Rediger lyd- og videokilderne til livestreamet. Tilføj en beskrivelse, og indstil den ønskede indholdslicens."
+
+#: src/views/Users.js:238
+msgid "Edit user"
+msgstr ""
 
 #: src/views/Publication/Edit.js:596
 msgid "Edit: {title}"
@@ -1047,18 +1068,26 @@ msgstr "Det lykkedes ikke at oprette en publikationstjeneste ({0})"
 msgid "Failed to create publication website files."
 msgstr "Det lykkedes ikke at oprette filer til publikationswebstedet."
 
+#: src/views/Users.js:161
+msgid "Failed to delete user"
+msgstr ""
+
 #: src/views/Edit/Profile.js:512
 #: src/views/Edit/Profile.js:671
 msgid "Failed to probe the source. Please check the <0>probe details</0>."
 msgstr "Mislykkes probe hos kilde. Undersøg <0> probe oplysninger</0>."
 
-#: src/utils/restreamer.js:449
+#: src/utils/restreamer.js:498
 msgid "Failed to refresh token: {0}"
 msgstr "Det lykkedes ikke at opdatere token: {0}"
 
-#: src/views/Edit/index.js:316
+#: src/views/Edit/index.js:320
 msgid "Failed to save ingest metadata"
 msgstr "Det mislykkedes at gemme indlæsningsmetadata"
+
+#: src/views/Users.js:134
+msgid "Failed to save user ({0})"
+msgstr ""
 
 #: src/views/Edit/index.js:187
 msgid "Failed to stop process"
@@ -1072,19 +1101,19 @@ msgstr "Det lykkedes ikke at gemme indstillingen for spillerstørrelse."
 msgid "Failed to store publication service ({0})"
 msgstr "Det lykkedes ikke at gemme publikationstjenesten ({0})"
 
-#: src/views/Edit/index.js:309
+#: src/views/Edit/index.js:312
 msgid "Failed to update ingest process ({0})"
 msgstr "Opdatering af indlæsningsprocessen mislykkedes ({0})"
 
-#: src/views/Edit/index.js:322
+#: src/views/Edit/index.js:326
 msgid "Failed to update ingest snapshot process ({0})"
 msgstr "Opdatering af processen for indtastning af snapshot mislykkedes ({0})"
 
-#: src/views/Edit/index.js:328
+#: src/views/Edit/index.js:332
 msgid "Failed to update the player"
 msgstr "Opdatering af spilleren mislykkedes"
 
-#: src/views/Edit/index.js:334
+#: src/views/Edit/index.js:338
 msgid "Failed to update the playersite"
 msgstr "Opdatering af spillersiden mislykkedes"
 
@@ -1181,8 +1210,8 @@ msgstr "Frekvens (Hz)"
 msgid "Game"
 msgstr ""
 
-#: src/views/Edit/index.js:418
-#: src/views/Edit/index.js:430
+#: src/views/Edit/index.js:422
+#: src/views/Edit/index.js:434
 #: src/views/Edit/Sources/Network.js:612
 #: src/views/Playersite.js:328
 #: src/views/Playersite.js:341
@@ -1247,7 +1276,7 @@ msgstr "Højde"
 msgid "HLS"
 msgstr "HLS"
 
-#: src/views/Edit/index.js:490
+#: src/views/Edit/index.js:494
 msgid "HLS output"
 msgstr "HLS-output"
 
@@ -1379,8 +1408,8 @@ msgstr "Instansdomæne"
 msgid "Interval (seconds)"
 msgstr "Interval (sekunder)"
 
-#: src/Header.js:295
-#: src/Header.js:336
+#: src/Header.js:304
+#: src/Header.js:345
 msgid "Issue alert"
 msgstr "Advarsel om spørgsmål"
 
@@ -1419,8 +1448,8 @@ msgstr "Nivå"
 msgid "Level of system protocol."
 msgstr "Niveau af systemprotokol."
 
-#: src/views/Edit/index.js:421
-#: src/views/Edit/index.js:597
+#: src/views/Edit/index.js:425
+#: src/views/Edit/index.js:601
 #: src/views/Edit/Wizard/License.js:17
 msgid "License"
 msgstr "licens"
@@ -1429,7 +1458,7 @@ msgstr "licens"
 msgid "Life color"
 msgstr "Livets farve"
 
-#: src/views/Edit/index.js:565
+#: src/views/Edit/index.js:569
 #: src/views/Publication/Add.js:465
 #: src/views/Publication/Edit.js:651
 msgid "Limits"
@@ -1533,15 +1562,15 @@ msgstr "Logning"
 msgid "Login"
 msgstr "Log på"
 
-#: src/utils/restreamer.js:262
-#: src/utils/restreamer.js:296
+#: src/utils/restreamer.js:266
+#: src/utils/restreamer.js:300
 msgid "Login failed: {0}"
 msgstr "Login mislykkedes: {0}"
 
-#: src/utils/restreamer.js:271
-#: src/utils/restreamer.js:276
-#: src/utils/restreamer.js:305
-#: src/utils/restreamer.js:310
+#: src/utils/restreamer.js:275
+#: src/utils/restreamer.js:280
+#: src/utils/restreamer.js:309
+#: src/utils/restreamer.js:314
 msgid "Login failed: Couldn't load API details"
 msgstr "Login mislykkedes: Kunne ikke indlæse API-detaljer"
 
@@ -1553,7 +1582,7 @@ msgstr "Login/JWT-autorisation"
 msgid "Logo"
 msgstr "Logginga"
 
-#: src/Header.js:307
+#: src/Header.js:316
 msgid "Logout"
 msgstr "Logout"
 
@@ -1587,7 +1616,7 @@ msgstr "Hoved kanal gemt"
 msgid "Main page channel (index.html)."
 msgstr "Kanalen på hovedsiden (index.html)."
 
-#: src/views/Edit/index.js:398
+#: src/views/Edit/index.js:402
 msgid "Main Source"
 msgstr "Hoved kilde"
 
@@ -1610,6 +1639,11 @@ msgstr "Mærkede rammer"
 #: src/misc/controls/HLS.js:137
 msgid "Master playlist (increases browser/client compatibility)"
 msgstr "Hovedspilleliste (øger kompatibiliteten mellem browser/klient)"
+
+#: src/views/Users.js:202
+#: src/views/Users.js:280
+msgid "Max. restreams"
+msgstr ""
 
 #: src/views/Settings.js:1841
 msgid "Maximum allowed cache size, 0 for unlimited."
@@ -1679,11 +1713,11 @@ msgstr "Hukommelsesgrænse (megabyte)"
 msgid "Memory usage limit in megabytes, 0 for unlimited."
 msgstr "Grænse for hukommelsesforbrug i megabyte, 0 for ubegrænset."
 
-#: src/views/Edit/index.js:420
+#: src/views/Edit/index.js:424
 msgid "Meta information"
 msgstr "Meta oplysninger"
 
-#: src/views/Edit/index.js:577
+#: src/views/Edit/index.js:581
 #: src/views/Edit/Wizard/Metadata.js:17
 msgid "Metadata"
 msgstr "Metadata"
@@ -1760,6 +1794,10 @@ msgstr "Netværk"
 msgid "Network source"
 msgstr "Netværkskilde"
 
+#: src/views/Users.js:261
+msgid "New password (leave empty to keep current)"
+msgstr ""
+
 #: src/views/Edit/Wizard/Audio.js:114
 #: src/views/Edit/Wizard/Metadata.js:40
 #: src/views/Edit/Wizard/Video.js:71
@@ -1796,6 +1834,10 @@ msgstr "Ingen input-enhed tilgængelig"
 #: src/views/Edit/Wizard/Video.js:31
 msgid "No live stream was detected. Please check the software that sends the stream."
 msgstr "Der blev ikke fundet nogen live stream. Kontroller venligst den software, der sender strømmen."
+
+#: src/views/Users.js:189
+msgid "No named users yet."
+msgstr ""
 
 #: src/views/Edit/Summary.js:29
 msgid "No source selected"
@@ -1929,6 +1971,7 @@ msgstr "Passthrough (kopi) bør kun deaktiveres, hvis det er nødvendigt. Hver k
 #: src/views/Publication/Services/WOWZA.js:178
 #: src/views/Settings.js:1569
 #: src/views/Settings.js:1727
+#: src/views/Users.js:261
 msgid "Password"
 msgstr "kodeord"
 
@@ -1941,6 +1984,10 @@ msgstr "kodeord til godkendelse."
 #: src/views/Edit/Wizard/Sources/Network.js:103
 msgid "Password for the device."
 msgstr "Adgangskode til enheden."
+
+#: src/views/Users.js:112
+msgid "Password must not be empty"
+msgstr ""
 
 #: src/views/Settings.js:1671
 msgid "Persist viewer statistics"
@@ -1988,7 +2035,7 @@ msgstr "Afspiller setup gemt"
 msgid "Player URL"
 msgstr "Spiller-URL"
 
-#: src/Header.js:267
+#: src/Header.js:268
 #: src/views/Playersite.js:353
 msgid "Playersite"
 msgstr "Afspillerside"
@@ -2115,7 +2162,7 @@ msgstr "Primær stream key"
 msgid "Probe"
 msgstr "Sonde"
 
-#: src/views/Edit/index.js:554
+#: src/views/Edit/index.js:558
 #: src/views/Publication/Add.js:454
 #: src/views/Publication/Edit.js:640
 msgid "Process"
@@ -2140,8 +2187,8 @@ msgstr "Procesoplysninger"
 msgid "Process report"
 msgstr "Procesrapport"
 
-#: src/views/Edit/index.js:419
-#: src/views/Edit/index.js:482
+#: src/views/Edit/index.js:423
+#: src/views/Edit/index.js:486
 msgid "Processing & Control"
 msgstr "Behandler & kontrol"
 
@@ -2405,6 +2452,11 @@ msgstr "Genforsøg"
 msgid "RGB test pattern"
 msgstr "RGB test mønster"
 
+#: src/views/Users.js:199
+#: src/views/Users.js:267
+msgid "Role"
+msgstr ""
+
 #: src/misc/filters/video/Transpose.js:46
 msgid "Rotate"
 msgstr "Drej"
@@ -2419,7 +2471,7 @@ msgstr "RTMP"
 msgid "RTMP app for publishing."
 msgstr "RTMP program til publicering."
 
-#: src/views/Edit/index.js:505
+#: src/views/Edit/index.js:509
 msgid "RTMP output"
 msgstr "RTMP-udgang"
 
@@ -2471,13 +2523,14 @@ msgid "Sampling"
 msgstr "Prøvetagning"
 
 #: src/misc/modals/Hint.js:186
-#: src/views/Edit/index.js:632
+#: src/views/Edit/index.js:636
 #: src/views/Edit/Wizard/License.js:43
 #: src/views/Playersite.js:829
 #: src/views/Publication/Add.js:574
 #: src/views/Publication/Edit.js:782
 #: src/views/Publication/Player.js:542
 #: src/views/Settings.js:2224
+#: src/views/Users.js:246
 msgid "Save"
 msgstr "Gem"
 
@@ -2617,7 +2670,7 @@ msgstr "Server"
 msgid "Server URL"
 msgstr "Server-URL"
 
-#: src/Header.js:257
+#: src/Header.js:258
 #: src/views/Login.js:246
 #: src/views/Settings.js:1233
 #: src/views/Settings.js:1314
@@ -2709,7 +2762,7 @@ msgstr "Sidenavn"
 msgid "Size"
 msgstr "Størrelse"
 
-#: src/views/Edit/index.js:543
+#: src/views/Edit/index.js:547
 #: src/views/Main/index.js:434
 msgid "Snapshot"
 msgstr "Øjebliksbillde"
@@ -2755,7 +2808,7 @@ msgstr "Forudindstillet hastighed"
 msgid "SRT"
 msgstr "SRT"
 
-#: src/views/Edit/index.js:524
+#: src/views/Edit/index.js:528
 msgid "SRT output"
 msgstr "SRT-udgang"
 
@@ -2880,7 +2933,7 @@ msgid "Supports HTTP (HLS, DASH), RTP, RTSP, RTMP, SRT and more."
 msgstr "Understøtter HTTP (HLS, DASH), RTP, RTSP, RTSP, RTMP, SRT og meget mere."
 
 #: src/Footer.js:184
-#: src/Header.js:275
+#: src/Header.js:276
 #: src/views/Settings.js:2095
 msgid "System"
 msgstr "System"
@@ -2930,19 +2983,23 @@ msgstr "Den tilgængelige binære FFmpeg-version understøtter ikke nogen af de 
 msgid "The bitrate of the audio stream."
 msgstr "Bitraten for lydstrømmen."
 
+#: src/views/Users.js:182
+msgid "The bootstrap admin login can always sign in and manage everything. Named users you create here can only see and manage their own restreams, up to their quota."
+msgstr ""
+
 #: src/views/Edit/Sources/VirtualAudio.js:150
 msgid "The carrier frequency"
 msgstr "Bærerfrekvensen"
 
-#: src/views/Edit/index.js:376
+#: src/views/Edit/index.js:380
 msgid "The channel \"{0}\" could not be deleted"
 msgstr "Kanalen \"{0}\" kunne ikke slettes"
 
-#: src/views/Edit/index.js:385
+#: src/views/Edit/index.js:389
 msgid "The channel \"{0}\" has been deleted"
 msgstr "Kanalen \"{0}\" er blevet slettet"
 
-#: src/views/Edit/index.js:676
+#: src/views/Edit/index.js:680
 msgid "The deletion of this channel can not be recovered. All publications of this channel will be removed."
 msgstr "Sletning af denne kanal kan ikke genoprettes. Alle publikationer af denne kanal vil blive fjernet."
 
@@ -3139,7 +3196,7 @@ msgstr "Denne protokol er ukendt eller understøttes ikke af den tilgængelige b
 msgid "This publication was set up with a service (\"{_service}\") that no longer exists - it may have shut down or been removed. It can't be edited, only deleted."
 msgstr ""
 
-#: src/views/Edit/index.js:657
+#: src/views/Edit/index.js:661
 msgid "This source cannot be edited while it is in use. To continue, you have to disconnect the source."
 msgstr "Denne kilde kan ikke redigeres, mens den er i brug. Hvis du vil fortsætte, skal du afbryde forbindelsen til kilden."
 
@@ -3354,6 +3411,10 @@ msgstr "Ukendt"
 msgid "Unknown upload error"
 msgstr "Ukendt uploadfejl"
 
+#: src/views/Users.js:212
+msgid "Unlimited"
+msgstr ""
+
 #: src/views/Playersite.js:635
 msgid "Unselected"
 msgstr "Ikke-valgt"
@@ -3417,7 +3478,7 @@ msgstr ""
 msgid "Use low-latency preset (TCP transport)"
 msgstr ""
 
-#: src/views/Edit/index.js:444
+#: src/views/Edit/index.js:448
 msgid "Use the wizard (<0/>) for a quick and easy setup, or edit (<1/>) the sources directly in custom mode."
 msgstr "Brug guiden (<0/>) til en hurtig og nem opsætning, eller rediger (<1/>) kilderne direkte i brugerdefineret tilstand."
 
@@ -3425,7 +3486,7 @@ msgstr "Brug guiden (<0/>) til en hurtig og nem opsætning, eller rediger (<1/>)
 msgid "Use your copyright and choose the correct image license. Whether free for all or highly restricted. Briefly discuss what others are allowed to do with your image."
 msgstr "Brug din ophavsret, og vælg den korrekte billedlicens. Uanset om den er fri for alle eller stærkt begrænset. Diskuter kort, hvad andre må gøre med dit billede."
 
-#: src/views/Edit/index.js:602
+#: src/views/Edit/index.js:606
 msgid "Use your copyright and choose the right image licence. Whether free for all or highly restricted. Briefly discuss what others are allowed to do with your image."
 msgstr "Brug din ophavsret, og vælg den rigtige billedlicens. Uanset om den er fri for alle eller stærkt begrænset. Diskuter kort, hvad andre må gøre med dit billede."
 
@@ -3433,9 +3494,22 @@ msgstr "Brug din ophavsret, og vælg den rigtige billedlicens. Uanset om den er 
 msgid "use_wallclock_as_timestamps"
 msgstr "use_wallclock_as_timestamps"
 
+#: src/views/Users.js:211
+#: src/views/Users.js:269
+msgid "User"
+msgstr ""
+
+#: src/views/Users.js:165
+msgid "User deleted"
+msgstr ""
+
 #: src/views/Password.js:99
 msgid "User registration"
 msgstr "Registrering af brugere"
+
+#: src/views/Users.js:138
+msgid "User saved"
+msgstr ""
 
 #: src/views/Edit/Sources/Network.js:793
 #: src/views/Edit/Wizard/Sources/Network.js:84
@@ -3448,6 +3522,8 @@ msgstr "Registrering af brugere"
 #: src/views/Publication/Services/WOWZA.js:168
 #: src/views/Settings.js:1556
 #: src/views/Settings.js:1714
+#: src/views/Users.js:196
+#: src/views/Users.js:253
 msgid "Username"
 msgstr "Brugernavn"
 
@@ -3460,6 +3536,15 @@ msgstr "Brugernavn for "
 #: src/views/Edit/Wizard/Sources/Network.js:90
 msgid "Username for the device."
 msgstr "Brugernavn til enheden."
+
+#: src/views/Users.js:100
+msgid "Username must not be empty"
+msgstr ""
+
+#: src/Header.js:284
+#: src/views/Users.js:179
+msgid "Users"
+msgstr ""
 
 #: src/misc/coders/Encoders/video/h264_v4l2m2m.js:167
 msgid "V4L2_M2M is experimental."
@@ -3594,6 +3679,10 @@ msgstr "Du skal genetablere forbindelsen manuelt"
 #: src/views/Publication/Edit.js:663
 msgid "You have unsaved changes. Please save them before you can control the service again."
 msgstr "Du har ændringer, der ikke er gemt. Gem dem venligst, før du kan styre tjenesten igen."
+
+#: src/views/Edit/index.js:310
+msgid "You've reached the maximum number of restreams allowed for your account."
+msgstr ""
 
 #: src/views/Edit/Wizard/VideoProfile.js:36
 msgid "Your stream needs to be encoded, but there's no suitable encoder available."

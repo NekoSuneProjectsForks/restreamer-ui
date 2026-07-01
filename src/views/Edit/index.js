@@ -306,7 +306,11 @@ export default function Edit(props) {
 			// Create/update the ingest
 			let [, err] = await props.restreamer.UpsertIngest(_channelid, global, inputs, outputs, control);
 			if (err !== null) {
-				notify.Dispatch('error', 'save:ingest', i18n._(t`Failed to update ingest process (${err.message})`));
+				if (err.code === 403) {
+					notify.Dispatch('error', 'save:ingest', i18n._(t`You've reached the maximum number of restreams allowed for your account.`));
+				} else {
+					notify.Dispatch('error', 'save:ingest', i18n._(t`Failed to update ingest process (${err.message})`));
+				}
 				return false;
 			}
 

@@ -11,6 +11,7 @@ import Main from './Main';
 import Password from './Password';
 import Playersite from './Playersite';
 import Settings from './Settings';
+import Users from './Users';
 import Wizard from './Edit/Wizard';
 
 export default {
@@ -25,6 +26,7 @@ export default {
 	Main,
 	Playersite,
 	Settings,
+	Users,
 	Wizard,
 	ChannelSelect,
 	Password,

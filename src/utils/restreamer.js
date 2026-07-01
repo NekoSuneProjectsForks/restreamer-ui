@@ -57,6 +57,10 @@ class Restreamer {
 
 		this.refreshToken = null;
 
+		this.username = null;
+		this.isAdmin = true;
+		this.hasUsers = false;
+
 		this.updates = null;
 		this.hasUpdates = false;
 		this.hasService = false;
@@ -381,6 +385,7 @@ class Restreamer {
 			return;
 		}
 
+		await this._checkAdmin();
 		await this._initSkills();
 		await this._initConfig();
 		await this._discoverChannels();
@@ -403,16 +408,60 @@ class Restreamer {
 	_setAccessToken(token) {
 		if (token === null) {
 			this.api.SetToken('');
+			this.username = null;
 		} else {
 			let claims = null;
 			try {
 				claims = jwtDecode(token);
 				this._setTokenRefresh(claims.exi);
 				this.api.SetToken(token);
+				this.username = claims.sub || null;
 			} catch (e) {
 				this.api.SetToken('');
+				this.username = null;
 			}
 		}
+	}
+
+	// _checkAdmin figures out whether the current login is an admin. The
+	// multi-tenant users API is admin-only, so a successful call means
+	// admin, a 403 means a named non-admin user, and anything else (e.g.
+	// 404 because the users feature isn't configured on the server) means
+	// there's no multi-tenancy in play and everyone is treated as admin.
+	async _checkAdmin() {
+		if (this.requiresLogin === false) {
+			this.isAdmin = true;
+			this.hasUsers = false;
+			return;
+		}
+
+		const [, err] = await this._call(this.api.UsersGetAll);
+		if (err !== null) {
+			if (err.code === 403) {
+				this.isAdmin = false;
+				this.hasUsers = true;
+			} else {
+				this.isAdmin = true;
+				this.hasUsers = false;
+			}
+
+			return;
+		}
+
+		this.isAdmin = true;
+		this.hasUsers = true;
+	}
+
+	GetUsername() {
+		return this.username;
+	}
+
+	IsAdmin() {
+		return this.isAdmin;
+	}
+
+	HasUsers() {
+		return this.hasUsers;
 	}
 
 	_setRefreshToken(token) {
@@ -2832,6 +2881,39 @@ class Restreamer {
 
 	async ListSRTChannels() {
 		return await this._listSRTChannels();
+	}
+
+	// Users (admin only)
+
+	async ListUsers() {
+		const [val, err] = await this._call(this.api.UsersGetAll);
+		if (err !== null) {
+			return [];
+		}
+
+		return val;
+	}
+
+	async GetUser(id) {
+		const [val, err] = await this._call(this.api.UsersGet, id);
+		if (err !== null) {
+			return null;
+		}
+
+		return val;
+	}
+
+	async CreateUser(data) {
+		return await this._call(this.api.UsersCreate, data);
+	}
+
+	async UpdateUser(id, data) {
+		return await this._call(this.api.UsersUpdate, id, data);
+	}
+
+	async DeleteUser(id) {
+		const [, err] = await this._call(this.api.UsersDelete, id);
+		return err === null;
 	}
 
 	// WebRTC (WHIP/WHEP)

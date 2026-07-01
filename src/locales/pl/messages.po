@@ -43,19 +43,21 @@ msgid "7 (+ fragmented MP4 format)"
 msgstr "7 (+ fragmentaryczny format MP4)"
 
 #: src/misc/ChannelList.js:412
-#: src/views/Edit/index.js:647
-#: src/views/Edit/index.js:666
+#: src/views/Edit/index.js:651
+#: src/views/Edit/index.js:670
 #: src/views/Edit/Profile.js:599
 #: src/views/Edit/Wizard/Abort.js:14
 #: src/views/Publication/Edit.js:566
 #: src/views/Publication/Edit.js:812
 #: src/views/Settings.js:2278
 #: src/views/Settings.js:2300
+#: src/views/Users.js:241
+#: src/views/Users.js:294
 msgid "Abort"
 msgstr "Anuluj"
 
-#: src/Header.js:283
-#: src/Header.js:324
+#: src/Header.js:292
+#: src/Header.js:333
 msgid "About"
 msgstr "O nas"
 
@@ -82,6 +84,11 @@ msgstr "Dodaj Publikację"
 #: src/misc/modals/Hint.js:158
 #~ msgid "Add Stream"
 #~ msgstr ""
+
+#: src/views/Users.js:230
+#: src/views/Users.js:238
+msgid "Add user"
+msgstr ""
 
 #: src/views/Publication/Add.js:373
 msgid "Add: {0}"
@@ -138,6 +145,11 @@ msgstr "Adres:"
 #: src/views/Playersite.js:552
 msgid "Adjust publication site colors and background as you like."
 msgstr "Dostosuj kolory i tło witryny publikowania zgodnie z potrzebami."
+
+#: src/views/Users.js:211
+#: src/views/Users.js:272
+msgid "Admin"
+msgstr ""
 
 #: src/views/Login.js:322
 msgid "Advanced monitoring"
@@ -379,7 +391,7 @@ msgstr "niebieski"
 msgid "Bottom field"
 msgstr "Dolne pole"
 
-#: src/views/Edit/index.js:582
+#: src/views/Edit/index.js:586
 #: src/views/Edit/Wizard/Metadata.js:24
 msgid "Briefly describe what the audience will see during the live stream."
 msgstr "Krótko opisz, co widzowie zobaczą podczas transmisji na żywo."
@@ -424,7 +436,7 @@ msgstr "Przechwyt kliknięć"
 msgid "Capture cursor"
 msgstr "Przechwyt kursoru"
 
-#: src/views/Edit/index.js:351
+#: src/views/Edit/index.js:355
 msgid "Channel \"{0}\" saved"
 msgstr "Kanał \"{0}” został zapisany"
 
@@ -491,7 +503,7 @@ msgstr "Kawałek"
 #: src/misc/Changelog.js:177
 #: src/misc/ModalContent.js:77
 #: src/misc/modals/Hint.js:181
-#: src/views/Edit/index.js:621
+#: src/views/Edit/index.js:625
 #: src/views/Playersite.js:823
 #: src/views/Publication/Add.js:411
 #: src/views/Publication/Add.js:565
@@ -754,13 +766,14 @@ msgstr "Limit czasu"
 msgid "Delay (ms)"
 msgstr "Opóźnienie (w ms)"
 
-#: src/views/Edit/index.js:635
-#: src/views/Edit/index.js:671
+#: src/views/Edit/index.js:639
+#: src/views/Edit/index.js:675
 #: src/views/Playersite.js:506
 #: src/views/Publication/Edit.js:555
 #: src/views/Publication/Edit.js:571
 #: src/views/Publication/Edit.js:785
 #: src/views/Publication/Edit.js:817
+#: src/views/Users.js:299
 msgid "Delete"
 msgstr "Usuń"
 
@@ -796,7 +809,7 @@ msgstr "Urządzenie"
 msgid "Disconnect"
 msgstr "Wyloguj"
 
-#: src/views/Edit/index.js:652
+#: src/views/Edit/index.js:656
 msgid "Disconnect & Continue"
 msgstr "Odłącz i kontynuuj"
 
@@ -824,7 +837,7 @@ msgstr "Miejsce na dysku"
 msgid "Do you really want to restart the application now?"
 msgstr "Czy na pewno chcesz teraz ponownie uruchomić aplikację?"
 
-#: src/views/Edit/index.js:663
+#: src/views/Edit/index.js:667
 msgid "Do you want to delete \"{0}\"?"
 msgstr "Czy chcesz usunąć \"{0}”?"
 
@@ -836,12 +849,16 @@ msgstr "Czy chcesz usunąć {title}?"
 msgid "Do you want to delete this publication?"
 msgstr ""
 
-#: src/views/Edit/index.js:644
+#: src/views/Users.js:291
+msgid "Do you want to delete this user?"
+msgstr ""
+
+#: src/views/Edit/index.js:648
 msgid "Do you want to disconnect \"{0}\"?"
 msgstr "Czy chcesz odłączyć \"{0}”?"
 
-#: src/Header.js:289
-#: src/Header.js:330
+#: src/Header.js:298
+#: src/Header.js:339
 msgid "Docs"
 msgstr "Dokumentacja"
 
@@ -869,13 +886,17 @@ msgstr "Każde pole"
 msgid "Each frames"
 msgstr "Każda ramka"
 
-#: src/views/Edit/index.js:409
+#: src/views/Edit/index.js:413
 msgid "Edit"
 msgstr "Edytuj"
 
-#: src/views/Edit/index.js:435
+#: src/views/Edit/index.js:439
 msgid "Edit the audio and video sources for the live stream. Add a description, and set your desired content license."
 msgstr "Zmień źródła audio i wideo dla transmisji na żywo. Dodaj opis i ustaw licencję na żądaną zawartość."
+
+#: src/views/Users.js:238
+msgid "Edit user"
+msgstr ""
 
 #: src/views/Publication/Edit.js:596
 msgid "Edit: {title}"
@@ -1047,18 +1068,26 @@ msgstr "Nie udało się utworzyć usługi publikowania ({0})"
 msgid "Failed to create publication website files."
 msgstr "Nie udało się utworzyć publikowanych plików witryny."
 
+#: src/views/Users.js:161
+msgid "Failed to delete user"
+msgstr ""
+
 #: src/views/Edit/Profile.js:512
 #: src/views/Edit/Profile.js:671
 msgid "Failed to probe the source. Please check the <0>probe details</0>."
 msgstr "Nie można zbadać źródła. Sprawdź <0>szczegóły sondy</0>."
 
-#: src/utils/restreamer.js:449
+#: src/utils/restreamer.js:498
 msgid "Failed to refresh token: {0}"
 msgstr "Nie udało się odświeżyć tokena: {0}"
 
-#: src/views/Edit/index.js:316
+#: src/views/Edit/index.js:320
 msgid "Failed to save ingest metadata"
 msgstr "Nie udało się zapisać metadanych pozyskiwania"
+
+#: src/views/Users.js:134
+msgid "Failed to save user ({0})"
+msgstr ""
 
 #: src/views/Edit/index.js:187
 msgid "Failed to stop process"
@@ -1072,19 +1101,19 @@ msgstr "Nie udało się zapisać ustawienia rozmiaru dysku."
 msgid "Failed to store publication service ({0})"
 msgstr "Nie udało się zapisać usługi publikowania ({0})"
 
-#: src/views/Edit/index.js:309
+#: src/views/Edit/index.js:312
 msgid "Failed to update ingest process ({0})"
 msgstr "Nie udało się zaktualizować procesu przetwarzania ({0})"
 
-#: src/views/Edit/index.js:322
+#: src/views/Edit/index.js:326
 msgid "Failed to update ingest snapshot process ({0})"
 msgstr "Nie udało się zaktualizować procesu ingest snapshot ({0})"
 
-#: src/views/Edit/index.js:328
+#: src/views/Edit/index.js:332
 msgid "Failed to update the player"
 msgstr "Aktualizacja odtwarzacza nie powiodła się"
 
-#: src/views/Edit/index.js:334
+#: src/views/Edit/index.js:338
 msgid "Failed to update the playersite"
 msgstr "Nie udało się zaktualizować strony dla graczy"
 
@@ -1181,8 +1210,8 @@ msgstr "Częstotliwość (Hz)"
 msgid "Game"
 msgstr ""
 
-#: src/views/Edit/index.js:418
-#: src/views/Edit/index.js:430
+#: src/views/Edit/index.js:422
+#: src/views/Edit/index.js:434
 #: src/views/Edit/Sources/Network.js:612
 #: src/views/Playersite.js:328
 #: src/views/Playersite.js:341
@@ -1247,7 +1276,7 @@ msgstr "Wysokośc"
 msgid "HLS"
 msgstr "HLS"
 
-#: src/views/Edit/index.js:490
+#: src/views/Edit/index.js:494
 msgid "HLS output"
 msgstr "Wyjście HLS"
 
@@ -1379,8 +1408,8 @@ msgstr "Domena instancji"
 msgid "Interval (seconds)"
 msgstr "Interwał (sekundy)"
 
-#: src/Header.js:295
-#: src/Header.js:336
+#: src/Header.js:304
+#: src/Header.js:345
 msgid "Issue alert"
 msgstr "Zgłoszenie problemów"
 
@@ -1419,8 +1448,8 @@ msgstr "Poziom"
 msgid "Level of system protocol."
 msgstr "Poziom protokołu systemowego."
 
-#: src/views/Edit/index.js:421
-#: src/views/Edit/index.js:597
+#: src/views/Edit/index.js:425
+#: src/views/Edit/index.js:601
 #: src/views/Edit/Wizard/License.js:17
 msgid "License"
 msgstr "Patent"
@@ -1429,7 +1458,7 @@ msgstr "Patent"
 msgid "Life color"
 msgstr "Kolor życia"
 
-#: src/views/Edit/index.js:565
+#: src/views/Edit/index.js:569
 #: src/views/Publication/Add.js:465
 #: src/views/Publication/Edit.js:651
 msgid "Limits"
@@ -1533,15 +1562,15 @@ msgstr "Zapis"
 msgid "Login"
 msgstr "Zaloguj"
 
-#: src/utils/restreamer.js:262
-#: src/utils/restreamer.js:296
+#: src/utils/restreamer.js:266
+#: src/utils/restreamer.js:300
 msgid "Login failed: {0}"
 msgstr "Połączenie nie powiodło się: {0}"
 
-#: src/utils/restreamer.js:271
-#: src/utils/restreamer.js:276
-#: src/utils/restreamer.js:305
-#: src/utils/restreamer.js:310
+#: src/utils/restreamer.js:275
+#: src/utils/restreamer.js:280
+#: src/utils/restreamer.js:309
+#: src/utils/restreamer.js:314
 msgid "Login failed: Couldn't load API details"
 msgstr "Połączenie nie powiodło się: nie udało się wczytać szczegółów interfejsu API"
 
@@ -1553,7 +1582,7 @@ msgstr "Zezwolenie na logowanie/JWT"
 msgid "Logo"
 msgstr "Logo"
 
-#: src/Header.js:307
+#: src/Header.js:316
 msgid "Logout"
 msgstr "Wyloguj"
 
@@ -1587,7 +1616,7 @@ msgstr "Kanał główny zapisany"
 msgid "Main page channel (index.html)."
 msgstr "Kanał strony głównej (index.html)."
 
-#: src/views/Edit/index.js:398
+#: src/views/Edit/index.js:402
 msgid "Main Source"
 msgstr "Główne Źródło"
 
@@ -1610,6 +1639,11 @@ msgstr "Zaznaczone ramki"
 #: src/misc/controls/HLS.js:137
 msgid "Master playlist (increases browser/client compatibility)"
 msgstr "Główna lista odtwarzania (zwiększa kompatybilność z przeglądarką/klientem)"
+
+#: src/views/Users.js:202
+#: src/views/Users.js:280
+msgid "Max. restreams"
+msgstr ""
 
 #: src/views/Settings.js:1841
 msgid "Maximum allowed cache size, 0 for unlimited."
@@ -1679,11 +1713,11 @@ msgstr "Limit pamięci (megabajty)"
 msgid "Memory usage limit in megabytes, 0 for unlimited."
 msgstr "Limit użycia pamięci w megabajtach, 0 dla nieograniczonego."
 
-#: src/views/Edit/index.js:420
+#: src/views/Edit/index.js:424
 msgid "Meta information"
 msgstr "Informacje Meta"
 
-#: src/views/Edit/index.js:577
+#: src/views/Edit/index.js:581
 #: src/views/Edit/Wizard/Metadata.js:17
 msgid "Metadata"
 msgstr "Metadane"
@@ -1760,6 +1794,10 @@ msgstr "Sieć"
 msgid "Network source"
 msgstr "Źródło sieciowe"
 
+#: src/views/Users.js:261
+msgid "New password (leave empty to keep current)"
+msgstr ""
+
 #: src/views/Edit/Wizard/Audio.js:114
 #: src/views/Edit/Wizard/Metadata.js:40
 #: src/views/Edit/Wizard/Video.js:71
@@ -1796,6 +1834,10 @@ msgstr "Brak dostępnego urządzenia wejściowego"
 #: src/views/Edit/Wizard/Video.js:31
 msgid "No live stream was detected. Please check the software that sends the stream."
 msgstr "Nie wykryto transmisji na żywo. Sprawdź oprogramowanie wysyłające strumień."
+
+#: src/views/Users.js:189
+msgid "No named users yet."
+msgstr ""
 
 #: src/views/Edit/Summary.js:29
 msgid "No source selected"
@@ -1929,6 +1971,7 @@ msgstr "Przekazywanie (kopiowanie) powinno być wyłączone tylko w razie potrze
 #: src/views/Publication/Services/WOWZA.js:178
 #: src/views/Settings.js:1569
 #: src/views/Settings.js:1727
+#: src/views/Users.js:261
 msgid "Password"
 msgstr "Hasło"
 
@@ -1941,6 +1984,10 @@ msgstr "Hasło do autoryzacji."
 #: src/views/Edit/Wizard/Sources/Network.js:103
 msgid "Password for the device."
 msgstr "Hasło do urządzenia."
+
+#: src/views/Users.js:112
+msgid "Password must not be empty"
+msgstr ""
 
 #: src/views/Settings.js:1671
 msgid "Persist viewer statistics"
@@ -1988,7 +2035,7 @@ msgstr "Zapis ustawień odtwarzacza"
 msgid "Player URL"
 msgstr "Adres URL Playera"
 
-#: src/Header.js:267
+#: src/Header.js:268
 #: src/views/Playersite.js:353
 msgid "Playersite"
 msgstr "Playersite"
@@ -2115,7 +2162,7 @@ msgstr "Klucz strumienia podstawowego"
 msgid "Probe"
 msgstr "Sonda"
 
-#: src/views/Edit/index.js:554
+#: src/views/Edit/index.js:558
 #: src/views/Publication/Add.js:454
 #: src/views/Publication/Edit.js:640
 msgid "Process"
@@ -2140,8 +2187,8 @@ msgstr "Szczegóły procesu"
 msgid "Process report"
 msgstr "Raport z procesu"
 
-#: src/views/Edit/index.js:419
-#: src/views/Edit/index.js:482
+#: src/views/Edit/index.js:423
+#: src/views/Edit/index.js:486
 msgid "Processing & Control"
 msgstr "Przetwarzanie i kontrola"
 
@@ -2405,6 +2452,11 @@ msgstr "Spróbuj ponownie"
 msgid "RGB test pattern"
 msgstr "Wzór testowy RGB"
 
+#: src/views/Users.js:199
+#: src/views/Users.js:267
+msgid "Role"
+msgstr ""
+
 #: src/misc/filters/video/Transpose.js:46
 msgid "Rotate"
 msgstr "Obrót"
@@ -2419,7 +2471,7 @@ msgstr "RTMP"
 msgid "RTMP app for publishing."
 msgstr "Aplikacja RTMP do publikacji."
 
-#: src/views/Edit/index.js:505
+#: src/views/Edit/index.js:509
 msgid "RTMP output"
 msgstr "Wyjście RTMP"
 
@@ -2471,13 +2523,14 @@ msgid "Sampling"
 msgstr "Próbowanie"
 
 #: src/misc/modals/Hint.js:186
-#: src/views/Edit/index.js:632
+#: src/views/Edit/index.js:636
 #: src/views/Edit/Wizard/License.js:43
 #: src/views/Playersite.js:829
 #: src/views/Publication/Add.js:574
 #: src/views/Publication/Edit.js:782
 #: src/views/Publication/Player.js:542
 #: src/views/Settings.js:2224
+#: src/views/Users.js:246
 msgid "Save"
 msgstr "Zapisz"
 
@@ -2617,7 +2670,7 @@ msgstr "Serwer"
 msgid "Server URL"
 msgstr "URL serwera"
 
-#: src/Header.js:257
+#: src/Header.js:258
 #: src/views/Login.js:246
 #: src/views/Settings.js:1233
 #: src/views/Settings.js:1314
@@ -2709,7 +2762,7 @@ msgstr "Nazwa Strony"
 msgid "Size"
 msgstr "Rozmiar"
 
-#: src/views/Edit/index.js:543
+#: src/views/Edit/index.js:547
 #: src/views/Main/index.js:434
 msgid "Snapshot"
 msgstr "Snapshot"
@@ -2755,7 +2808,7 @@ msgstr "Wstępne ustawienie prędkości"
 msgid "SRT"
 msgstr "SRT"
 
-#: src/views/Edit/index.js:524
+#: src/views/Edit/index.js:528
 msgid "SRT output"
 msgstr "Wyjście SRT"
 
@@ -2880,7 +2933,7 @@ msgid "Supports HTTP (HLS, DASH), RTP, RTSP, RTMP, SRT and more."
 msgstr "Obsługuje HTTP (HLS, DASH), RTP, RTSP, RTMP, SRT i inne."
 
 #: src/Footer.js:184
-#: src/Header.js:275
+#: src/Header.js:276
 #: src/views/Settings.js:2095
 msgid "System"
 msgstr "System"
@@ -2930,19 +2983,23 @@ msgstr "Dostępne binarki FFmpeg nie obsługują żadnego z wymaganych protokoł
 msgid "The bitrate of the audio stream."
 msgstr "Szybkość transmisji strumienia audio."
 
+#: src/views/Users.js:182
+msgid "The bootstrap admin login can always sign in and manage everything. Named users you create here can only see and manage their own restreams, up to their quota."
+msgstr ""
+
 #: src/views/Edit/Sources/VirtualAudio.js:150
 msgid "The carrier frequency"
 msgstr "Częstotliwość nośna"
 
-#: src/views/Edit/index.js:376
+#: src/views/Edit/index.js:380
 msgid "The channel \"{0}\" could not be deleted"
 msgstr "Nie można usunąć kanału \"{0}”"
 
-#: src/views/Edit/index.js:385
+#: src/views/Edit/index.js:389
 msgid "The channel \"{0}\" has been deleted"
 msgstr "Kanał \"{0}” został usunięty"
 
-#: src/views/Edit/index.js:676
+#: src/views/Edit/index.js:680
 msgid "The deletion of this channel can not be recovered. All publications of this channel will be removed."
 msgstr "Usunięcia tego kanału nie można odzyskać. Wszystkie posty w tym kanale zostaną usunięte."
 
@@ -3139,7 +3196,7 @@ msgstr "Ten protokół jest nieznany lub nie jest obsługiwany przez dostępne b
 msgid "This publication was set up with a service (\"{_service}\") that no longer exists - it may have shut down or been removed. It can't be edited, only deleted."
 msgstr ""
 
-#: src/views/Edit/index.js:657
+#: src/views/Edit/index.js:661
 msgid "This source cannot be edited while it is in use. To continue, you have to disconnect the source."
 msgstr "Tego źródła nie można edytować podczas używania. Aby kontynuować, musisz odłączyć źródło."
 
@@ -3354,6 +3411,10 @@ msgstr "Nieznany"
 msgid "Unknown upload error"
 msgstr "Nieznany błąd przesyłania"
 
+#: src/views/Users.js:212
+msgid "Unlimited"
+msgstr ""
+
 #: src/views/Playersite.js:635
 msgid "Unselected"
 msgstr "Nie zaznaczone"
@@ -3417,7 +3478,7 @@ msgstr ""
 msgid "Use low-latency preset (TCP transport)"
 msgstr ""
 
-#: src/views/Edit/index.js:444
+#: src/views/Edit/index.js:448
 msgid "Use the wizard (<0/>) for a quick and easy setup, or edit (<1/>) the sources directly in custom mode."
 msgstr "Użyj kreatora (<0/>) do szybkiej i łatwej konfiguracji lub edytuj (<1/>) źródła bezpośrednio w trybie niestandardowym."
 
@@ -3425,7 +3486,7 @@ msgstr "Użyj kreatora (<0/>) do szybkiej i łatwej konfiguracji lub edytuj (<1/
 msgid "Use your copyright and choose the correct image license. Whether free for all or highly restricted. Briefly discuss what others are allowed to do with your image."
 msgstr "Wykorzystaj swoje prawa autorskie i wybierz odpowiednią licencję na obraz. Bez względu na to, czy jest darmowy dla wszystkich, czy mocno ograniczony. Krótko omów, co inni mogą zrobić z Twoim wizerunkiem."
 
-#: src/views/Edit/index.js:602
+#: src/views/Edit/index.js:606
 msgid "Use your copyright and choose the right image licence. Whether free for all or highly restricted. Briefly discuss what others are allowed to do with your image."
 msgstr "Wykorzystaj swoje prawa autorskie i wybierz odpowiednią licencję na obraz. Niezależnie od tego, czy jest to licencja bezpłatna, czy bardzo ograniczona. Krótko omów, co inni mogą zrobić z Twoim wizerunkiem."
 
@@ -3433,9 +3494,22 @@ msgstr "Wykorzystaj swoje prawa autorskie i wybierz odpowiednią licencję na ob
 msgid "use_wallclock_as_timestamps"
 msgstr "use_wallclock_as_timestamps"
 
+#: src/views/Users.js:211
+#: src/views/Users.js:269
+msgid "User"
+msgstr ""
+
+#: src/views/Users.js:165
+msgid "User deleted"
+msgstr ""
+
 #: src/views/Password.js:99
 msgid "User registration"
 msgstr "Rejestracja Użytkownika"
+
+#: src/views/Users.js:138
+msgid "User saved"
+msgstr ""
 
 #: src/views/Edit/Sources/Network.js:793
 #: src/views/Edit/Wizard/Sources/Network.js:84
@@ -3448,6 +3522,8 @@ msgstr "Rejestracja Użytkownika"
 #: src/views/Publication/Services/WOWZA.js:168
 #: src/views/Settings.js:1556
 #: src/views/Settings.js:1714
+#: src/views/Users.js:196
+#: src/views/Users.js:253
 msgid "Username"
 msgstr "Login"
 
@@ -3460,6 +3536,15 @@ msgstr "Nazwa użytkownika do autoryzacji."
 #: src/views/Edit/Wizard/Sources/Network.js:90
 msgid "Username for the device."
 msgstr "Nazwa użytkownika urządzenia."
+
+#: src/views/Users.js:100
+msgid "Username must not be empty"
+msgstr ""
+
+#: src/Header.js:284
+#: src/views/Users.js:179
+msgid "Users"
+msgstr ""
 
 #: src/misc/coders/Encoders/video/h264_v4l2m2m.js:167
 msgid "V4L2_M2M is experimental."
@@ -3594,6 +3679,10 @@ msgstr "Musisz ponownie połączyć się ręcznie"
 #: src/views/Publication/Edit.js:663
 msgid "You have unsaved changes. Please save them before you can control the service again."
 msgstr "Masz niezapisane zmiany. Utwórz ich kopię zapasową, zanim będziesz mógł ponownie kontrolować usługę."
+
+#: src/views/Edit/index.js:310
+msgid "You've reached the maximum number of restreams allowed for your account."
+msgstr ""
 
 #: src/views/Edit/Wizard/VideoProfile.js:36
 msgid "Your stream needs to be encoded, but there's no suitable encoder available."

@@ -43,19 +43,21 @@ msgid "7 (+ fragmented MP4 format)"
 msgstr "7 (+ fragmented MP4 格式)"
 
 #: src/misc/ChannelList.js:412
-#: src/views/Edit/index.js:647
-#: src/views/Edit/index.js:666
+#: src/views/Edit/index.js:651
+#: src/views/Edit/index.js:670
 #: src/views/Edit/Profile.js:599
 #: src/views/Edit/Wizard/Abort.js:14
 #: src/views/Publication/Edit.js:566
 #: src/views/Publication/Edit.js:812
 #: src/views/Settings.js:2278
 #: src/views/Settings.js:2300
+#: src/views/Users.js:241
+#: src/views/Users.js:294
 msgid "Abort"
 msgstr "取消"
 
-#: src/Header.js:283
-#: src/Header.js:324
+#: src/Header.js:292
+#: src/Header.js:333
 msgid "About"
 msgstr "关于"
 
@@ -82,6 +84,11 @@ msgstr "添加串流输出"
 #: src/misc/modals/Hint.js:158
 #~ msgid "Add Stream"
 #~ msgstr ""
+
+#: src/views/Users.js:230
+#: src/views/Users.js:238
+msgid "Add user"
+msgstr ""
 
 #: src/views/Publication/Add.js:373
 msgid "Add: {0}"
@@ -138,6 +145,11 @@ msgstr "地址"
 #: src/views/Playersite.js:552
 msgid "Adjust publication site colors and background as you like."
 msgstr "根据喜好调整发布站点的颜色和背景。"
+
+#: src/views/Users.js:211
+#: src/views/Users.js:272
+msgid "Admin"
+msgstr ""
 
 #: src/views/Login.js:322
 msgid "Advanced monitoring"
@@ -379,7 +391,7 @@ msgstr "蓝色"
 msgid "Bottom field"
 msgstr "底部区域"
 
-#: src/views/Edit/index.js:582
+#: src/views/Edit/index.js:586
 #: src/views/Edit/Wizard/Metadata.js:24
 msgid "Briefly describe what the audience will see during the live stream."
 msgstr "简要描述观众将在直播中看到的内容。"
@@ -424,7 +436,7 @@ msgstr "捕获点击"
 msgid "Capture cursor"
 msgstr "捕获指针"
 
-#: src/views/Edit/index.js:351
+#: src/views/Edit/index.js:355
 msgid "Channel \"{0}\" saved"
 msgstr "已保存频道 \"{0}\""
 
@@ -491,7 +503,7 @@ msgstr "块"
 #: src/misc/Changelog.js:177
 #: src/misc/ModalContent.js:77
 #: src/misc/modals/Hint.js:181
-#: src/views/Edit/index.js:621
+#: src/views/Edit/index.js:625
 #: src/views/Playersite.js:823
 #: src/views/Publication/Add.js:411
 #: src/views/Publication/Add.js:565
@@ -754,13 +766,14 @@ msgstr "延迟"
 msgid "Delay (ms)"
 msgstr "延迟（ms）"
 
-#: src/views/Edit/index.js:635
-#: src/views/Edit/index.js:671
+#: src/views/Edit/index.js:639
+#: src/views/Edit/index.js:675
 #: src/views/Playersite.js:506
 #: src/views/Publication/Edit.js:555
 #: src/views/Publication/Edit.js:571
 #: src/views/Publication/Edit.js:785
 #: src/views/Publication/Edit.js:817
+#: src/views/Users.js:299
 msgid "Delete"
 msgstr "删除"
 
@@ -796,7 +809,7 @@ msgstr "设备"
 msgid "Disconnect"
 msgstr "断开连接"
 
-#: src/views/Edit/index.js:652
+#: src/views/Edit/index.js:656
 msgid "Disconnect & Continue"
 msgstr "断连 & 继续"
 
@@ -824,7 +837,7 @@ msgstr "硬盘存储"
 msgid "Do you really want to restart the application now?"
 msgstr "确定要立刻重启应用吗？"
 
-#: src/views/Edit/index.js:663
+#: src/views/Edit/index.js:667
 msgid "Do you want to delete \"{0}\"?"
 msgstr "确定要删除 \"{0}\" 吗？"
 
@@ -836,12 +849,16 @@ msgstr "确定要删除 {title} 吗？"
 msgid "Do you want to delete this publication?"
 msgstr ""
 
-#: src/views/Edit/index.js:644
+#: src/views/Users.js:291
+msgid "Do you want to delete this user?"
+msgstr ""
+
+#: src/views/Edit/index.js:648
 msgid "Do you want to disconnect \"{0}\"?"
 msgstr "确定要断开 \"{0}\" 的连接吗？"
 
-#: src/Header.js:289
-#: src/Header.js:330
+#: src/Header.js:298
+#: src/Header.js:339
 msgid "Docs"
 msgstr "文档"
 
@@ -869,13 +886,17 @@ msgstr "每个区域"
 msgid "Each frames"
 msgstr "每一帧"
 
-#: src/views/Edit/index.js:409
+#: src/views/Edit/index.js:413
 msgid "Edit"
 msgstr "编辑"
 
-#: src/views/Edit/index.js:435
+#: src/views/Edit/index.js:439
 msgid "Edit the audio and video sources for the live stream. Add a description, and set your desired content license."
 msgstr "编辑直播流的音频和视频源。添加描述，并设置您想要的内容许可。"
+
+#: src/views/Users.js:238
+msgid "Edit user"
+msgstr ""
 
 #: src/views/Publication/Edit.js:596
 msgid "Edit: {title}"
@@ -1047,18 +1068,26 @@ msgstr "创建串流输出服务失败（{0}）"
 msgid "Failed to create publication website files."
 msgstr "创建发布站点文件失败。"
 
+#: src/views/Users.js:161
+msgid "Failed to delete user"
+msgstr ""
+
 #: src/views/Edit/Profile.js:512
 #: src/views/Edit/Profile.js:671
 msgid "Failed to probe the source. Please check the <0>probe details</0>."
 msgstr "探测媒体信息头失败。请检查 <0>媒体头详情</0>。"
 
-#: src/utils/restreamer.js:449
+#: src/utils/restreamer.js:498
 msgid "Failed to refresh token: {0}"
 msgstr "刷新 token 失败：{0}"
 
-#: src/views/Edit/index.js:316
+#: src/views/Edit/index.js:320
 msgid "Failed to save ingest metadata"
 msgstr "保存摄取元数据失败"
+
+#: src/views/Users.js:134
+msgid "Failed to save user ({0})"
+msgstr ""
 
 #: src/views/Edit/index.js:187
 msgid "Failed to stop process"
@@ -1072,19 +1101,19 @@ msgstr "保存播放器尺寸设置失败。"
 msgid "Failed to store publication service ({0})"
 msgstr "保存串流输出服务失败（{0}）"
 
-#: src/views/Edit/index.js:309
+#: src/views/Edit/index.js:312
 msgid "Failed to update ingest process ({0})"
 msgstr "更新摄取进程失败（{0}）"
 
-#: src/views/Edit/index.js:322
+#: src/views/Edit/index.js:326
 msgid "Failed to update ingest snapshot process ({0})"
 msgstr "无法更新摄取快照进程 ({0})"
 
-#: src/views/Edit/index.js:328
+#: src/views/Edit/index.js:332
 msgid "Failed to update the player"
 msgstr "更新播放器失败"
 
-#: src/views/Edit/index.js:334
+#: src/views/Edit/index.js:338
 msgid "Failed to update the playersite"
 msgstr "无法上传播放器页"
 
@@ -1181,8 +1210,8 @@ msgstr "频率（Hz）"
 msgid "Game"
 msgstr ""
 
-#: src/views/Edit/index.js:418
-#: src/views/Edit/index.js:430
+#: src/views/Edit/index.js:422
+#: src/views/Edit/index.js:434
 #: src/views/Edit/Sources/Network.js:612
 #: src/views/Playersite.js:328
 #: src/views/Playersite.js:341
@@ -1247,7 +1276,7 @@ msgstr "高度"
 msgid "HLS"
 msgstr "HLS"
 
-#: src/views/Edit/index.js:490
+#: src/views/Edit/index.js:494
 msgid "HLS output"
 msgstr "HLS 输出"
 
@@ -1379,8 +1408,8 @@ msgstr "实例域名"
 msgid "Interval (seconds)"
 msgstr "间隔（秒）"
 
-#: src/Header.js:295
-#: src/Header.js:336
+#: src/Header.js:304
+#: src/Header.js:345
 msgid "Issue alert"
 msgstr "问题警告"
 
@@ -1419,8 +1448,8 @@ msgstr "Level"
 msgid "Level of system protocol."
 msgstr "系统协议的等级。"
 
-#: src/views/Edit/index.js:421
-#: src/views/Edit/index.js:597
+#: src/views/Edit/index.js:425
+#: src/views/Edit/index.js:601
 #: src/views/Edit/Wizard/License.js:17
 msgid "License"
 msgstr "许可证"
@@ -1429,7 +1458,7 @@ msgstr "许可证"
 msgid "Life color"
 msgstr "Life color"
 
-#: src/views/Edit/index.js:565
+#: src/views/Edit/index.js:569
 #: src/views/Publication/Add.js:465
 #: src/views/Publication/Edit.js:651
 msgid "Limits"
@@ -1533,15 +1562,15 @@ msgstr "日志"
 msgid "Login"
 msgstr "登录"
 
-#: src/utils/restreamer.js:262
-#: src/utils/restreamer.js:296
+#: src/utils/restreamer.js:266
+#: src/utils/restreamer.js:300
 msgid "Login failed: {0}"
 msgstr "登录失败：{0}"
 
-#: src/utils/restreamer.js:271
-#: src/utils/restreamer.js:276
-#: src/utils/restreamer.js:305
-#: src/utils/restreamer.js:310
+#: src/utils/restreamer.js:275
+#: src/utils/restreamer.js:280
+#: src/utils/restreamer.js:309
+#: src/utils/restreamer.js:314
 msgid "Login failed: Couldn't load API details"
 msgstr "登录失败：无法加载 API 详情"
 
@@ -1553,7 +1582,7 @@ msgstr "登录/JWT 认证"
 msgid "Logo"
 msgstr "图标"
 
-#: src/Header.js:307
+#: src/Header.js:316
 msgid "Logout"
 msgstr "退出登录"
 
@@ -1587,7 +1616,7 @@ msgstr "已保存主频道"
 msgid "Main page channel (index.html)."
 msgstr "主页频道（index.html）。"
 
-#: src/views/Edit/index.js:398
+#: src/views/Edit/index.js:402
 msgid "Main Source"
 msgstr "主媒体流"
 
@@ -1610,6 +1639,11 @@ msgstr "标记的帧"
 #: src/misc/controls/HLS.js:137
 msgid "Master playlist (increases browser/client compatibility)"
 msgstr "Master playlist（增加浏览器/客户端兼容性）"
+
+#: src/views/Users.js:202
+#: src/views/Users.js:280
+msgid "Max. restreams"
+msgstr ""
 
 #: src/views/Settings.js:1841
 msgid "Maximum allowed cache size, 0 for unlimited."
@@ -1679,11 +1713,11 @@ msgstr "内存限制（兆字节）"
 msgid "Memory usage limit in megabytes, 0 for unlimited."
 msgstr "内存使用限制（兆字节），0 表示无限制。"
 
-#: src/views/Edit/index.js:420
+#: src/views/Edit/index.js:424
 msgid "Meta information"
 msgstr "元数据"
 
-#: src/views/Edit/index.js:577
+#: src/views/Edit/index.js:581
 #: src/views/Edit/Wizard/Metadata.js:17
 msgid "Metadata"
 msgstr "元数据"
@@ -1760,6 +1794,10 @@ msgstr "网络"
 msgid "Network source"
 msgstr "网络源"
 
+#: src/views/Users.js:261
+msgid "New password (leave empty to keep current)"
+msgstr ""
+
 #: src/views/Edit/Wizard/Audio.js:114
 #: src/views/Edit/Wizard/Metadata.js:40
 #: src/views/Edit/Wizard/Video.js:71
@@ -1796,6 +1834,10 @@ msgstr "没有可用的输入设备"
 #: src/views/Edit/Wizard/Video.js:31
 msgid "No live stream was detected. Please check the software that sends the stream."
 msgstr "未检测到直播流。请检查发送直播流的软件。"
+
+#: src/views/Users.js:189
+msgid "No named users yet."
+msgstr ""
 
 #: src/views/Edit/Summary.js:29
 msgid "No source selected"
@@ -1929,6 +1971,7 @@ msgstr "仅在必要时才应禁用直通（复制）。每种编码都需要额
 #: src/views/Publication/Services/WOWZA.js:178
 #: src/views/Settings.js:1569
 #: src/views/Settings.js:1727
+#: src/views/Users.js:261
 msgid "Password"
 msgstr "密码"
 
@@ -1941,6 +1984,10 @@ msgstr "用于身份验证密码。"
 #: src/views/Edit/Wizard/Sources/Network.js:103
 msgid "Password for the device."
 msgstr "设备密码。"
+
+#: src/views/Users.js:112
+msgid "Password must not be empty"
+msgstr ""
 
 #: src/views/Settings.js:1671
 msgid "Persist viewer statistics"
@@ -1988,7 +2035,7 @@ msgstr "已保存播放器设置"
 msgid "Player URL"
 msgstr "播放器 URL"
 
-#: src/Header.js:267
+#: src/Header.js:268
 #: src/views/Playersite.js:353
 msgid "Playersite"
 msgstr "播放页"
@@ -2115,7 +2162,7 @@ msgstr "主线路 key"
 msgid "Probe"
 msgstr "检测媒体流信息"
 
-#: src/views/Edit/index.js:554
+#: src/views/Edit/index.js:558
 #: src/views/Publication/Add.js:454
 #: src/views/Publication/Edit.js:640
 msgid "Process"
@@ -2140,8 +2187,8 @@ msgstr "进程详情"
 msgid "Process report"
 msgstr "进程报告"
 
-#: src/views/Edit/index.js:419
-#: src/views/Edit/index.js:482
+#: src/views/Edit/index.js:423
+#: src/views/Edit/index.js:486
 msgid "Processing & Control"
 msgstr "串流进程和控制"
 
@@ -2405,6 +2452,11 @@ msgstr "重试"
 msgid "RGB test pattern"
 msgstr "RGB 测试模式"
 
+#: src/views/Users.js:199
+#: src/views/Users.js:267
+msgid "Role"
+msgstr ""
+
 #: src/misc/filters/video/Transpose.js:46
 msgid "Rotate"
 msgstr "旋转"
@@ -2419,7 +2471,7 @@ msgstr "RTMP"
 msgid "RTMP app for publishing."
 msgstr "串流输出的 RTMP app。"
 
-#: src/views/Edit/index.js:505
+#: src/views/Edit/index.js:509
 msgid "RTMP output"
 msgstr "RTMP 输出"
 
@@ -2471,13 +2523,14 @@ msgid "Sampling"
 msgstr "采样"
 
 #: src/misc/modals/Hint.js:186
-#: src/views/Edit/index.js:632
+#: src/views/Edit/index.js:636
 #: src/views/Edit/Wizard/License.js:43
 #: src/views/Playersite.js:829
 #: src/views/Publication/Add.js:574
 #: src/views/Publication/Edit.js:782
 #: src/views/Publication/Player.js:542
 #: src/views/Settings.js:2224
+#: src/views/Users.js:246
 msgid "Save"
 msgstr "保存"
 
@@ -2617,7 +2670,7 @@ msgstr "服务器"
 msgid "Server URL"
 msgstr "服务器 URL"
 
-#: src/Header.js:257
+#: src/Header.js:258
 #: src/views/Login.js:246
 #: src/views/Settings.js:1233
 #: src/views/Settings.js:1314
@@ -2709,7 +2762,7 @@ msgstr "站点名称"
 msgid "Size"
 msgstr "大小"
 
-#: src/views/Edit/index.js:543
+#: src/views/Edit/index.js:547
 #: src/views/Main/index.js:434
 msgid "Snapshot"
 msgstr "截图"
@@ -2755,7 +2808,7 @@ msgstr "速度预设"
 msgid "SRT"
 msgstr "SRT"
 
-#: src/views/Edit/index.js:524
+#: src/views/Edit/index.js:528
 msgid "SRT output"
 msgstr "SRT 输出"
 
@@ -2880,7 +2933,7 @@ msgid "Supports HTTP (HLS, DASH), RTP, RTSP, RTMP, SRT and more."
 msgstr "支持 HTTP (HLS, DASH), RT, RTSP, RTMP, SRT 以及其他。"
 
 #: src/Footer.js:184
-#: src/Header.js:275
+#: src/Header.js:276
 #: src/views/Settings.js:2095
 msgid "System"
 msgstr "系统"
@@ -2930,19 +2983,23 @@ msgstr "可用的 FFmpeg 不支持任何一种要求的协议。"
 msgid "The bitrate of the audio stream."
 msgstr "音频流的比特率。"
 
+#: src/views/Users.js:182
+msgid "The bootstrap admin login can always sign in and manage everything. Named users you create here can only see and manage their own restreams, up to their quota."
+msgstr ""
+
 #: src/views/Edit/Sources/VirtualAudio.js:150
 msgid "The carrier frequency"
 msgstr "载波频率"
 
-#: src/views/Edit/index.js:376
+#: src/views/Edit/index.js:380
 msgid "The channel \"{0}\" could not be deleted"
 msgstr "无法删除频道 \"{0}\""
 
-#: src/views/Edit/index.js:385
+#: src/views/Edit/index.js:389
 msgid "The channel \"{0}\" has been deleted"
 msgstr "已删除频道 \"{0}\""
 
-#: src/views/Edit/index.js:676
+#: src/views/Edit/index.js:680
 msgid "The deletion of this channel can not be recovered. All publications of this channel will be removed."
 msgstr "此频道删除后无法恢复。该频道的所有串流输出将被删除。"
 
@@ -3139,7 +3196,7 @@ msgstr "该协议未知或不被当前可用的 FFmpeg 支持。"
 msgid "This publication was set up with a service (\"{_service}\") that no longer exists - it may have shut down or been removed. It can't be edited, only deleted."
 msgstr ""
 
-#: src/views/Edit/index.js:657
+#: src/views/Edit/index.js:661
 msgid "This source cannot be edited while it is in use. To continue, you have to disconnect the source."
 msgstr "此源在使用中无法编辑。要继续，您必须断开信号源。"
 
@@ -3354,6 +3411,10 @@ msgstr "未知的"
 msgid "Unknown upload error"
 msgstr "未知上传错误"
 
+#: src/views/Users.js:212
+msgid "Unlimited"
+msgstr ""
+
 #: src/views/Playersite.js:635
 msgid "Unselected"
 msgstr "未选中"
@@ -3417,7 +3478,7 @@ msgstr ""
 msgid "Use low-latency preset (TCP transport)"
 msgstr ""
 
-#: src/views/Edit/index.js:444
+#: src/views/Edit/index.js:448
 msgid "Use the wizard (<0/>) for a quick and easy setup, or edit (<1/>) the sources directly in custom mode."
 msgstr "使用向导 (<0/>) 快速设置，或者直接在自定义模式中编辑 (<1/>) 源。"
 
@@ -3425,7 +3486,7 @@ msgstr "使用向导 (<0/>) 快速设置，或者直接在自定义模式中编�
 msgid "Use your copyright and choose the correct image license. Whether free for all or highly restricted. Briefly discuss what others are allowed to do with your image."
 msgstr "使用您的版权并选择正确的图像许可。无论是对所有人免费还是受到高度限制。简要讨论其他人可以用您的形象做什么。"
 
-#: src/views/Edit/index.js:602
+#: src/views/Edit/index.js:606
 msgid "Use your copyright and choose the right image licence. Whether free for all or highly restricted. Briefly discuss what others are allowed to do with your image."
 msgstr "使用您的版权并选择正确的图像许可。无论是对所有人免费还是受到高度限制。简要讨论其他人可以用您的形象做什么。"
 
@@ -3433,9 +3494,22 @@ msgstr "使用您的版权并选择正确的图像许可。无论是对所有人
 msgid "use_wallclock_as_timestamps"
 msgstr "use_wallclock_as_timestamps"
 
+#: src/views/Users.js:211
+#: src/views/Users.js:269
+msgid "User"
+msgstr ""
+
+#: src/views/Users.js:165
+msgid "User deleted"
+msgstr ""
+
 #: src/views/Password.js:99
 msgid "User registration"
 msgstr "用户注册"
+
+#: src/views/Users.js:138
+msgid "User saved"
+msgstr ""
 
 #: src/views/Edit/Sources/Network.js:793
 #: src/views/Edit/Wizard/Sources/Network.js:84
@@ -3448,6 +3522,8 @@ msgstr "用户注册"
 #: src/views/Publication/Services/WOWZA.js:168
 #: src/views/Settings.js:1556
 #: src/views/Settings.js:1714
+#: src/views/Users.js:196
+#: src/views/Users.js:253
 msgid "Username"
 msgstr "用户名"
 
@@ -3460,6 +3536,15 @@ msgstr "用于身份认证的用户名。"
 #: src/views/Edit/Wizard/Sources/Network.js:90
 msgid "Username for the device."
 msgstr "设备用户名。"
+
+#: src/views/Users.js:100
+msgid "Username must not be empty"
+msgstr ""
+
+#: src/Header.js:284
+#: src/views/Users.js:179
+msgid "Users"
+msgstr ""
 
 #: src/misc/coders/Encoders/video/h264_v4l2m2m.js:167
 msgid "V4L2_M2M is experimental."
@@ -3594,6 +3679,10 @@ msgstr "需要手动重连"
 #: src/views/Publication/Edit.js:663
 msgid "You have unsaved changes. Please save them before you can control the service again."
 msgstr "有未保存的更改。请保存以再次管理服务。"
+
+#: src/views/Edit/index.js:310
+msgid "You've reached the maximum number of restreams allowed for your account."
+msgstr ""
 
 #: src/views/Edit/Wizard/VideoProfile.js:36
 msgid "Your stream needs to be encoded, but there's no suitable encoder available."

@@ -23,6 +23,7 @@ import TranslateIcon from '@mui/icons-material/Translate';
 import Typography from '@mui/material/Typography';
 import VideocamIcon from '@mui/icons-material/Videocam';
 import WebIcon from '@mui/icons-material/Web';
+import PeopleIcon from '@mui/icons-material/People';
 
 import * as Storage from './utils/storage';
 import * as Version from './version';
@@ -275,6 +276,14 @@ function HeaderMenu(props) {
 							<Trans>System</Trans>
 						</MenuItem>
 					)}
+					{props.showUsers === true && (
+						<MenuItem onClick={props.onUsers}>
+							<ListItemIcon>
+								<PeopleIcon fontSize="small" />
+							</ListItemIcon>
+							<Trans>Users</Trans>
+						</MenuItem>
+					)}
 					<Divider />
 					<MenuItem onClick={() => setAbout(true)}>
 						<ListItemIcon>
@@ -352,10 +361,12 @@ HeaderMenu.defaultProps = {
 	onChannel: () => {},
 	onPlayersite: () => {},
 	onSettings: () => {},
+	onUsers: () => {},
 	onLogout: () => {},
 	expand: false,
 	showPlayersite: false,
 	showSettings: false,
+	showUsers: false,
 	hasUpdates: false,
 	hasService: false,
 };
