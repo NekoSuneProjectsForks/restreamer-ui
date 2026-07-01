@@ -2,17 +2,19 @@ import React from 'react';
 
 import { Trans } from '@lingui/macro';
 import Grid from '@mui/material/Grid';
+import MenuItem from '@mui/material/MenuItem';
 import TextField from '@mui/material/TextField';
 
-import Logo from './logos/dlive.svg';
+import Logo from './logos/vpzone.png';
 
 import FormInlineButton from '../../../misc/FormInlineButton';
+import Select from '../../../misc/Select';
 
-const id = 'dlive';
-const name = 'dlive';
+const id = 'vpzone';
+const name = 'VPZone';
 const version = '1.0';
-const stream_key_link = 'https://dlive.tv/s/dashboard';
-const description = <Trans>Live-Streaming to dlive Live RTMP Service.</Trans>;
+const stream_key_link = 'https://vpzone.tv/';
+const description = <Trans>Live-Streaming to VPZone RTMP Service.</Trans>;
 const image_copyright = '';
 const author = {
 	creator: {
@@ -35,11 +37,12 @@ const requires = {
 };
 
 function ServiceIcon(props) {
-	return <img src={Logo} alt="dlive Logo" {...props} />;
+	return <img src={Logo} alt="VPZone Logo" {...props} />;
 }
 
 function init(settings) {
 	const initSettings = {
+		region: 'rtmp.vpzone.tv',
 		key: '',
 		...settings,
 	};
@@ -62,7 +65,7 @@ function Service(props) {
 
 	const createOutput = (settings) => {
 		const output = {
-			address: 'rtmp://stream.dlive.tv/live/' + settings.key,
+			address: 'rtmp://' + settings.region + ':1935/live/' + settings.key,
 			options: ['-f', 'flv'],
 		};
 
@@ -71,6 +74,12 @@ function Service(props) {
 
 	return (
 		<Grid container spacing={2}>
+			<Grid item xs={12}>
+				<Select label={<Trans>Region</Trans>} value={settings.region} onChange={handleChange('region')}>
+					<MenuItem value="rtmp.vpzone.tv">Canada</MenuItem>
+					<MenuItem value="eur.vpzone.tv">EU</MenuItem>
+				</Select>
+			</Grid>
 			<Grid item xs={12} md={9}>
 				<TextField variant="outlined" fullWidth label={<Trans>Stream key</Trans>} value={settings.key} onChange={handleChange('key')} />
 			</Grid>

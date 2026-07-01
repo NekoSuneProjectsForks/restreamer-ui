@@ -87,10 +87,92 @@ export default function Edit(props) {
 	const [$service, setService] = React.useState(null);
 	const [$serviceSkills, setServiceSkills] = React.useState(null);
 	const [$invalid, setInvalid] = React.useState('');
+	const [$sourceLive, setSourceLive] = React.useState(false);
+	const sourceLiveMounted = React.useRef(false);
+	const autopilotBusy = React.useRef(false);
 
 	useInterval(async () => {
 		await update(false);
 	}, 1000);
+
+	// Some services (currently only TikTok, via Streamlabs) need to start/stop
+	// an external session together with the source going live/offline, since
+	// they issue a fresh server/key per session rather than a fixed one.
+	React.useEffect(() => {
+		if (!sourceLiveMounted.current) {
+			sourceLiveMounted.current = true;
+			return;
+		}
+
+		if (!$service || !('func' in $service) || typeof $service.func.canAutomate !== 'function') {
+			return;
+		}
+
+		if (!$service.func.canAutomate($settings.settings)) {
+			return;
+		}
+
+		if (autopilotBusy.current) {
+			return;
+		}
+
+		autopilotBusy.current = true;
+
+		(async () => {
+			try {
+				if ($sourceLive) {
+					if ($progress.state === 'connected' || $progress.state === 'connecting') {
+						return;
+					}
+
+					const updated = await $service.func.startLive($settings.settings);
+					await saveAndStart(updated);
+				} else {
+					if ($progress.state === 'disconnected') {
+						return;
+					}
+
+					await props.restreamer.StopEgress(_channelid, id);
+					await $service.func.endLive($settings.settings);
+				}
+			} catch (err) {
+				notify.Dispatch('error', 'autopilot:egress:' + _service, i18n._(t`TikTok autopilot failed (${err.message})`));
+			} finally {
+				autopilotBusy.current = false;
+			}
+		})();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [$sourceLive]);
+
+	// saveAndStart pushes updated service settings (e.g. a fresh TikTok
+	// server/key) to CORE and (re)starts the publication process against
+	// them - the same two-step save the manual "Done" button uses, plus a
+	// start.
+	const saveAndStart = async (newServiceSettings) => {
+		const output = $service.func.createOutput(newServiceSettings);
+		const outputs = Array.isArray(output) ? output : [output];
+
+		const newSettings = {
+			...$settings,
+			outputs: outputs,
+			settings: newServiceSettings,
+		};
+
+		const [global, inputs, resolvedOutputs] = helper.createInputsOutputs($sources, newSettings.profiles, newSettings.outputs, false);
+
+		await props.restreamer.UpdateEgress(_channelid, id, global, inputs, resolvedOutputs, newSettings.control);
+		await props.restreamer.SetEgressMetadata(_channelid, id, newSettings);
+		await props.restreamer.StartEgress(_channelid, id);
+
+		setSettings(newSettings);
+	};
+
+	const handleServiceLiveUpdate = async () => {
+		await props.restreamer.StopEgress(_channelid, id);
+
+		const updated = await $service.func.startLive($settings.settings);
+		await saveAndStart(updated);
+	};
 
 	React.useEffect(() => {
 		(async () => {
@@ -120,6 +202,11 @@ export default function Edit(props) {
 		}
 
 		setProgress(proc.progress);
+
+		const ingest = await props.restreamer.GetIngest(_channelid, ['state']);
+		if (ingest !== null) {
+			setSourceLive(ingest.progress.state === 'connected');
+		}
 
 		if (isFirst === true) {
 			const s = Services.Get(_service);
@@ -448,6 +535,8 @@ export default function Edit(props) {
 										metadata={$metadata}
 										streams={$settings.streams}
 										onChange={handleServiceChange}
+										live={$progress.state === 'connected'}
+										onLiveUpdate={handleServiceLiveUpdate}
 									/>
 								</Grid>
 							</TabContent>
